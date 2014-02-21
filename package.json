@@ -1,0 +1,50 @@
+{
+  "name": "cf-expandables",
+  "version": "0.2.0",
+  "description": "Standard expandable (show/hide) component for Capital Framework.",
+  "keywords": ["capital-framework", "capital", "expandables", "jquery", "js", "less"],
+  "author": {
+    "name": "Consumer Financial Protection Bureau",
+    "url": "http://cfpb.github.io/"
+  },
+  "homepage": "https://github.com/cfpb/cf-expandables",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cfpb/cf-expandables.git"
+  },
+  "bugs": "https://github.com/cfpb/cf-expandables/issues",
+  "licenses": [
+    {
+      "type": "Public Domain",
+      "url": "https://github.com/cfpb/cf-expandables/blob/master/TERMS.md"
+    }
+  ],
+  "main": "src/js/cf-expandables.js",
+  "engines": {
+    "node": ">=0.8.0"
+  },
+  "scripts": {
+    "test": "grunt test"
+  },
+  "directories": {
+    "test": "test"
+  },
+  "devDependencies": {
+    "cf-component-demo": "git://github.com/cfpb/cf-component-demo.git",
+    "grunt": "~0.4.2",
+    "grunt-autoprefixer": "~0.6.5",
+    "grunt-bower-task": "~0.3.2",
+    "grunt-contrib-clean": "~0.5.0",
+    "grunt-contrib-concat": "~0.3.0",
+    "grunt-contrib-connect": "~0.3.0",
+    "grunt-contrib-copy": "~0.5.0",
+    "grunt-contrib-jshint": "~0.8.0",
+    "grunt-contrib-less": "~0.8.3",
+    "grunt-contrib-qunit": "~0.3.0",
+    "grunt-contrib-uglify": "~0.2.7",
+    "grunt-contrib-watch": "~0.5.3",
+    "grunt-string-replace": "~0.2.7",
+    "grunt-topdoc": "~0.2.0",
+    "time-grunt": "~0.2.8"
+  }
+}
