@@ -1,20 +1,4 @@
 /*!
- *              ad$$             $$
- *             d$"               $$
- *             $$                $$
- *   ,adPYba,  $$$$$ $b,dPYba,   $$,dPYba,
- *  aP'    '$: $$    $$P'   '$a  $$P'   '$a
- *  $(         $$    $$(     )$  $$(     )$
- *  "b,    ,$: $$    $$b,   ,$"  $$b,   ,$"
- *   `"Ybd$"'  $$    $$`YbdP"'   $$`Ybd$"'
- *                   $$
- *                   $$
- *                   ""
- *  cf-expandables - v0.2.0 - 2014-02-18
- *  https://github.com/cfpb/cf-expandables
- *  A public domain work of the Consumer Financial Protection Bureau
- */
-/*!
  * jQuery JavaScript Library v1.10.2
  * http://jquery.com/
  *
@@ -9803,6 +9787,13 @@ if ( typeof module === "object" && module && typeof module.exports === "object" 
 }
 
 })( window );
+
+/**
+ * cf-expandables
+ * https://github.com/cfpb/cf-expandables
+ *
+ * A public domain work of the Consumer Financial Protection Bureau
+ */
 
 (function($) {
 
