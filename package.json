@@ -34,13 +34,8 @@
     "cf-grunt-config": "git://github.com/cfpb/cf-grunt-config.git",
     "glob": "~3.2.9",
     "grunt": "latest",
-    "jit-grunt": "latest",
+    "jit-grunt": "0.3.2",
     "load-grunt-tasks": "latest",
-    "time-grunt": "latest",
-    "grunt-contrib-connect": "~0.3.0",
-    "grunt-contrib-jshint": "~0.8.0",
-    "grunt-contrib-qunit": "~0.3.0",
-    "grunt-contrib-uglify": "~0.2.7",
-    "grunt-contrib-watch": "~0.5.3"
+    "time-grunt": "latest"
   }
 }
