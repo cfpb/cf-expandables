@@ -21,7 +21,9 @@
     "cf-colors": "git://github.com/cfpb/cf-colors.git",
     "cf-typography": "git://github.com/cfpb/cf-typography.git",
     "font-awesome": "~3.2.1",
-    "jquery": "~1.10.1"
+    "jquery": "~1.10.1",
+    "normalize-css": "~3.0.0",
+    "normalize-legacy-addon": "git://github.com/cfpb/normalize-legacy-addon.git#0.1.0"
   },
   "devDependencies": {
     "qunit": "~1.14.0"
