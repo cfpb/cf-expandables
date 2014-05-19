@@ -10302,19 +10302,19 @@ return jQuery;
 
   $(function() {
 
-      $('.expandable').on( 'click', '.expandable-header', function( ev ){
+      $('.expandable').on( 'click', '.expandable_header', function( ev ){
 
         var $header = $( this ),
-            $container = $header.parent('.expandable'),
-            $button = $header.children('.expandable-button');
+            $expandable = $header.parent('.expandable'),
+            $content = $expandable.find('.expandable_content'),
+            $cta = $header.find('.expandable_text');
 
         ev.preventDefault();
         ev.stopPropagation();
 
-        $container.toggleClass('open');
-        $header.next('.expandable-content').slideToggle();
-        $button.toggleClass('open');
-        $button.children('.expandable-text').text( $container.hasClass('open') ? 'Hide' : 'Show' );
+        $expandable.toggleClass('expandable__open');
+        $content.slideToggle();
+        $cta.text( $expandable.hasClass('expandable__open') ? 'Hide' : 'Show' );
 
       });
 

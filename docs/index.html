@@ -24,13 +24,16 @@
               </header>
               <section>
 <div class="expandable">
-    <header class="expandable-header">
+    <header class="expandable_header">
         Expandable Header
-        <a href="" class="expandable-button">
-            <span class="expandable-text">Show</span> <i class="icon-plus-sign"></i>
-        </a>
+        <span class="expandable_button">
+            <span class="expandable_text">
+                Show
+            </span>
+            <i class="expandable_icon icon-plus-sign"></i>
+        </span>
     </header>
-    <div class="expandable-content expandable-hidden" style="display: none;">
+    <div class="expandable_content expandable_hidden" style="display: none;">
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
         quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
@@ -42,13 +45,16 @@
 </section>
               <footer class="demo-pattern-list_footer">
                 <pre class="html"><code data-language="html">&lt;div class=&quot;expandable&quot;&gt;
-    &lt;header class=&quot;expandable-header&quot;&gt;
+    &lt;header class=&quot;expandable_header&quot;&gt;
         Expandable Header
-        &lt;a href=&quot;&quot; class=&quot;expandable-button&quot;&gt;
-            &lt;span class=&quot;expandable-text&quot;&gt;Show&lt;/span&gt; &lt;i class=&quot;icon-plus-sign&quot;&gt;&lt;/i&gt;
-        &lt;/a&gt;
+        &lt;span class=&quot;expandable_button&quot;&gt;
+            &lt;span class=&quot;expandable_text&quot;&gt;
+                Show
+            &lt;/span&gt;
+            &lt;i class=&quot;expandable_icon icon-plus-sign&quot;&gt;&lt;/i&gt;
+        &lt;/span&gt;
     &lt;/header&gt;
-    &lt;div class=&quot;expandable-content expandable-hidden&quot; style=&quot;display: none;&quot;&gt;
+    &lt;div class=&quot;expandable_content expandable_hidden&quot; style=&quot;display: none;&quot;&gt;
         &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
         quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
@@ -66,35 +72,34 @@
   background: #f1f2f2;
 }
 .expandable:hover,
-.expandable .open {
+.expandable__open {
   background: #e3e4e5;
 }
-.expandable-hidden {
-  display: none;
-}
-.expandable-header {
+.expandable_header {
   padding: 0.625em 0.75em;
   font-family: &quot;Avenir Next Medium&quot;, Arial, sans-serif;
   font-style: normal;
   font-weight: 500;
   cursor: pointer;
 }
-.expandable-button,
-.expandable-button:link,
-.expandable-button:visited {
+.expandable_button {
   margin: 0;
   border-width: 0;
   float: right;
+  color: #0072ce;
   font-family: &quot;Avenir Next&quot;, Arial, sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 0.875em;
   line-height: 1.57142857;
 }
-.expandable-content {
+.expandable_content {
   padding: 0 0.75em 0.25em;
 }
-.open .icon-plus-sign:before {
+.expandable-content__hidden {
+  display: none;
+}
+.expandable__open .expandable_icon:before {
   content: &quot;\f056&quot;;
 }</code></pre>
           </div>

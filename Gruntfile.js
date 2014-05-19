@@ -104,6 +104,6 @@ module.exports = function(grunt) {
    */
   grunt.registerTask('test', ['jshint', 'connect', 'qunit']);
   grunt.registerTask('vendor', ['bower', 'copy:component_assets', 'copy:docs_assets', 'concat']);
-  grunt.registerTask('default', ['test', 'concat', 'less', 'string-replace', 'autoprefixer', 'uglify', 'copy:docs', 'topdoc']);
+  grunt.registerTask('default', ['concat', 'less', 'string-replace', 'autoprefixer', 'uglify', 'test', 'copy:docs', 'topdoc']);
 
 };
