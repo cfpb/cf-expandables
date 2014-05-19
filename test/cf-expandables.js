@@ -29,10 +29,10 @@
 
   test('Verify modules are closed on DOM load', function() {
     expect( 4 );
-    ok( !$('.one').find('.expandable_content').is( ':visible' ), 'should be closed' );
-    ok( !$('.two').find('.expandable_content').is( ':visible' ), 'should be closed' );
-    ok( $('.one').find('.expandable_text').text() === 'Show', 'should have show text' );
-    ok( $('.two').find('.expandable_text').text() === 'Show', 'should have show text' );
+    ok( !$('.one').find('.expandable_content').is( ':visible' ), 'content should be closed' );
+    ok( !$('.two').find('.expandable_content').is( ':visible' ), 'content should be closed' );
+    ok( $('.one').find('.expandable_button-open').is( ':visible' ), 'open icon should be visible' );
+    ok( $('.two').find('.expandable_button-open').is( ':visible' ), 'open icon should be visible' );
   });
 
   asyncTest('Verify modules can open', function() {
@@ -41,12 +41,12 @@
       $( this ).find('.expandable_header').click();
     });
     setTimeout(function() {
-      ok( $('.one').find('.expandable_content').is( ':visible' ), 'should be visible' );
-      ok( $('.two').find('.expandable_content').is( ':visible' ), 'should be visible' );
-      ok( $('.one').hasClass('expandable__open'), 'should have open class' );
-      ok( $('.two').hasClass('expandable__open'), 'should have open class' );
-      ok( $('.one').find('.expandable_text').text() === 'Hide', 'should have hide text' );
-      ok( $('.two').find('.expandable_text').text() === 'Hide', 'should have hide text' );
+      ok( $('.one').find('.expandable_content').is( ':visible' ), 'content should be visible' );
+      ok( $('.two').find('.expandable_content').is( ':visible' ), 'content should be visible' );
+      ok( $('.one').hasClass('expandable__open'), 'expandable should have open class' );
+      ok( $('.two').hasClass('expandable__open'), 'expandable should have open class' );
+      ok( $('.one').find('.expandable_button-close').is( ':visible' ), 'close icon should be visible' );
+      ok( $('.two').find('.expandable_button-close').is( ':visible' ), 'close icon should be visible' );
       start();
     }, 900);
   });
@@ -57,12 +57,12 @@
       $( this ).find('.expandable_header').click();
     });
     setTimeout(function() {
-      ok( !$('.one').find('.expandable_content').is( ':visible' ), 'should be hidden' );
-      ok( !$('.two').find('.expandable_content').is( ':visible' ), 'should be hidden' );
-      ok( !$('.one').hasClass('expandable__open'), 'should not have open class' );
-      ok( !$('.two').hasClass('expandable__open'), 'should not have open class' );
-      ok( $('.one').find('.expandable_text').text() === 'Show', 'should have show text' );
-      ok( $('.two').find('.expandable_text').text() === 'Show', 'should have show text' );
+      ok( !$('.one').find('.expandable_content').is( ':visible' ), 'content should be hidden' );
+      ok( !$('.two').find('.expandable_content').is( ':visible' ), 'content should be hidden' );
+      ok( !$('.one').hasClass('expandable__open'), 'expandable should not have open class' );
+      ok( !$('.two').hasClass('expandable__open'), 'expandable should not have open class' );
+      ok( $('.one').find('.expandable_button-open').is( ':visible' ), 'open icon should be visible' );
+      ok( $('.two').find('.expandable_button-open').is( ':visible' ), 'open icon should be visible' );
       start();
     }, 900);
   });

@@ -10306,15 +10306,13 @@ return jQuery;
 
         var $header = $( this ),
             $expandable = $header.parent('.expandable'),
-            $content = $expandable.find('.expandable_content'),
-            $cta = $header.find('.expandable_text');
+            $content = $expandable.find('.expandable_content');
 
         ev.preventDefault();
         ev.stopPropagation();
 
         $expandable.toggleClass('expandable__open');
         $content.slideToggle();
-        $cta.text( $expandable.hasClass('expandable__open') ? 'Hide' : 'Show' );
 
       });
 
