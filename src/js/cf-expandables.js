@@ -6,23 +6,31 @@
  */
 
 (function($) {
-
   $(function() {
 
-      $('.expandable').on( 'click', '.expandable_header', function( ev ){
+      $('.expandable').each(function(){
 
-        var $header = $( this ),
-            $expandable = $header.parent('.expandable'),
-            $content = $expandable.find('.expandable_content');
+        var $this = $( this ),
+            $header = $this.find('.expandable_header'),
+            $content = $this.find('.expandable_content');
 
-        ev.preventDefault();
-        ev.stopPropagation();
+        if ($this.hasClass('expandable__expanded')) {
+            $content.css('display','block');
+        } else {
+            $content.css('display','none');
+        }
 
-        $expandable.toggleClass('expandable__open');
-        $content.slideToggle();
+        $header.on( 'click', function( ev ){
+
+          ev.preventDefault();
+          ev.stopPropagation();
+
+          $this.toggleClass('expandable__expanded');
+          $content.slideToggle();
+
+        });
 
       });
 
   });
-
 }(jQuery));
