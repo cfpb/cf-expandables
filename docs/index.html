@@ -15,87 +15,304 @@
         <h1 class="h5">cf-expandables docs</h1>
       </header>
       <ul class="demo-component-list">
-        <li id="default-expandable" class="demo-component-list_item wrapper">
-          <h1 class="demo-component-list_header">Default expandable</h1>
+        <li id="barebones-expandable" class="demo-component-list_item wrapper">
+          <h1 class="demo-component-list_header">Barebones expandable</h1>
           <ul class="demo-pattern-list">
             <li class="demo-pattern-list_item">
               <header class="demo-pattern-list_header">
-                <h3>Default state</h3>
+                <h3>Default barebones expandable pattern</h3>
+                <ul class="demo_codenotes">
+                  <li>
+                    <pre class="code"><code>Structural cheat sheet:
+-----------------------
+.expandable
+  .expandable_target
+    .expandable_cue-open
+    .expandable_cue-close
+  .expandable_content</code></pre>
+                  </li>
+                </ul>
+                <ul class="demo_notes">
+                  <li>This is a barebones expandable pattern which our official recommended expandable is based off of. Please only use this is if you need a custom expandable experience.</li>
+                  <li>Use the anchor tag for the .expandable_target element to allow for keyboard access. The href attribute should be set to the ID of the .expanded_content element as a fallback for no JavaScript support. When pressed the link will jump you down to the content. Admittedly this is a very minor convenience in most cases, but in some cases there might actually be a significant amount of content between .expandable_target and .expandable_content.</li>
+                  <li>The aria-pressed attribute on .expandable_target gets automatically added and updated by JavaScript.</li>
+                </ul>
               </header>
               <section>
 <div class="expandable">
-    <header class="expandable-header">
-        Expandable Header
-        <a href="" class="expandable-button">
-            <span class="expandable-text">Show</span> <i class="icon-plus-sign"></i>
-        </a>
-    </header>
-    <div class="expandable-content expandable-hidden" style="display: none;">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    <a class="expandable_target"
+       href="#barebones-content">
+        <span class="expandable_cue-open">
+            Show
+        </span>
+        <span class="expandable_cue-close">
+            Hide
+        </span>
+    </a>
+    <div class="expandable_content" id="barebones-content">
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing
+            elit. Neque ipsa voluptatibus soluta nobis unde quisquam
+            temporibus magnam debitis quidem. Ducimus ratione
+            corporis nesciunt earum vel est quaerat blanditiis
+            dolore ipsa?
+        </p>
     </div>
 </div>
 </section>
               <footer class="demo-pattern-list_footer">
                 <pre class="html"><code data-language="html">&lt;div class=&quot;expandable&quot;&gt;
-    &lt;header class=&quot;expandable-header&quot;&gt;
-        Expandable Header
-        &lt;a href=&quot;&quot; class=&quot;expandable-button&quot;&gt;
-            &lt;span class=&quot;expandable-text&quot;&gt;Show&lt;/span&gt; &lt;i class=&quot;icon-plus-sign&quot;&gt;&lt;/i&gt;
-        &lt;/a&gt;
-    &lt;/header&gt;
-    &lt;div class=&quot;expandable-content expandable-hidden&quot; style=&quot;display: none;&quot;&gt;
-        &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;
+    &lt;a class=&quot;expandable_target&quot;
+       href=&quot;#barebones-content&quot;&gt;
+        &lt;span class=&quot;expandable_cue-open&quot;&gt;
+            Show
+        &lt;/span&gt;
+        &lt;span class=&quot;expandable_cue-close&quot;&gt;
+            Hide
+        &lt;/span&gt;
+    &lt;/a&gt;
+    &lt;div class=&quot;expandable_content&quot; id=&quot;barebones-content&quot;&gt;
+        &lt;p&gt;
+            Lorem ipsum dolor sit amet, consectetur adipisicing
+            elit. Neque ipsa voluptatibus soluta nobis unde quisquam
+            temporibus magnam debitis quidem. Ducimus ratione
+            corporis nesciunt earum vel est quaerat blanditiis
+            dolore ipsa?
+        &lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+              </footer>
+            </li>
+            <li class="demo-pattern-list_item">
+              <header class="demo-pattern-list_header">
+                <h3>Expandable that is open by default</h3>
+                <ul class="demo_codenotes">
+                  <li>
+                    <pre class="code"><code>Structural cheat sheet:
+-----------------------
+.expandable.expandable__expanded
+  .expandable_target
+    .expandable_cue-open
+    .expandable_cue-close
+  .expandable_content</code></pre>
+                  </li>
+                </ul>
+                <ul class="demo_notes">
+                  <li>Simply add the .expandable__expanded modifier to .expanded.</li>
+                </ul>
+              </header>
+              <section>
+<div class="expandable expandable__expanded">
+    <a class="expandable_target"
+       href="#expanded-by-default-content">
+        <span class="expandable_cue-open">
+            Show
+        </span>
+        <span class="expandable_cue-close">
+            Hide
+        </span>
+    </a>
+    <div class="expandable_content" id="expanded-by-default-content">
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing
+            elit. Neque ipsa voluptatibus soluta nobis unde quisquam
+            temporibus magnam debitis quidem. Ducimus ratione
+            corporis nesciunt earum vel est quaerat blanditiis
+            dolore ipsa?
+        </p>
+    </div>
+</div>
+</section>
+              <footer class="demo-pattern-list_footer">
+                <pre class="html"><code data-language="html">&lt;div class=&quot;expandable expandable__expanded&quot;&gt;
+    &lt;a class=&quot;expandable_target&quot;
+       href=&quot;#expanded-by-default-content&quot;&gt;
+        &lt;span class=&quot;expandable_cue-open&quot;&gt;
+            Show
+        &lt;/span&gt;
+        &lt;span class=&quot;expandable_cue-close&quot;&gt;
+            Hide
+        &lt;/span&gt;
+    &lt;/a&gt;
+    &lt;div class=&quot;expandable_content&quot; id=&quot;expanded-by-default-content&quot;&gt;
+        &lt;p&gt;
+            Lorem ipsum dolor sit amet, consectetur adipisicing
+            elit. Neque ipsa voluptatibus soluta nobis unde quisquam
+            temporibus magnam debitis quidem. Ducimus ratione
+            corporis nesciunt earum vel est quaerat blanditiis
+            dolore ipsa?
+        &lt;/p&gt;
     &lt;/div&gt;
 &lt;/div&gt;</code></pre>
               </footer>
             </li>
           </ul>
           <div class="demo-pattern-css">
-            <pre class="css"><code data-language="css">.expandable {
-  margin-bottom: 1.375em;
-  background: #f1f2f2;
-}
-.expandable:hover,
-.expandable .open {
-  background: #e3e4e5;
-}
-.expandable-hidden {
-  display: none;
-}
-.expandable-header {
-  padding: 0.625em 0.75em;
-  font-family: &quot;Avenir Next Medium&quot;, Arial, sans-serif;
-  font-style: normal;
-  font-weight: 500;
+            <pre class="css"><code data-language="css">.expandable_target {
   cursor: pointer;
 }
-.expandable-button,
-.expandable-button:link,
-.expandable-button:visited {
-  margin: 0;
-  border-width: 0;
+.expandable_cue-close {
+  display: none;
+}
+.expandable__expanded .expandable_cue-open {
+  display: none;
+}
+.expandable__expanded .expandable_cue-close {
+  display: inline;
+}
+.expandable_content {
+  overflow: hidden;
+}</code></pre>
+          </div>
+        </li>
+        <li id="padded-expandable" class="demo-component-list_item wrapper">
+          <h1 class="demo-component-list_header">Padded expandable</h1>
+          <ul class="demo-pattern-list">
+            <li class="demo-pattern-list_item">
+              <header class="demo-pattern-list_header">
+                <h3>Default padded expandable pattern</h3>
+                <ul class="demo_codenotes">
+                  <li>
+                    <pre class="code"><code>Structural cheat sheet:
+-----------------------
+.expandable.expandable__padded
+  .expandable_target.expandable_header
+    .expandable_label
+    .expandable_link.expandable_header-right
+      .expandable_cue-open
+        .cf-icon.cf-icon-plus-round
+      .expandable_cue-close
+        .cf-icon.cf-icon-minus-round
+    .expandable_cue-open
+    .expandable_cue-close
+  .expandable_content</code></pre>
+                  </li>
+                </ul>
+                <ul class="demo_notes">
+                  <li>The padded expandable is our recommended go-to expandable pattern.</li>
+                  <li>If you need a custom expandable experience first try using a combination of the new elements that are used in the padded expandable pattern like .expandable_header, expandable_label, expandable_link, and expandable_header-right.</li>
+                </ul>
+              </header>
+              <section>
+<div class="expandable expandable__padded">
+    <a class="expandable_target expandable_header"
+       href="#styled-expandable-content">
+        <span class="expandable_label">
+            Expandable Header
+        </span>
+        <span class="expandable_link expandable_header-right">
+            <span class="expandable_cue-open">
+                Show
+                <span class="cf-icon cf-icon-plus-round"></span>
+            </span>
+            <span class="expandable_cue-close">
+                Hide
+                <span class="cf-icon cf-icon-minus-round"></span>
+            </span>
+        </span>
+    </a>
+    <div class="expandable_content" id="styled-expandable-content">
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing
+            elit. Neque ipsa voluptatibus soluta nobis unde quisquam
+            temporibus magnam debitis quidem. Ducimus ratione
+            corporis nesciunt earum vel est quaerat blanditiis
+            dolore ipsa?
+        </p>
+    </div>
+</div>
+</section>
+              <footer class="demo-pattern-list_footer">
+                <pre class="html"><code data-language="html">&lt;div class=&quot;expandable expandable__padded&quot;&gt;
+    &lt;a class=&quot;expandable_target expandable_header&quot;
+       href=&quot;#styled-expandable-content&quot;&gt;
+        &lt;span class=&quot;expandable_label&quot;&gt;
+            Expandable Header
+        &lt;/span&gt;
+        &lt;span class=&quot;expandable_link expandable_header-right&quot;&gt;
+            &lt;span class=&quot;expandable_cue-open&quot;&gt;
+                Show
+                &lt;span class=&quot;cf-icon cf-icon-plus-round&quot;&gt;&lt;/span&gt;
+            &lt;/span&gt;
+            &lt;span class=&quot;expandable_cue-close&quot;&gt;
+                Hide
+                &lt;span class=&quot;cf-icon cf-icon-minus-round&quot;&gt;&lt;/span&gt;
+            &lt;/span&gt;
+        &lt;/span&gt;
+    &lt;/a&gt;
+    &lt;div class=&quot;expandable_content&quot; id=&quot;styled-expandable-content&quot;&gt;
+        &lt;p&gt;
+            Lorem ipsum dolor sit amet, consectetur adipisicing
+            elit. Neque ipsa voluptatibus soluta nobis unde quisquam
+            temporibus magnam debitis quidem. Ducimus ratione
+            corporis nesciunt earum vel est quaerat blanditiis
+            dolore ipsa?
+        &lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+              </footer>
+            </li>
+          </ul>
+          <div class="demo-pattern-css">
+            <pre class="css"><code data-language="css">.expandable_header {
+  display: block;
+}
+.expandable_header-right {
   float: right;
-  font-family: &quot;Avenir Next&quot;, Arial, sans-serif;
+}
+.expandable_label {
+  color: #101820;
+  font-family: &quot;AvenirNextLTW01-Medium&quot;, Arial, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+}
+.lt-ie9 .expandable_label {
+  font-weight: normal !important;
+}
+.expandable_link {
+  color: #0072ce;
+  font-family: &quot;AvenirNextLTW01-Regular&quot;, Arial, sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 0.875em;
   line-height: 1.57142857;
 }
-.expandable-content {
-  padding: 0 0.75em 0.25em;
+.expandable_link em,
+.expandable_link i {
+  font-family: &quot;AvenirNextLTW01-Italic&quot;, Arial, sans-serif;
+  font-style: italic;
+  font-weight: normal;
 }
-.open .icon-plus-sign:before {
-  content: &quot;\f056&quot;;
+.lt-ie9 .expandable_link em,
+.lt-ie9 .expandable_link i {
+  font-style: normal !important;
+}
+.expandable_link strong,
+.expandable_link b {
+  font-family: &quot;AvenirNextLTW01-Demi&quot;, Arial, sans-serif;
+  font-style: normal;
+  font-weight: bold;
+}
+.lt-ie9 .expandable_link strong,
+.lt-ie9 .expandable_link b {
+  font-weight: normal !important;
+}
+.expandable__padded {
+  margin-bottom: 1.875em;
+  background: #f1f2f2;
+}
+.expandable__padded:hover,
+.expandable__padded.expandable__expanded {
+  background: #e3e4e5;
+}
+.expandable__padded .expandable_header {
+  padding: 0.625em 1em;
+}
+.expandable__padded .expandable_header.expandable_target {
+  border-bottom: none;
+}
+.expandable__padded .expandable_content {
+  margin: 0 1em 1.375em;
 }</code></pre>
           </div>
         </li>

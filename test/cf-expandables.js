@@ -23,48 +23,151 @@
   module('cf-expandables', {
     // This will run before each test in this module.
     setup: function() {
-      this.$expandables = $('.expandable');
+      this.$testSubjectOne = $('#test-subject-one');
+      this.$testSubjectTwo = $('#test-subject-two');
     }
   });
 
-  test('Verify modules are closed on DOM load', function() {
-    expect( 4 );
-    ok( !$('.one').find('.expandable-content').is( ':visible' ), 'should be closed' );
-    ok( !$('.two').find('.expandable-content').is( ':visible' ), 'should be closed' );
-    ok( $('.one').find('.expandable-text').text() === 'Show', 'should have show text' );
-    ok( $('.two').find('.expandable-text').text() === 'Show', 'should have show text' );
+  test('Verify initial default collapsed state', function() {
+    expect(4);
+    ok(
+        !$('#test-subject-one .expandable_content').is(':visible'),
+        'The content should be collapsed'
+    );
+    ok(
+        $('#test-subject-one .expandable_cue-open').is(':visible'),
+        'The open cue should be visible'
+    );
+    ok(
+        !$('#test-subject-one .expandable_cue-close').is(':visible'),
+        'The close cue should be hidden'
+    );
+    ok(
+        ($('#test-subject-one .expandable_target').attr('aria-pressed') === 'false'),
+        'The target should have an aria-pressed attribute that is false'
+    );
   });
 
-  asyncTest('Verify modules can open', function() {
-    expect( 6 );
-    this.$expandables.each(function(){
-      $( this ).find('.expandable-header').click();
-    });
+  test('Verify initial state when using the expanded modifier', function() {
+    expect(4);
+    ok(
+        $('#test-subject-two .expandable_content').is(':visible'),
+        'The content should be expanded'
+    );
+    ok(
+        $('#test-subject-two .expandable_cue-close').is(':visible'),
+        'The close cue should be visible'
+    );
+    ok(
+        !$('#test-subject-two .expandable_cue-open').is(':visible'),
+        'The open cue should be hidden'
+    );
+    ok(
+        ($('#test-subject-two .expandable_target').attr('aria-pressed') === 'true'),
+        'The target should have an aria-pressed attribute that is true'
+    );
+  });
+
+  asyncTest('Verify expandables can open after being closed by default', function() {
+    expect(4);
+    var $expandable = this.$testSubjectOne;
+    $expandable.find('.expandable_target').trigger('click');
     setTimeout(function() {
-      ok( $('.one').find('.expandable-content').is( ':visible' ), 'should be visible' );
-      ok( $('.two').find('.expandable-content').is( ':visible' ), 'should be visible' );
-      ok( $('.one').hasClass('open'), 'should have open class' );
-      ok( $('.two').hasClass('open'), 'should have open class' );
-      ok( $('.one').find('.expandable-text').text() === 'Hide', 'should have hide text' );
-      ok( $('.two').find('.expandable-text').text() === 'Hide', 'should have hide text' );
+      ok(
+          $expandable.find('.expandable_content').is(':visible'),
+          'The content should no longer be collapsed'
+      );
+      ok(
+          $expandable.find('.expandable_cue-close').is(':visible'),
+          'The close cue should be visible'
+      );
+      ok(
+          !$expandable.find('.expandable_cue-open').is(':visible'),
+          'The open cue should be hidden'
+      );
+      ok(
+          ($expandable.find('.expandable_target').attr('aria-pressed') === 'true'),
+          'The target should have an aria-pressed attribute that is true'
+      );
       start();
     }, 900);
   });
 
-  asyncTest('Verify modules can close', function() {
-    expect( 6 );
-    this.$expandables.each(function(){
-      $( this ).find('.expandable-header').click();
-    });
+  asyncTest('Verify expandables can close after being opened by a click', function() {
+    expect(4);
+    var $expandable = this.$testSubjectOne;
+    // This expandable was opened in the previous test
+    $expandable.find('.expandable_target').trigger('click');
     setTimeout(function() {
-      ok( !$('.one').find('.expandable-content').is( ':visible' ), 'should be hidden' );
-      ok( !$('.two').find('.expandable-content').is( ':visible' ), 'should be hidden' );
-      ok( !$('.one').hasClass('open'), 'should not have open class' );
-      ok( !$('.two').hasClass('open'), 'should not have open class' );
-      ok( $('.one').find('.expandable-text').text() === 'Show', 'should have show text' );
-      ok( $('.two').find('.expandable-text').text() === 'Show', 'should have show text' );
+      ok(
+          !$expandable.find('.expandable_content').is(':visible'),
+          'The content should be collapsed'
+      );
+      ok(
+          $expandable.find('.expandable_cue-open').is(':visible'),
+          'The open cue should be visible'
+      );
+      ok(
+          !$expandable.find('.expandable_cue-close').is(':visible'),
+          'The close cue should be hidden'
+      );
+      ok(
+          ($expandable.find('.expandable_target').attr('aria-pressed') === 'false'),
+          'The target should have an aria-pressed attribute that is false'
+      );
+      start();
+    }, 1800);
+  });
+
+  asyncTest('Verify expandables can close after being open by default', function() {
+    expect(4);
+    var $expandable = this.$testSubjectTwo;
+    $expandable.find('.expandable_target').trigger('click');
+    setTimeout(function() {
+      ok(
+          !$expandable.find('.expandable_content').is(':visible'),
+          'The content should be collapsed'
+      );
+      ok(
+          $expandable.find('.expandable_cue-open').is(':visible'),
+          'The open cue should be visible'
+      );
+      ok(
+          !$expandable.find('.expandable_cue-close').is(':visible'),
+          'The close cue should be hidden'
+      );
+      ok(
+          ($expandable.find('.expandable_target').attr('aria-pressed') === 'false'),
+          'The target should have an aria-pressed attribute that is false'
+      );
       start();
     }, 900);
+  });
+
+  asyncTest('Verify expandables can open after being closed by a click', function() {
+    expect(4);
+    var $expandable = this.$testSubjectTwo;
+    // This expandable was opened in the previous test
+    $expandable.find('.expandable_target').trigger('click');
+    setTimeout(function() {
+      ok(
+          $expandable.find('.expandable_content').is(':visible'),
+          'The content should no longer be collapsed'
+      );
+      ok(
+          $expandable.find('.expandable_cue-close').is(':visible'),
+          'The close cue should be visible'
+      );
+      ok(
+          !$expandable.find('.expandable_cue-open').is(':visible'),
+          'The open cue should be hidden'
+      );
+      ok(
+          ($expandable.find('.expandable_target').attr('aria-pressed') === 'true'),
+          'The target should have an aria-pressed attribute that is true'
+      );
+      start();
+    }, 1800);
   });
 
 }(jQuery));

@@ -1,6 +1,6 @@
 {
   "name": "cf-expandables",
-  "version": "0.2.2",
+  "version": "0.3.0",
   "description": "Standard expandable (show/hide) component for Capital Framework.",
   "keywords": ["capital-framework", "capital", "expandables", "jquery", "js", "less"],
   "authors": [
@@ -19,8 +19,8 @@
   "dependencies": {
     "cf-buttons": "git://github.com/cfpb/cf-buttons.git",
     "cf-colors": "git://github.com/cfpb/cf-colors.git",
+    "cf-icons": "git://github.com/cfpb/cf-icons.git",
     "cf-typography": "git://github.com/cfpb/cf-typography.git",
-    "font-awesome": "~3.2.1",
     "jquery": "~1.11.0",
     "normalize-css": "~3.0.0",
     "normalize-legacy-addon": "git://github.com/cfpb/normalize-legacy-addon.git#0.1.0"
@@ -34,10 +34,6 @@
       "less": "src/**/*.less",
       "fonts": "src/fonts/*.*",
       "js": "src/**/*.js"
-    },
-    "font-awesome": {
-      "css": "css/*.css",
-      "fonts": "font/*.*"
     }
   }
 }

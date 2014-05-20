@@ -5,69 +5,217 @@
 
 
 /* topdoc
-    name: Default expandable
+    name: Barebones expandable
     family: cf-expandables
     patterns:
-    - name: Default state
+    - name: Default barebones expandable pattern
       markup: |
         <div class="expandable">
-            <header class="expandable-header">
-                Expandable Header
-                <a href="" class="expandable-button">
-                    <span class="expandable-text">Show</span> <i class="icon-plus-sign"></i>
-                </a>
-            </header>
-            <div class="expandable-content expandable-hidden" style="display: none;">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <a class="expandable_target"
+               href="#barebones-content">
+                <span class="expandable_cue-open">
+                    Show
+                </span>
+                <span class="expandable_cue-close">
+                    Hide
+                </span>
+            </a>
+            <div class="expandable_content" id="barebones-content">
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing
+                    elit. Neque ipsa voluptatibus soluta nobis unde quisquam
+                    temporibus magnam debitis quidem. Ducimus ratione
+                    corporis nesciunt earum vel est quaerat blanditiis
+                    dolore ipsa?
+                </p>
             </div>
         </div>
+      codenotes:
+        - |
+          Structural cheat sheet:
+          -----------------------
+          .expandable
+            .expandable_target
+              .expandable_cue-open
+              .expandable_cue-close
+            .expandable_content
+      notes:
+        - "This is a barebones expandable pattern which our official recommended
+          expandable is based off of. Please only use this is if you need a
+          custom expandable experience."
+        - "Use the anchor tag for the .expandable_target element to allow for
+          keyboard access. The href attribute should be set to the ID of the
+          .expanded_content element as a fallback for no JavaScript support.
+          When pressed the link will jump you down to the content. Admittedly
+          this is a very minor convenience in most cases, but in some cases
+          there might actually be a significant amount of content between
+          .expandable_target and .expandable_content."
+        - "The aria-pressed attribute on .expandable_target gets automatically
+          added and updated by JavaScript."
+    - name: Expandable that is open by default
+      markup: |
+        <div class="expandable expandable__expanded">
+            <a class="expandable_target"
+               href="#expanded-by-default-content">
+                <span class="expandable_cue-open">
+                    Show
+                </span>
+                <span class="expandable_cue-close">
+                    Hide
+                </span>
+            </a>
+            <div class="expandable_content" id="expanded-by-default-content">
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing
+                    elit. Neque ipsa voluptatibus soluta nobis unde quisquam
+                    temporibus magnam debitis quidem. Ducimus ratione
+                    corporis nesciunt earum vel est quaerat blanditiis
+                    dolore ipsa?
+                </p>
+            </div>
+        </div>
+      codenotes:
+        - |
+          Structural cheat sheet:
+          -----------------------
+          .expandable.expandable__expanded
+            .expandable_target
+              .expandable_cue-open
+              .expandable_cue-close
+            .expandable_content
+      notes:
+        - "Simply add the .expandable__expanded modifier to .expanded."
     tags:
     - cf-expandables
 */
 
-.expandable {
-    margin-bottom: unit(@base-line-height, em);
-    background: @gray-10;
-
-    &:hover,
-    .open {
-        background: @gray-20;
-    }
-}
-
-.expandable-hidden {
-    display: none;
-}
-
-.expandable-header {
-    padding: 0.625em 0.75em;
-    .webfont-medium;
+.expandable_target {
     cursor: pointer;
 }
 
-.expandable-button,
-.expandable-button:link,
-.expandable-button:visited {
-    margin: 0;
-    border-width: 0;
+.expandable_cue-close {
+    display: none;
+}
+
+.expandable__expanded {
+    .expandable_cue-open {
+        display: none;
+    }
+    .expandable_cue-close {
+        display: inline;
+    }
+}
+
+.expandable_content {
+    // overflow hidden is used to prevent margin collapsing which causes
+    // jumpiness when animating the expand and collapse.
+    overflow: hidden;
+}
+
+
+/* topdoc
+    name: Padded expandable
+    family: cf-expandables
+    patterns:
+    - name: Default padded expandable pattern
+      markup: |
+        <div class="expandable expandable__padded">
+            <a class="expandable_target expandable_header"
+               href="#styled-expandable-content">
+                <span class="expandable_label">
+                    Expandable Header
+                </span>
+                <span class="expandable_link expandable_header-right">
+                    <span class="expandable_cue-open">
+                        Show
+                        <span class="cf-icon cf-icon-plus-round"></span>
+                    </span>
+                    <span class="expandable_cue-close">
+                        Hide
+                        <span class="cf-icon cf-icon-minus-round"></span>
+                    </span>
+                </span>
+            </a>
+            <div class="expandable_content" id="styled-expandable-content">
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing
+                    elit. Neque ipsa voluptatibus soluta nobis unde quisquam
+                    temporibus magnam debitis quidem. Ducimus ratione
+                    corporis nesciunt earum vel est quaerat blanditiis
+                    dolore ipsa?
+                </p>
+            </div>
+        </div>
+      codenotes:
+        - |
+          Structural cheat sheet:
+          -----------------------
+          .expandable.expandable__padded
+            .expandable_target.expandable_header
+              .expandable_label
+              .expandable_link.expandable_header-right
+                .expandable_cue-open
+                  .cf-icon.cf-icon-plus-round
+                .expandable_cue-close
+                  .cf-icon.cf-icon-minus-round
+              .expandable_cue-open
+              .expandable_cue-close
+            .expandable_content
+      notes:
+        - "The padded expandable is our recommended go-to expandable pattern."
+        - "If you need a custom expandable experience first try using a
+          combination of the new elements that are used in the padded expandable
+          pattern like .expandable_header, expandable_label, expandable_link,
+          and expandable_header-right."
+    tags:
+    - cf-expandables
+*/
+
+.expandable_header {
+    display: block;
+}
+
+.expandable_header-right {
     float: right;
+}
+
+.expandable_label {
+    color: @black;
+    .webfont-medium();
+}
+
+.expandable_link {
+    color: @pacific;
     .webfont-regular;
     font-size: unit(@btn-font-size / @base-font-size-px, em);
     line-height: unit(@base-line-height-px / @btn-font-size);
 }
 
-.expandable-content {
-    padding: 0 0.75em 0.25em;
+.expandable__padded {
+    margin-bottom: unit(30px / @base-font-size-px, em);
+    background: @gray-10;
+
+    &:hover,
+    &.expandable__expanded {
+        background: @gray-20;
+    }
+
+    .expandable_header {
+        padding: unit(10px / @base-font-size-px, em)
+                 unit(16px / @base-font-size-px, em);
+        &.expandable_target {
+            border-bottom: none;
+        }
+    }
+
+    .expandable_content {
+        // Margin collapsing trick for more consistent bottom padding.
+        margin: 0
+                unit(16px / @base-font-size-px, em)
+                unit(22px / @base-font-size-px, em);
+    }
 }
 
-.open .icon-plus-sign:before {
-    content: "\f056";
-}
 
 /* topdoc
   name: EOF

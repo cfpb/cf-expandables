@@ -16,23 +16,84 @@
     <script src="static/demo/html5shiv-printshiv.js"></script><![endif]-->
   </head>
   <body style="padding:4px;">
-    <div id="default-expandable">
+    <div id="barebones-expandable">
       <div>
         <div>
 <div class="expandable">
-    <header class="expandable-header">
-        Expandable Header
-        <a href="" class="expandable-button">
-            <span class="expandable-text">Show</span> <i class="icon-plus-sign"></i>
-        </a>
-    </header>
-    <div class="expandable-content expandable-hidden" style="display: none;">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    <a class="expandable_target"
+       href="#barebones-content">
+        <span class="expandable_cue-open">
+            Show
+        </span>
+        <span class="expandable_cue-close">
+            Hide
+        </span>
+    </a>
+    <div class="expandable_content" id="barebones-content">
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing
+            elit. Neque ipsa voluptatibus soluta nobis unde quisquam
+            temporibus magnam debitis quidem. Ducimus ratione
+            corporis nesciunt earum vel est quaerat blanditiis
+            dolore ipsa?
+        </p>
+    </div>
+</div>
+</div><br>
+      </div>
+      <div>
+        <div>
+<div class="expandable expandable__expanded">
+    <a class="expandable_target"
+       href="#expanded-by-default-content">
+        <span class="expandable_cue-open">
+            Show
+        </span>
+        <span class="expandable_cue-close">
+            Hide
+        </span>
+    </a>
+    <div class="expandable_content" id="expanded-by-default-content">
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing
+            elit. Neque ipsa voluptatibus soluta nobis unde quisquam
+            temporibus magnam debitis quidem. Ducimus ratione
+            corporis nesciunt earum vel est quaerat blanditiis
+            dolore ipsa?
+        </p>
+    </div>
+</div>
+</div><br>
+      </div>
+    </div>
+    <div id="padded-expandable">
+      <div>
+        <div>
+<div class="expandable expandable__padded">
+    <a class="expandable_target expandable_header"
+       href="#styled-expandable-content">
+        <span class="expandable_label">
+            Expandable Header
+        </span>
+        <span class="expandable_link expandable_header-right">
+            <span class="expandable_cue-open">
+                Show
+                <span class="cf-icon cf-icon-plus-round"></span>
+            </span>
+            <span class="expandable_cue-close">
+                Hide
+                <span class="cf-icon cf-icon-minus-round"></span>
+            </span>
+        </span>
+    </a>
+    <div class="expandable_content" id="styled-expandable-content">
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing
+            elit. Neque ipsa voluptatibus soluta nobis unde quisquam
+            temporibus magnam debitis quidem. Ducimus ratione
+            corporis nesciunt earum vel est quaerat blanditiis
+            dolore ipsa?
+        </p>
     </div>
 </div>
 </div><br>

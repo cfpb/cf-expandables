@@ -1,62 +1,72 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="utf-8">
-  <title>CF Expandables jQuery Plugin Test Suite</title>
-  <link rel="stylesheet" href="../src/vendor/qunit/qunit.css" media="screen">
-  <script src="../src/vendor/jquery/jquery.js"></script>
-  <script src="../src/vendor/qunit/qunit.js"></script>
-  <!-- Load local lib and tests. -->
-  <script src="../src/js/cf-expandables.js"></script>
-  <script src="cf-expandables.js"></script>
-  <!-- Removing access to jQuery and $. But it'll still be available as _$, if
-       you REALLY want to mess around with jQuery in the console. REMEMBER WE
-       ARE TESTING A PLUGIN HERE, THIS HELPS ENSURE BEST PRACTICES. REALLY. -->
-  <script>window._$ = jQuery.noConflict(true);</script>
+    <meta charset="utf-8">
+    <title>CF Expandables jQuery Plugin Test Suite</title>
+    <link rel="stylesheet" href="../demo/static/css/main.css">
+    <link rel="stylesheet" href="../src/vendor/qunit/qunit.css" media="screen">
 </head>
 <body>
 
-  <h1 id="qunit-header">QUnit Test Suite</h1>  
-  <h2 id="qunit-banner"></h2>  
-  <div id="qunit-testrunner-toolbar"></div>  
-  <h2 id="qunit-userAgent"></h2>  
-  <ol id="qunit-tests"></ol>  
+    <div id="qunit"></div>
+    <!--
+         We can't use qunit-fixture in this scenario, more info here:
+         http://stackoverflow.com/questions/16800739/qunit-test-alternates-between-pass-and-fail-on-page-refresh
+     -->
+    <!-- <div id="qunit-fixture"> -->
 
-  <div class="expandable one">
-      <header class="expandable-header">
-          Expandable Header
-          <a href="" class="expandable-button">
-              <span class="expandable-text">Show</span> <i class="icon-plus-sign"></i>
-          </a>
-      </header>
-      <div class="expandable-content expandable-hidden" style="display: none;">
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-          cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-          proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-      </div>
-  </div>
+        <div class="expandable" id="test-subject-one">
+            <a class="expandable_target"
+               href="#barebones-content">
+                <span class="expandable_cue-open">
+                    Show
+                </span>
+                <span class="expandable_cue-close">
+                    Hide
+                </span>
+            </a>
+            <div class="expandable_content" id="barebones-content">
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing
+                    elit. Neque ipsa voluptatibus soluta nobis unde quisquam
+                    temporibus magnam debitis quidem. Ducimus ratione
+                    corporis nesciunt earum vel est quaerat blanditiis
+                    dolore ipsa?
+                </p>
+            </div>
+        </div>
 
-  <div class="expandable two">
-      <header class="expandable-header">
-          Expandable Header
-          <a href="" class="expandable-button">
-              <span class="expandable-text">Show</span> <i class="icon-plus-sign"></i>
-          </a>
-      </header>
-      <div class="expandable-content expandable-hidden" style="display: none;">
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-          cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-          proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-      </div>
-  </div>
+        <div class="expandable expandable__expanded" id="test-subject-two">
+            <a class="expandable_target"
+               href="#expanded-by-default-content">
+                <span class="expandable_cue-open">
+                    Show
+                </span>
+                <span class="expandable_cue-close">
+                    Hide
+                </span>
+            </a>
+            <div class="expandable_content" id="expanded-by-default-content">
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing
+                    elit. Neque ipsa voluptatibus soluta nobis unde quisquam
+                    temporibus magnam debitis quidem. Ducimus ratione
+                    corporis nesciunt earum vel est quaerat blanditiis
+                    dolore ipsa?
+                </p>
+            </div>
+        </div>
 
+    <!-- </div> -->
 
-
+    <script src="../src/vendor/jquery/jquery.js"></script>
+    <script src="../src/vendor/qunit/qunit.js"></script>
+    <!-- Load local lib and tests. -->
+    <script src="../src/js/cf-expandables.js"></script>
+    <script src="cf-expandables.js"></script>
+    <!-- Removing access to jQuery and $. But it'll still be available as _$, if
+    you REALLY want to mess around with jQuery in the console. REMEMBER WE
+    ARE TESTING A PLUGIN HERE, THIS HELPS ENSURE BEST PRACTICES. REALLY. -->
+    <script>window._$ = jQuery.noConflict(true);</script>
 </body>
 </html>
