@@ -1,5 +1,8 @@
 # cf-expandables
 
+[![Bower dependency status](https://www.versioneye.com/user/projects/53459c86e97a46304d00009a/badge.png)](https://www.versioneye.com/user/projects/53459c86e97a46304d00009a)
+[![npm dependency status](https://gemnasium.com/cfpb/cf-expandables.svg)](https://gemnasium.com/cfpb/cf-expandables)
+
 Standard expandable (show/hide) component.
 This component can be used by itself, but it was made for Capital Framework,
 a new front end framework developed at the
