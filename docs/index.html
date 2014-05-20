@@ -10,12 +10,12 @@
     <link rel="stylesheet" type="text/css" href="static/demo/brackets.css">
   </head>
   <body>
-    <div class="wrapper">
+    <div class="demo-wrapper">
       <header class="demo_header">
         <h1 class="h5">cf-expandables docs</h1>
       </header>
       <ul class="demo-component-list">
-        <li id="barebones-expandable" class="demo-component-list_item wrapper">
+        <li id="barebones-expandable" class="demo-component-list_item demo-wrapper">
           <h1 class="demo-component-list_header">Barebones expandable</h1>
           <ul class="demo-pattern-list">
             <li class="demo-pattern-list_item">
@@ -165,7 +165,7 @@
 }</code></pre>
           </div>
         </li>
-        <li id="padded-expandable" class="demo-component-list_item wrapper">
+        <li id="padded-expandable" class="demo-component-list_item demo-wrapper">
           <h1 class="demo-component-list_header">Padded expandable</h1>
           <ul class="demo-pattern-list">
             <li class="demo-pattern-list_item">
@@ -177,7 +177,7 @@
 -----------------------
 .expandable.expandable__padded
   .expandable_target.expandable_header
-    .expandable_label
+    .expandable_label.expandable_header-left
     .expandable_link.expandable_header-right
       .expandable_cue-open
         .cf-icon.cf-icon-plus-round
@@ -256,6 +256,10 @@
           <div class="demo-pattern-css">
             <pre class="css"><code data-language="css">.expandable_header {
   display: block;
+  position: relative;
+}
+.expandable_header-left {
+  float: left;
 }
 .expandable_header-right {
   float: right;

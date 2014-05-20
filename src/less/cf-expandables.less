@@ -152,7 +152,7 @@
           -----------------------
           .expandable.expandable__padded
             .expandable_target.expandable_header
-              .expandable_label
+              .expandable_label.expandable_header-left
               .expandable_link.expandable_header-right
                 .expandable_cue-open
                   .cf-icon.cf-icon-plus-round
@@ -166,13 +166,17 @@
         - "If you need a custom expandable experience first try using a
           combination of the new elements that are used in the padded expandable
           pattern like .expandable_header, expandable_label, expandable_link,
-          and expandable_header-right."
+          expandable_header-left. and expandable_header-right."
     tags:
     - cf-expandables
 */
 
 .expandable_header {
     display: block;
+}
+
+.expandable_header-left {
+    float: left;
 }
 
 .expandable_header-right {
