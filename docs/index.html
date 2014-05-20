@@ -190,14 +190,14 @@
                 </ul>
                 <ul class="demo_notes">
                   <li>The padded expandable is our recommended go-to expandable pattern.</li>
-                  <li>If you need a custom expandable experience first try using a combination of the new elements that are used in the padded expandable pattern like .expandable_header, expandable_label, expandable_link, and expandable_header-right.</li>
+                  <li>If you need a custom expandable experience first try using a combination of the new elements that are used in the padded expandable pattern like .expandable_header, expandable_label, expandable_link, expandable_header-left. and expandable_header-right.</li>
                 </ul>
               </header>
               <section>
 <div class="expandable expandable__padded">
     <a class="expandable_target expandable_header"
        href="#styled-expandable-content">
-        <span class="expandable_label">
+        <span class="expandable_label expandable_header-left">
             Expandable Header
         </span>
         <span class="expandable_link expandable_header-right">
@@ -226,7 +226,7 @@
                 <pre class="html"><code data-language="html">&lt;div class=&quot;expandable expandable__padded&quot;&gt;
     &lt;a class=&quot;expandable_target expandable_header&quot;
        href=&quot;#styled-expandable-content&quot;&gt;
-        &lt;span class=&quot;expandable_label&quot;&gt;
+        &lt;span class=&quot;expandable_label expandable_header-left&quot;&gt;
             Expandable Header
         &lt;/span&gt;
         &lt;span class=&quot;expandable_link expandable_header-right&quot;&gt;
@@ -256,7 +256,7 @@
           <div class="demo-pattern-css">
             <pre class="css"><code data-language="css">.expandable_header {
   display: block;
-  position: relative;
+  overflow: hidden;
 }
 .expandable_header-left {
   float: left;
