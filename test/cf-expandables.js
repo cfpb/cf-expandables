@@ -93,4 +93,30 @@
     }, 900);
   });
 
+  asyncTest('Verify expandables can close after being opened by a click', function() {
+    expect(4);
+    var $expandable = this.$testSubjectOne;
+    // This expandable was opened in the previous test
+    $expandable.find('.expandable_target').trigger('click');
+    setTimeout(function() {
+      ok(
+          !$expandable.find('.expandable_content').is(':visible'),
+          'The content should be collapsed'
+      );
+      ok(
+          $expandable.find('.expandable_cue-open').is(':visible'),
+          'The open cue should be visible'
+      );
+      ok(
+          !$expandable.find('.expandable_cue-close').is(':visible'),
+          'The close cue should be hidden'
+      );
+      ok(
+          ($expandable.find('.expandable_target').attr('aria-pressed') === 'false'),
+          'The target should have an aria-pressed attribute that is false'
+      );
+      start();
+    }, 1800);
+  });
+
 }(jQuery));
