@@ -31,8 +31,8 @@
     expect( 4 );
     ok( !$('.one').find('.expandable_content').is( ':visible' ), 'content should be closed' );
     ok( $('.two').find('.expandable_content').is( ':visible' ), 'content should be open' );
-    ok( $('.one').find('.expandable_button-open').is( ':visible' ), 'open icon should be visible' );
-    ok( $('.two').find('.expandable_button-close').is( ':visible' ), 'close icon should be visible' );
+    ok( $('.one').find('.expandable_cue-open').is( ':visible' ), 'open cue should be visible' );
+    ok( $('.two').find('.expandable_cue-close').is( ':visible' ), 'close cue should be visible' );
   });
 
   asyncTest('Verify modules can open or close', function() {
@@ -45,8 +45,8 @@
       ok( !$('.two').find('.expandable_content').is( ':visible' ), 'content should be closed' );
       ok( $('.one').hasClass('expandable__expanded'), 'expandable should have expanded class' );
       ok( !$('.two').hasClass('expandable__expanded'), 'expandable should not have expanded class' );
-      ok( $('.one').find('.expandable_button-close').is( ':visible' ), 'close icon should be visible' );
-      ok( $('.two').find('.expandable_button-open').is( ':visible' ), 'open icon should be visible' );
+      ok( $('.one').find('.expandable_cue-close').is( ':visible' ), 'close cue should be visible' );
+      ok( $('.two').find('.expandable_cue-open').is( ':visible' ), 'open cue should be visible' );
       start();
     }, 900);
   });
@@ -61,8 +61,8 @@
       ok( $('.two').find('.expandable_content').is( ':visible' ), 'content should be visible' );
       ok( !$('.one').hasClass('expandable__expanded'), 'expandable should not have expanded class' );
       ok( $('.two').hasClass('expandable__expanded'), 'expandable should have expanded class' );
-      ok( $('.one').find('.expandable_button-open').is( ':visible' ), 'open icon should be visible' );
-      ok( $('.two').find('.expandable_button-close').is( ':visible' ), 'close icon should be visible' );
+      ok( $('.one').find('.expandable_cue-open').is( ':visible' ), 'open cue should be visible' );
+      ok( $('.two').find('.expandable_cue-close').is( ':visible' ), 'close cue should be visible' );
       start();
     }, 900);
   });

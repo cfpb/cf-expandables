@@ -24,13 +24,13 @@
               </header>
               <section>
 <div class="expandable">
-    <header class="expandable_header">
+    <header class="expandable_header expandable_target">
         Expandable Header
-        <span class="expandable_button expandable_button-open expandable_target">
+        <span class="expandable_button expandable_cue-open">
             Show
             <i class="icon-plus-sign"></i>
         </span>
-        <span class="expandable_button expandable_button-close expandable_target">
+        <span class="expandable_button expandable_cue-close expandable_target">
             Hide
             <i class="icon-minus-sign"></i>
         </span>
@@ -47,13 +47,13 @@
 </section>
               <footer class="demo-pattern-list_footer">
                 <pre class="html"><code data-language="html">&lt;div class=&quot;expandable&quot;&gt;
-    &lt;header class=&quot;expandable_header&quot;&gt;
+    &lt;header class=&quot;expandable_header expandable_target&quot;&gt;
         Expandable Header
-        &lt;span class=&quot;expandable_button expandable_button-open expandable_target&quot;&gt;
+        &lt;span class=&quot;expandable_button expandable_cue-open&quot;&gt;
             Show
             &lt;i class=&quot;icon-plus-sign&quot;&gt;&lt;/i&gt;
         &lt;/span&gt;
-        &lt;span class=&quot;expandable_button expandable_button-close expandable_target&quot;&gt;
+        &lt;span class=&quot;expandable_button expandable_cue-close expandable_target&quot;&gt;
             Hide
             &lt;i class=&quot;icon-minus-sign&quot;&gt;&lt;/i&gt;
         &lt;/span&gt;
@@ -75,8 +75,20 @@
   margin-bottom: 1.375em;
   background: #f1f2f2;
 }
+.expandable_content {
+  padding: 0 0.75em 0.25em;
+}
 .expandable_target {
   cursor: pointer;
+}
+.expandable_cue-close {
+  display: none;
+}
+.expandable__expanded .expandable_cue-open {
+  display: none;
+}
+.expandable__expanded .expandable_cue-close {
+  display: inline;
 }
 .expandable:hover,
 .expandable__open {
@@ -98,18 +110,6 @@
   font-weight: normal;
   font-size: 0.875em;
   line-height: 1.57142857;
-}
-.expandable_button-close {
-  display: none;
-}
-.expandable__expanded .expandable_button-open {
-  display: none;
-}
-.expandable__expanded .expandable_button-close {
-  display: inline;
-}
-.expandable_content {
-  padding: 0 0.75em 0.25em;
 }</code></pre>
           </div>
         </li>

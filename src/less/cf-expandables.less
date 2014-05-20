@@ -11,13 +11,13 @@
     - name: Default state
       markup: |
         <div class="expandable">
-            <header class="expandable_header">
+            <header class="expandable_header expandable_target">
                 Expandable Header
-                <span class="expandable_button expandable_button-open expandable_target">
+                <span class="expandable_button expandable_cue-open">
                     Show
                     <i class="icon-plus-sign"></i>
                 </span>
-                <span class="expandable_button expandable_button-close expandable_target">
+                <span class="expandable_button expandable_cue-close expandable_target">
                     Hide
                     <i class="icon-minus-sign"></i>
                 </span>
@@ -40,8 +40,25 @@
     background: @gray-10;
 }
 
+.expandable_content {
+    padding: 0 0.75em 0.25em;
+}
+
 .expandable_target {
     cursor: pointer;
+}
+
+.expandable_cue-close {
+    display: none;
+}
+
+.expandable__expanded {
+    .expandable_cue-open {
+        display: none;
+    }
+    .expandable_cue-close {
+        display: inline;
+    }
 }
 
 .expandable:hover,
@@ -64,22 +81,6 @@
     line-height: unit(@base-line-height-px / @btn-font-size);
 }
 
-.expandable_button-close {
-    display: none;
-}
-
-.expandable__expanded {
-    .expandable_button-open {
-        display: none;
-    }
-    .expandable_button-close {
-        display: inline;
-    }
-}
-
-.expandable_content {
-    padding: 0 0.75em 0.25em;
-}
 
 /* topdoc
   name: EOF
