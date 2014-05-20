@@ -15,26 +15,37 @@
         <h1 class="h5">cf-expandables docs</h1>
       </header>
       <ul class="demo-component-list">
-        <li id="default-expandable" class="demo-component-list_item wrapper">
-          <h1 class="demo-component-list_header">Default expandable</h1>
+        <li id="barebones-expandable" class="demo-component-list_item wrapper">
+          <h1 class="demo-component-list_header">Barebones expandable</h1>
           <ul class="demo-pattern-list">
             <li class="demo-pattern-list_item">
               <header class="demo-pattern-list_header">
-                <h3>Default state</h3>
+                <h3>Default barebones expandable pattern</h3>
+                <ul class="demo_codenotes">
+                  <li>
+                    <pre class="code"><code>Structural cheat sheet:
+-----------------------
+.expandable
+  .expandable_target
+    .expandable_cue-open
+    .expandable_cue-close
+  .expandable_content</code></pre>
+                  </li>
+                </ul>
+                <ul class="demo_notes">
+                  <li>This is a barebones expandable pattern which our official recommended expandable is based off of. Please only use this is if you need a custom expandable experience.</li>
+                </ul>
               </header>
               <section>
 <div class="expandable">
-    <header class="expandable_header expandable_target">
-        Expandable Header
-        <span class="expandable_button expandable_cue-open">
+    <span class="expandable_target">
+        <span class="expandable_cue-open">
             Show
-            <i class="icon-plus-sign"></i>
         </span>
-        <span class="expandable_button expandable_cue-close">
+        <span class="expandable_cue-close">
             Hide
-            <i class="icon-minus-sign"></i>
         </span>
-    </header>
+    </span>
     <div class="expandable_content">
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
@@ -47,17 +58,73 @@
 </section>
               <footer class="demo-pattern-list_footer">
                 <pre class="html"><code data-language="html">&lt;div class=&quot;expandable&quot;&gt;
-    &lt;header class=&quot;expandable_header expandable_target&quot;&gt;
-        Expandable Header
-        &lt;span class=&quot;expandable_button expandable_cue-open&quot;&gt;
+    &lt;span class=&quot;expandable_target&quot;&gt;
+        &lt;span class=&quot;expandable_cue-open&quot;&gt;
             Show
-            &lt;i class=&quot;icon-plus-sign&quot;&gt;&lt;/i&gt;
         &lt;/span&gt;
-        &lt;span class=&quot;expandable_button expandable_cue-close&quot;&gt;
+        &lt;span class=&quot;expandable_cue-close&quot;&gt;
             Hide
-            &lt;i class=&quot;icon-minus-sign&quot;&gt;&lt;/i&gt;
         &lt;/span&gt;
-    &lt;/header&gt;
+    &lt;/span&gt;
+    &lt;div class=&quot;expandable_content&quot;&gt;
+        &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+              </footer>
+            </li>
+            <li class="demo-pattern-list_item">
+              <header class="demo-pattern-list_header">
+                <h3>Expandable that is open by default</h3>
+                <ul class="demo_codenotes">
+                  <li>
+                    <pre class="code"><code>Structural cheat sheet:
+-----------------------
+.expandable.expandable__expanded
+  .expandable_target
+    .expandable_cue-open
+    .expandable_cue-close
+  .expandable_content</code></pre>
+                  </li>
+                </ul>
+                <ul class="demo_notes">
+                  <li>Simply add the .expandable__expanded modifier to .expanded.</li>
+                </ul>
+              </header>
+              <section>
+<div class="expandable expandable__expanded">
+    <span class="expandable_target">
+        <span class="expandable_cue-open">
+            Show
+        </span>
+        <span class="expandable_cue-close">
+            Hide
+        </span>
+    </span>
+    <div class="expandable_content">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </div>
+</div>
+</section>
+              <footer class="demo-pattern-list_footer">
+                <pre class="html"><code data-language="html">&lt;div class=&quot;expandable expandable__expanded&quot;&gt;
+    &lt;span class=&quot;expandable_target&quot;&gt;
+        &lt;span class=&quot;expandable_cue-open&quot;&gt;
+            Show
+        &lt;/span&gt;
+        &lt;span class=&quot;expandable_cue-close&quot;&gt;
+            Hide
+        &lt;/span&gt;
+    &lt;/span&gt;
     &lt;div class=&quot;expandable_content&quot;&gt;
         &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
@@ -71,14 +138,7 @@
             </li>
           </ul>
           <div class="demo-pattern-css">
-            <pre class="css"><code data-language="css">.expandable {
-  margin-bottom: 1.375em;
-  background: #f1f2f2;
-}
-.expandable_content {
-  padding: 0 0.75em 0.25em;
-}
-.expandable_target {
+            <pre class="css"><code data-language="css">.expandable_target {
   cursor: pointer;
 }
 .expandable_cue-close {
@@ -90,26 +150,8 @@
 .expandable__expanded .expandable_cue-close {
   display: inline;
 }
-.expandable:hover,
-.expandable__open {
-  background: #e3e4e5;
-}
-.expandable_header {
-  padding: 0.625em 0.75em;
-  font-family: &quot;Avenir Next Medium&quot;, Arial, sans-serif;
-  font-style: normal;
-  font-weight: 500;
-}
-.expandable_button {
-  margin: 0;
-  border-width: 0;
-  float: right;
-  color: #0072ce;
-  font-family: &quot;Avenir Next&quot;, Arial, sans-serif;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 0.875em;
-  line-height: 1.57142857;
+.expandable_content {
+  overflow: hidden;
 }</code></pre>
           </div>
         </li>

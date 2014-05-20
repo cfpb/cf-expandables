@@ -27,44 +27,36 @@
     }
   });
 
-  test('Verify initial state', function() {
-    expect( 4 );
-    ok( !$('.one').find('.expandable_content').is( ':visible' ), 'content should be closed' );
-    ok( $('.two').find('.expandable_content').is( ':visible' ), 'content should be open' );
-    ok( $('.one').find('.expandable_cue-open').is( ':visible' ), 'open cue should be visible' );
-    ok( $('.two').find('.expandable_cue-close').is( ':visible' ), 'close cue should be visible' );
+  test('Verify initial default collapsed state', function() {
+    expect(3);
+    ok(
+        !$('#test-subject-one .expandable_content').is(':visible'),
+        'The content should be collapsed'
+    );
+    ok(
+        $('#test-subject-one .expandable_cue-open').is(':visible'),
+        'The open cue should be visible'
+    );
+    ok(
+        !$('#test-subject-one .expandable_cue-close').is(':visible'),
+        'The close cue should be hidden'
+    );
   });
 
-  asyncTest('Verify modules can open or close', function() {
-    expect( 6 );
-    this.$expandables.each(function(){
-      $( this ).find('.expandable_target').click();
-    });
-    setTimeout(function() {
-      ok( $('.one').find('.expandable_content').is( ':visible' ), 'content should be visible' );
-      ok( !$('.two').find('.expandable_content').is( ':visible' ), 'content should be closed' );
-      ok( $('.one').hasClass('expandable__expanded'), 'expandable should have expanded class' );
-      ok( !$('.two').hasClass('expandable__expanded'), 'expandable should not have expanded class' );
-      ok( $('.one').find('.expandable_cue-close').is( ':visible' ), 'close cue should be visible' );
-      ok( $('.two').find('.expandable_cue-open').is( ':visible' ), 'open cue should be visible' );
-      start();
-    }, 900);
-  });
-
-  asyncTest('Verify modules can toggle', function() {
-    expect( 6 );
-    this.$expandables.each(function(){
-      $( this ).find('.expandable_target').click();
-    });
-    setTimeout(function() {
-      ok( !$('.one').find('.expandable_content').is( ':visible' ), 'content should be closed' );
-      ok( $('.two').find('.expandable_content').is( ':visible' ), 'content should be visible' );
-      ok( !$('.one').hasClass('expandable__expanded'), 'expandable should not have expanded class' );
-      ok( $('.two').hasClass('expandable__expanded'), 'expandable should have expanded class' );
-      ok( $('.one').find('.expandable_cue-open').is( ':visible' ), 'open cue should be visible' );
-      ok( $('.two').find('.expandable_cue-close').is( ':visible' ), 'close cue should be visible' );
-      start();
-    }, 900);
+  test('Verify initial state when using the expanded modifier', function() {
+    expect(3);
+    ok(
+        $('#test-subject-two .expandable_content').is(':visible'),
+        'The content should be expanded'
+    );
+    ok(
+        $('#test-subject-two .expandable_cue-close').is(':visible'),
+        'The close cue should be visible'
+    );
+    ok(
+        !$('#test-subject-two .expandable_cue-open').is(':visible'),
+        'The open cue should be hidden'
+    );
   });
 
 }(jQuery));
