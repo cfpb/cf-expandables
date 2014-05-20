@@ -119,4 +119,55 @@
     }, 1800);
   });
 
+  asyncTest('Verify expandables can close after being open by default', function() {
+    expect(4);
+    var $expandable = this.$testSubjectTwo;
+    $expandable.find('.expandable_target').trigger('click');
+    setTimeout(function() {
+      ok(
+          !$expandable.find('.expandable_content').is(':visible'),
+          'The content should be collapsed'
+      );
+      ok(
+          $expandable.find('.expandable_cue-open').is(':visible'),
+          'The open cue should be visible'
+      );
+      ok(
+          !$expandable.find('.expandable_cue-close').is(':visible'),
+          'The close cue should be hidden'
+      );
+      ok(
+          ($expandable.find('.expandable_target').attr('aria-pressed') === 'false'),
+          'The target should have an aria-pressed attribute that is false'
+      );
+      start();
+    }, 900);
+  });
+
+  asyncTest('Verify expandables can open after being closed by a click', function() {
+    expect(4);
+    var $expandable = this.$testSubjectTwo;
+    // This expandable was opened in the previous test
+    $expandable.find('.expandable_target').trigger('click');
+    setTimeout(function() {
+      ok(
+          $expandable.find('.expandable_content').is(':visible'),
+          'The content should no longer be collapsed'
+      );
+      ok(
+          $expandable.find('.expandable_cue-close').is(':visible'),
+          'The close cue should be visible'
+      );
+      ok(
+          !$expandable.find('.expandable_cue-open').is(':visible'),
+          'The open cue should be hidden'
+      );
+      ok(
+          ($expandable.find('.expandable_target').attr('aria-pressed') === 'true'),
+          'The target should have an aria-pressed attribute that is true'
+      );
+      start();
+    }, 1800);
+  });
+
 }(jQuery));
