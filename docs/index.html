@@ -10,12 +10,12 @@
     <link rel="stylesheet" type="text/css" href="static/demo/brackets.css">
   </head>
   <body>
-    <div class="wrapper">
+    <div class="demo-wrapper">
       <header class="demo_header">
         <h1 class="h5">cf-expandables docs</h1>
       </header>
       <ul class="demo-component-list">
-        <li id="barebones-expandable" class="demo-component-list_item wrapper">
+        <li id="barebones-expandable" class="demo-component-list_item demo-wrapper">
           <h1 class="demo-component-list_header">Barebones expandable</h1>
           <ul class="demo-pattern-list">
             <li class="demo-pattern-list_item">
@@ -165,7 +165,7 @@
 }</code></pre>
           </div>
         </li>
-        <li id="padded-expandable" class="demo-component-list_item wrapper">
+        <li id="padded-expandable" class="demo-component-list_item demo-wrapper">
           <h1 class="demo-component-list_header">Padded expandable</h1>
           <ul class="demo-pattern-list">
             <li class="demo-pattern-list_item">
@@ -177,7 +177,7 @@
 -----------------------
 .expandable.expandable__padded
   .expandable_target.expandable_header
-    .expandable_label
+    .expandable_label.expandable_header-left
     .expandable_link.expandable_header-right
       .expandable_cue-open
         .cf-icon.cf-icon-plus-round
@@ -190,14 +190,14 @@
                 </ul>
                 <ul class="demo_notes">
                   <li>The padded expandable is our recommended go-to expandable pattern.</li>
-                  <li>If you need a custom expandable experience first try using a combination of the new elements that are used in the padded expandable pattern like .expandable_header, expandable_label, expandable_link, and expandable_header-right.</li>
+                  <li>If you need a custom expandable experience first try using a combination of the new elements that are used in the padded expandable pattern like .expandable_header, expandable_label, expandable_link, expandable_header-left. and expandable_header-right.</li>
                 </ul>
               </header>
               <section>
 <div class="expandable expandable__padded">
     <a class="expandable_target expandable_header"
        href="#styled-expandable-content">
-        <span class="expandable_label">
+        <span class="expandable_label expandable_header-left">
             Expandable Header
         </span>
         <span class="expandable_link expandable_header-right">
@@ -226,7 +226,7 @@
                 <pre class="html"><code data-language="html">&lt;div class=&quot;expandable expandable__padded&quot;&gt;
     &lt;a class=&quot;expandable_target expandable_header&quot;
        href=&quot;#styled-expandable-content&quot;&gt;
-        &lt;span class=&quot;expandable_label&quot;&gt;
+        &lt;span class=&quot;expandable_label expandable_header-left&quot;&gt;
             Expandable Header
         &lt;/span&gt;
         &lt;span class=&quot;expandable_link expandable_header-right&quot;&gt;
@@ -256,6 +256,10 @@
           <div class="demo-pattern-css">
             <pre class="css"><code data-language="css">.expandable_header {
   display: block;
+  overflow: hidden;
+}
+.expandable_header-left {
+  float: left;
 }
 .expandable_header-right {
   float: right;
