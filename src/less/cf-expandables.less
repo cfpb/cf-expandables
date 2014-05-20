@@ -13,11 +13,11 @@
         <div class="expandable">
             <header class="expandable_header">
                 Expandable Header
-                <span class="expandable_button expandable_button-open">
+                <span class="expandable_button expandable_button-open expandable_target">
                     Show
                     <i class="icon-plus-sign"></i>
                 </span>
-                <span class="expandable_button expandable_button-close">
+                <span class="expandable_button expandable_button-close expandable_target">
                     Hide
                     <i class="icon-minus-sign"></i>
                 </span>
@@ -38,7 +38,10 @@
 .expandable {
     margin-bottom: unit(@base-line-height, em);
     background: @gray-10;
+}
 
+.expandable_target {
+    cursor: pointer;
 }
 
 .expandable:hover,
@@ -49,7 +52,6 @@
 .expandable_header {
     padding: 0.625em 0.75em;
     .webfont-medium;
-    cursor: pointer;
 }
 
 .expandable_button {

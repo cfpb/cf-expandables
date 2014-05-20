@@ -10304,7 +10304,7 @@ return jQuery;
       $('.expandable').each(function(){
 
         var $this = $( this ),
-            $header = $this.find('.expandable_header'),
+            $target = $this.find('.expandable_target'),
             $content = $this.find('.expandable_content');
 
         if ($this.hasClass('expandable__expanded')) {
@@ -10313,7 +10313,7 @@ return jQuery;
             $content.css('display','none');
         }
 
-        $header.on( 'click', function( ev ){
+        $target.on( 'click', function( ev ){
 
           ev.preventDefault();
           ev.stopPropagation();

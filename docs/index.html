@@ -26,11 +26,11 @@
 <div class="expandable">
     <header class="expandable_header">
         Expandable Header
-        <span class="expandable_button expandable_button-open">
+        <span class="expandable_button expandable_button-open expandable_target">
             Show
             <i class="icon-plus-sign"></i>
         </span>
-        <span class="expandable_button expandable_button-close">
+        <span class="expandable_button expandable_button-close expandable_target">
             Hide
             <i class="icon-minus-sign"></i>
         </span>
@@ -49,11 +49,11 @@
                 <pre class="html"><code data-language="html">&lt;div class=&quot;expandable&quot;&gt;
     &lt;header class=&quot;expandable_header&quot;&gt;
         Expandable Header
-        &lt;span class=&quot;expandable_button expandable_button-open&quot;&gt;
+        &lt;span class=&quot;expandable_button expandable_button-open expandable_target&quot;&gt;
             Show
             &lt;i class=&quot;icon-plus-sign&quot;&gt;&lt;/i&gt;
         &lt;/span&gt;
-        &lt;span class=&quot;expandable_button expandable_button-close&quot;&gt;
+        &lt;span class=&quot;expandable_button expandable_button-close expandable_target&quot;&gt;
             Hide
             &lt;i class=&quot;icon-minus-sign&quot;&gt;&lt;/i&gt;
         &lt;/span&gt;
@@ -75,6 +75,9 @@
   margin-bottom: 1.375em;
   background: #f1f2f2;
 }
+.expandable_target {
+  cursor: pointer;
+}
 .expandable:hover,
 .expandable__open {
   background: #e3e4e5;
@@ -84,7 +87,6 @@
   font-family: &quot;Avenir Next Medium&quot;, Arial, sans-serif;
   font-style: normal;
   font-weight: 500;
-  cursor: pointer;
 }
 .expandable_button {
   margin: 0;

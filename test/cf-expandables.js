@@ -38,7 +38,7 @@
   asyncTest('Verify modules can open or close', function() {
     expect( 6 );
     this.$expandables.each(function(){
-      $( this ).find('.expandable_header').click();
+      $( this ).find('.expandable_target').click();
     });
     setTimeout(function() {
       ok( $('.one').find('.expandable_content').is( ':visible' ), 'content should be visible' );
@@ -54,7 +54,7 @@
   asyncTest('Verify modules can toggle', function() {
     expect( 6 );
     this.$expandables.each(function(){
-      $( this ).find('.expandable_header').click();
+      $( this ).find('.expandable_target').click();
     });
     setTimeout(function() {
       ok( !$('.one').find('.expandable_content').is( ':visible' ), 'content should be closed' );
