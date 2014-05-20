@@ -16,8 +16,10 @@
 
         if ($this.hasClass('expandable__expanded')) {
             $content.css('display','block');
+            $target.attr('aria-pressed','true');
         } else {
             $content.css('display','none');
+            $target.attr('aria-pressed','false');
         }
 
         $target.on( 'click', function( ev ){
@@ -25,6 +27,11 @@
           ev.preventDefault();
           ev.stopPropagation();
 
+          if ($target.attr('aria-pressed') === 'true') {
+            $target.attr('aria-pressed','false');
+          } else {
+            $target.attr('aria-pressed','true');
+          }
           $this.toggleClass('expandable__expanded');
           $content.slideToggle();
 

@@ -103,7 +103,7 @@ module.exports = function(grunt) {
    * Create custom task aliases for our component build workflow.
    */
   grunt.registerTask('test', ['jshint', 'connect', 'qunit']);
-  grunt.registerTask('vendor', ['bower', 'copy:component_assets', 'copy:docs_assets', 'concat']);
-  grunt.registerTask('default', ['concat', 'less', 'string-replace', 'autoprefixer', 'uglify', 'test', 'copy:docs', 'topdoc']);
+  grunt.registerTask('vendor', ['bower', 'copy:component_assets', 'copy:docs_assets', 'concat:main', 'concat:bodyScripts']);
+  grunt.registerTask('default', ['concat:main', 'concat:bodyScripts', 'less', 'autoprefixer', 'uglify', 'test', 'copy:docs', 'topdoc']);
 
 };

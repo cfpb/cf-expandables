@@ -28,7 +28,7 @@
   });
 
   test('Verify initial default collapsed state', function() {
-    expect(3);
+    expect(4);
     ok(
         !$('#test-subject-one .expandable_content').is(':visible'),
         'The content should be collapsed'
@@ -41,10 +41,14 @@
         !$('#test-subject-one .expandable_cue-close').is(':visible'),
         'The close cue should be hidden'
     );
+    ok(
+        ($('#test-subject-one .expandable_target').attr('aria-pressed') === 'false'),
+        'The target should have an aria-pressed attribute that is false'
+    );
   });
 
   test('Verify initial state when using the expanded modifier', function() {
-    expect(3);
+    expect(4);
     ok(
         $('#test-subject-two .expandable_content').is(':visible'),
         'The content should be expanded'
@@ -56,6 +60,10 @@
     ok(
         !$('#test-subject-two .expandable_cue-open').is(':visible'),
         'The open cue should be hidden'
+    );
+    ok(
+        ($('#test-subject-two .expandable_target').attr('aria-pressed') === 'true'),
+        'The target should have an aria-pressed attribute that is true'
     );
   });
 
