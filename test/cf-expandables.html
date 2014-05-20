@@ -9,43 +9,55 @@
 <body>
 
     <div id="qunit"></div>
-    <div id="qunit-fixture">
+    <!--
+         We can't use qunit-fixture in this scenario, more info here:
+         http://stackoverflow.com/questions/16800739/qunit-test-alternates-between-pass-and-fail-on-page-refresh
+     -->
+    <!-- <div id="qunit-fixture"> -->
 
         <div class="expandable" id="test-subject-one">
-            <span class="expandable_target expandable_cue-open">
-                Show
-            </span>
-            <span class="expandable_target expandable_cue-close">
-                Hide
-            </span>
-            <div class="expandable_content">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <a class="expandable_target"
+               href="#barebones-content">
+                <span class="expandable_cue-open">
+                    Show
+                </span>
+                <span class="expandable_cue-close">
+                    Hide
+                </span>
+            </a>
+            <div class="expandable_content" id="barebones-content">
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing
+                    elit. Neque ipsa voluptatibus soluta nobis unde quisquam
+                    temporibus magnam debitis quidem. Ducimus ratione
+                    corporis nesciunt earum vel est quaerat blanditiis
+                    dolore ipsa?
+                </p>
             </div>
         </div>
 
         <div class="expandable expandable__expanded" id="test-subject-two">
-            <span class="expandable_target expandable_cue-open">
-                Show
-            </span>
-            <span class="expandable_target expandable_cue-close">
-                Hide
-            </span>
-            <div class="expandable_content">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <a class="expandable_target"
+               href="#expanded-by-default-content">
+                <span class="expandable_cue-open">
+                    Show
+                </span>
+                <span class="expandable_cue-close">
+                    Hide
+                </span>
+            </a>
+            <div class="expandable_content" id="expanded-by-default-content">
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing
+                    elit. Neque ipsa voluptatibus soluta nobis unde quisquam
+                    temporibus magnam debitis quidem. Ducimus ratione
+                    corporis nesciunt earum vel est quaerat blanditiis
+                    dolore ipsa?
+                </p>
             </div>
         </div>
 
-    </div>
+    <!-- </div> -->
 
     <script src="../src/vendor/jquery/jquery.js"></script>
     <script src="../src/vendor/qunit/qunit.js"></script>
