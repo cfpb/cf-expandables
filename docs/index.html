@@ -148,7 +148,10 @@
             </li>
           </ul>
           <div class="demo-pattern-css">
-            <pre class="css"><code data-language="css">.expandable_target {
+            <pre class="css"><code data-language="css">.expandable {
+  margin-bottom: 1.875em;
+}
+.expandable_target {
   cursor: pointer;
 }
 .expandable_cue-close {
@@ -162,6 +165,228 @@
 }
 .expandable_content {
   overflow: hidden;
+}</code></pre>
+          </div>
+        </li>
+        <li id="expandable-header" class="demo-component-list_item demo-wrapper">
+          <h1 class="demo-component-list_header">Expandable header</h1>
+          <ul class="demo-pattern-list">
+            <li class="demo-pattern-list_item">
+              <header class="demo-pattern-list_header">
+                <h3>Basic expandable header example</h3>
+                <ul class="demo_codenotes">
+                  <li>
+                    <pre class="code"><code>Structural cheat sheet:
+-----------------------
+.expandable_header
+  .expandable_header-left
+  .expandable_header-right</code></pre>
+                  </li>
+                </ul>
+                <ul class="demo_notes">
+                  <li>.expandable_header is good when you need an .expandable_target with information on the left and right.</li>
+                </ul>
+              </header>
+              <section>
+<div class="expandable_header">
+    <span class="expandable_header-left">
+        <a class="expandable_target"
+           href="#expanded-by-default-content">
+            <span class="expandable_cue-open">
+                Show
+            </span>
+            <span class="expandable_cue-close">
+                Hide
+            </span>
+        </a>
+    </span>
+    <span class="expandable_header-right">
+        <em>Now you can put some info on the right.</em>
+    </span>
+</div>
+</section>
+              <footer class="demo-pattern-list_footer">
+                <pre class="html"><code data-language="html">&lt;div class=&quot;expandable_header&quot;&gt;
+    &lt;span class=&quot;expandable_header-left&quot;&gt;
+        &lt;a class=&quot;expandable_target&quot;
+           href=&quot;#expanded-by-default-content&quot;&gt;
+            &lt;span class=&quot;expandable_cue-open&quot;&gt;
+                Show
+            &lt;/span&gt;
+            &lt;span class=&quot;expandable_cue-close&quot;&gt;
+                Hide
+            &lt;/span&gt;
+        &lt;/a&gt;
+    &lt;/span&gt;
+    &lt;span class=&quot;expandable_header-right&quot;&gt;
+        &lt;em&gt;Now you can put some info on the right.&lt;/em&gt;
+    &lt;/span&gt;
+&lt;/div&gt;</code></pre>
+              </footer>
+            </li>
+            <li class="demo-pattern-list_item">
+              <header class="demo-pattern-list_header">
+                <h3>Expandable header modifier: spaced</h3>
+                <ul class="demo_codenotes">
+                  <li>
+                    <pre class="code"><code>Structural cheat sheet:
+-----------------------
+.expandable_header.expandable_header__spaced</code></pre>
+                  </li>
+                </ul>
+                <ul class="demo_notes">
+                  <li>Adds some margin underneath .expandable_header.</li>
+                </ul>
+              </header>
+              <section>
+<div class="expandable_header expandable_header__spaced">
+    <a class="expandable_target"
+       href="#expanded-by-default-content">
+        <span class="expandable_cue-open">
+            Show
+        </span>
+        <span class="expandable_cue-close">
+            Hide
+        </span>
+    </a>
+</div>
+<div class="expandable_content" id="header-spaced-expandable-content"
+     style="background-color:#ccc;">
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing
+        elit. Neque ipsa voluptatibus soluta nobis unde quisquam
+        temporibus magnam debitis quidem. Ducimus ratione
+        corporis nesciunt earum vel est quaerat blanditiis
+        dolore ipsa?
+    </p>
+</div>
+</section>
+              <footer class="demo-pattern-list_footer">
+                <pre class="html"><code data-language="html">&lt;div class=&quot;expandable_header expandable_header__spaced&quot;&gt;
+    &lt;a class=&quot;expandable_target&quot;
+       href=&quot;#expanded-by-default-content&quot;&gt;
+        &lt;span class=&quot;expandable_cue-open&quot;&gt;
+            Show
+        &lt;/span&gt;
+        &lt;span class=&quot;expandable_cue-close&quot;&gt;
+            Hide
+        &lt;/span&gt;
+    &lt;/a&gt;
+&lt;/div&gt;
+&lt;div class=&quot;expandable_content&quot; id=&quot;header-spaced-expandable-content&quot;
+     style=&quot;background-color:#ccc;&quot;&gt;
+    &lt;p&gt;
+        Lorem ipsum dolor sit amet, consectetur adipisicing
+        elit. Neque ipsa voluptatibus soluta nobis unde quisquam
+        temporibus magnam debitis quidem. Ducimus ratione
+        corporis nesciunt earum vel est quaerat blanditiis
+        dolore ipsa?
+    &lt;/p&gt;
+&lt;/div&gt;</code></pre>
+              </footer>
+            </li>
+          </ul>
+          <div class="demo-pattern-css">
+            <pre class="css"><code data-language="css">.expandable_header {
+  display: block;
+  overflow: hidden;
+}
+.expandable_header__spaced {
+  margin-bottom: 0.9375em;
+}
+.expandable_header-left {
+  float: left;
+}
+.expandable_header-right {
+  float: right;
+}</code></pre>
+          </div>
+        </li>
+        <li id="expandable-text-elements" class="demo-component-list_item demo-wrapper">
+          <h1 class="demo-component-list_header">Expandable text elements</h1>
+          <ul class="demo-pattern-list">
+            <li class="demo-pattern-list_item">
+              <header class="demo-pattern-list_header">
+                <h3>Expandable label</h3>
+              </header>
+              <section>
+<span class="expandable_label">
+    Expandable Header
+</span>
+</section>
+              <footer class="demo-pattern-list_footer">
+                <pre class="html"><code data-language="html">&lt;span class=&quot;expandable_label&quot;&gt;
+    Expandable Header
+&lt;/span&gt;</code></pre>
+              </footer>
+            </li>
+            <li class="demo-pattern-list_item">
+              <header class="demo-pattern-list_header">
+                <h3>Expandable link</h3>
+              </header>
+              <section>
+<a href="#" class="expandable_link">
+    <span class="expandable_cue-open">
+        Show
+        <span class="cf-icon cf-icon-plus-round"></span>
+    </span>
+    <span class="expandable_cue-close">
+        Hide
+        <span class="cf-icon cf-icon-minus-round"></span>
+    </span>
+</a>
+</section>
+              <footer class="demo-pattern-list_footer">
+                <pre class="html"><code data-language="html">&lt;a href=&quot;#&quot; class=&quot;expandable_link&quot;&gt;
+    &lt;span class=&quot;expandable_cue-open&quot;&gt;
+        Show
+        &lt;span class=&quot;cf-icon cf-icon-plus-round&quot;&gt;&lt;/span&gt;
+    &lt;/span&gt;
+    &lt;span class=&quot;expandable_cue-close&quot;&gt;
+        Hide
+        &lt;span class=&quot;cf-icon cf-icon-minus-round&quot;&gt;&lt;/span&gt;
+    &lt;/span&gt;
+&lt;/a&gt;</code></pre>
+              </footer>
+            </li>
+          </ul>
+          <div class="demo-pattern-css">
+            <pre class="css"><code data-language="css">.expandable_label {
+  color: #101820;
+  font-family: &quot;AvenirNextLTW01-Medium&quot;, Arial, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+}
+.lt-ie9 .expandable_label {
+  font-weight: normal !important;
+}
+.expandable_link {
+  color: #0072ce;
+  font-family: &quot;AvenirNextLTW01-Regular&quot;, Arial, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 0.875em;
+  line-height: 1.57142857;
+}
+.expandable_link em,
+.expandable_link i {
+  font-family: &quot;AvenirNextLTW01-Italic&quot;, Arial, sans-serif;
+  font-style: italic;
+  font-weight: normal;
+}
+.lt-ie9 .expandable_link em,
+.lt-ie9 .expandable_link i {
+  font-style: normal !important;
+}
+.expandable_link strong,
+.expandable_link b {
+  font-family: &quot;AvenirNextLTW01-Demi&quot;, Arial, sans-serif;
+  font-style: normal;
+  font-weight: bold;
+}
+.lt-ie9 .expandable_link strong,
+.lt-ie9 .expandable_link b {
+  font-weight: normal !important;
 }</code></pre>
           </div>
         </li>
@@ -254,54 +479,7 @@
             </li>
           </ul>
           <div class="demo-pattern-css">
-            <pre class="css"><code data-language="css">.expandable_header {
-  display: block;
-  overflow: hidden;
-}
-.expandable_header-left {
-  float: left;
-}
-.expandable_header-right {
-  float: right;
-}
-.expandable_label {
-  color: #101820;
-  font-family: &quot;AvenirNextLTW01-Medium&quot;, Arial, sans-serif;
-  font-style: normal;
-  font-weight: 500;
-}
-.lt-ie9 .expandable_label {
-  font-weight: normal !important;
-}
-.expandable_link {
-  color: #0072ce;
-  font-family: &quot;AvenirNextLTW01-Regular&quot;, Arial, sans-serif;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 0.875em;
-  line-height: 1.57142857;
-}
-.expandable_link em,
-.expandable_link i {
-  font-family: &quot;AvenirNextLTW01-Italic&quot;, Arial, sans-serif;
-  font-style: italic;
-  font-weight: normal;
-}
-.lt-ie9 .expandable_link em,
-.lt-ie9 .expandable_link i {
-  font-style: normal !important;
-}
-.expandable_link strong,
-.expandable_link b {
-  font-family: &quot;AvenirNextLTW01-Demi&quot;, Arial, sans-serif;
-  font-style: normal;
-  font-weight: bold;
-}
-.lt-ie9 .expandable_link strong,
-.lt-ie9 .expandable_link b {
-  font-weight: normal !important;
-}
-.expandable__padded {
+            <pre class="css"><code data-language="css">.expandable__padded {
   margin-bottom: 1.875em;
   background: #f1f2f2;
 }
