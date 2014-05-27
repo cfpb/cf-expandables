@@ -568,7 +568,7 @@ input[type="radio"] {
       markup: |
         <div class="expandable">
             <a class="expandable_target"
-               href="#barebones-content">
+               href="#expandable-barebones-content">
                 <span class="expandable_cue-open">
                     Show
                 </span>
@@ -576,7 +576,7 @@ input[type="radio"] {
                     Hide
                 </span>
             </a>
-            <div class="expandable_content" id="barebones-content">
+            <div class="expandable_content" id="expandable-barebones-content">
                 <p>
                     Lorem ipsum dolor sit amet, consectetur adipisicing
                     elit. Neque ipsa voluptatibus soluta nobis unde quisquam
@@ -612,7 +612,7 @@ input[type="radio"] {
       markup: |
         <div class="expandable expandable__expanded">
             <a class="expandable_target"
-               href="#expanded-by-default-content">
+               href="#expandable-expanded-by-default-content">
                 <span class="expandable_cue-open">
                     Show
                 </span>
@@ -620,7 +620,7 @@ input[type="radio"] {
                     Hide
                 </span>
             </a>
-            <div class="expandable_content" id="expanded-by-default-content">
+            <div class="expandable_content" id="expandable-expanded-by-default-content">
                 <p>
                     Lorem ipsum dolor sit amet, consectetur adipisicing
                     elit. Neque ipsa voluptatibus soluta nobis unde quisquam
@@ -710,7 +710,7 @@ input[type="radio"] {
         <div class="expandable expandable__expanded">
             <div class="expandable_header expandable_header__spaced">
                 <a class="expandable_target"
-                   href="#expandable-header-spaced">
+                   href="#expandable-header-spaced-content">
                     <span class="expandable_cue-open">
                         Show
                     </span>
@@ -822,7 +822,7 @@ input[type="radio"] {
       markup: |
         <div class="expandable expandable__padded">
             <a class="expandable_target expandable_header"
-               href="#styled-expandable-content">
+               href="#expandable-padded-content">
                 <span class="expandable_label expandable_header-left">
                     Expandable Header
                 </span>
@@ -837,7 +837,7 @@ input[type="radio"] {
                     </span>
                 </span>
             </a>
-            <div class="expandable_content" id="styled-expandable-content">
+            <div class="expandable_content" id="expandable-padded-content">
                 <p>
                     Lorem ipsum dolor sit amet, consectetur adipisicing
                     elit. Neque ipsa voluptatibus soluta nobis unde quisquam
