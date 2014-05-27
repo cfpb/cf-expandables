@@ -864,10 +864,10 @@ input[type="radio"] {
             .expandable_content
       notes:
         - "The padded expandable is our recommended go-to expandable pattern."
-        - "If you need a custom expandable experience first try using a
-          combination of the new elements that are used in the padded expandable
-          pattern like .expandable_header, expandable_label, expandable_link,
-          expandable_header-left. and expandable_header-right."
+        - "If you need a custom expandable experience try using a combination of
+          the expandable elements that already exists like .expandable_header,
+          expandable_label, expandable_link, expandable_header-left. and
+          expandable_header-right."
     tags:
     - cf-expandables
 */
