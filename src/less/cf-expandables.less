@@ -227,13 +227,12 @@
         </span>
     - name: Expandable link
       markup: |
-        <a href="#" class="expandable_link">
+        <a href="#expandable-text-elements" class="expandable_link">
+            Expandable link
             <span class="expandable_cue-open">
-                Show
                 <span class="cf-icon cf-icon-plus-round"></span>
             </span>
             <span class="expandable_cue-close">
-                Hide
                 <span class="cf-icon cf-icon-minus-round"></span>
             </span>
         </a>
@@ -247,18 +246,10 @@
 }
 
 .expandable_link {
-    &,
-    &:link,
-    &:visited,
-    &:hover,
-    &:focus,
-    &:active {
-        border-bottom: none;
-        color: @pacific;
-        .webfont-regular();
-        font-size: unit(@btn-font-size / @base-font-size-px, em);
-        line-height: unit(@base-line-height-px / @btn-font-size);
-    }
+    color: @pacific;
+    .webfont-regular();
+    font-size: unit(@btn-font-size / @base-font-size-px, em);
+    line-height: unit(@base-line-height-px / @btn-font-size);
 }
 
 
