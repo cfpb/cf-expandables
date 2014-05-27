@@ -123,21 +123,32 @@
     patterns:
     - name: Basic expandable header example
       markup: |
-        <div class="expandable_header">
-            <span class="expandable_header-left">
-                <a class="expandable_target"
-                   href="#expanded-by-default-content">
-                    <span class="expandable_cue-open">
-                        Show
-                    </span>
-                    <span class="expandable_cue-close">
-                        Hide
-                    </span>
-                </a>
-            </span>
-            <span class="expandable_header-right">
-                <em>Now you can put some info on the right.</em>
-            </span>
+        <div class="expandable expandable__expanded">
+            <div class="expandable_header">
+                <span class="expandable_header-left">
+                    <em>Now you can put some info on the left and right.</em>
+                </span>
+                <span class="expandable_header-right">
+                    <a class="expandable_target"
+                       href="#expandable-header-content">
+                        <span class="expandable_cue-open">
+                            Show
+                        </span>
+                        <span class="expandable_cue-close">
+                            Hide
+                        </span>
+                    </a>
+                </span>
+            </div>
+            <div class="expandable_content" id="expandable-header-content">
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing
+                    elit. Neque ipsa voluptatibus soluta nobis unde quisquam
+                    temporibus magnam debitis quidem. Ducimus ratione
+                    corporis nesciunt earum vel est quaerat blanditiis
+                    dolore ipsa?
+                </p>
+            </div>
         </div>
       codenotes:
         - |
@@ -151,26 +162,29 @@
           information on the left and right."
     - name: "Expandable header modifier: spaced"
       markup: |
-        <div class="expandable_header expandable_header__spaced">
-            <a class="expandable_target"
-               href="#expanded-by-default-content">
-                <span class="expandable_cue-open">
-                    Show
-                </span>
-                <span class="expandable_cue-close">
-                    Hide
-                </span>
-            </a>
-        </div>
-        <div class="expandable_content" id="header-spaced-expandable-content"
-             style="background-color:#ccc;">
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing
-                elit. Neque ipsa voluptatibus soluta nobis unde quisquam
-                temporibus magnam debitis quidem. Ducimus ratione
-                corporis nesciunt earum vel est quaerat blanditiis
-                dolore ipsa?
-            </p>
+        <div class="expandable expandable__expanded">
+            <div class="expandable_header expandable_header__spaced">
+                <a class="expandable_target"
+                   href="#expandable-header-spaced">
+                    <span class="expandable_cue-open">
+                        Show
+                    </span>
+                    <span class="expandable_cue-close">
+                        Hide
+                    </span>
+                </a>
+            </div>
+            <div class="expandable_content"
+                 id="expandable-header-spaced-content"
+                 style="background-color:#ccc;">
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing
+                    elit. Neque ipsa voluptatibus soluta nobis unde quisquam
+                    temporibus magnam debitis quidem. Ducimus ratione
+                    corporis nesciunt earum vel est quaerat blanditiis
+                    dolore ipsa?
+                </p>
+            </div>
         </div>
       codenotes:
         - |
@@ -209,7 +223,7 @@
     - name: Expandable label
       markup: |
         <span class="expandable_label">
-            Expandable Header
+            Expandable label
         </span>
     - name: Expandable link
       markup: |
@@ -233,10 +247,18 @@
 }
 
 .expandable_link {
-    color: @pacific;
-    .webfont-regular;
-    font-size: unit(@btn-font-size / @base-font-size-px, em);
-    line-height: unit(@base-line-height-px / @btn-font-size);
+    &,
+    &:link,
+    &:visited,
+    &:hover,
+    &:focus,
+    &:active {
+        border-bottom: none;
+        color: @pacific;
+        .webfont-regular();
+        font-size: unit(@btn-font-size / @base-font-size-px, em);
+        line-height: unit(@base-line-height-px / @btn-font-size);
+    }
 }
 
 
@@ -310,9 +332,6 @@
     .expandable_header {
         padding: unit(10px / @base-font-size-px, em)
                  unit(16px / @base-font-size-px, em);
-        &.expandable_target {
-            border-bottom: none;
-        }
     }
 
     .expandable_content {

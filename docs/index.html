@@ -188,39 +188,61 @@
                 </ul>
               </header>
               <section>
-<div class="expandable_header">
-    <span class="expandable_header-left">
-        <a class="expandable_target"
-           href="#expanded-by-default-content">
-            <span class="expandable_cue-open">
-                Show
-            </span>
-            <span class="expandable_cue-close">
-                Hide
-            </span>
-        </a>
-    </span>
-    <span class="expandable_header-right">
-        <em>Now you can put some info on the right.</em>
-    </span>
+<div class="expandable expandable__expanded">
+    <div class="expandable_header">
+        <span class="expandable_header-left">
+            <em>Now you can put some info on the left and right.</em>
+        </span>
+        <span class="expandable_header-right">
+            <a class="expandable_target"
+               href="#expandable-header-content">
+                <span class="expandable_cue-open">
+                    Show
+                </span>
+                <span class="expandable_cue-close">
+                    Hide
+                </span>
+            </a>
+        </span>
+    </div>
+    <div class="expandable_content" id="expandable-header-content">
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing
+            elit. Neque ipsa voluptatibus soluta nobis unde quisquam
+            temporibus magnam debitis quidem. Ducimus ratione
+            corporis nesciunt earum vel est quaerat blanditiis
+            dolore ipsa?
+        </p>
+    </div>
 </div>
 </section>
               <footer class="demo-pattern-list_footer">
-                <pre class="html"><code data-language="html">&lt;div class=&quot;expandable_header&quot;&gt;
-    &lt;span class=&quot;expandable_header-left&quot;&gt;
-        &lt;a class=&quot;expandable_target&quot;
-           href=&quot;#expanded-by-default-content&quot;&gt;
-            &lt;span class=&quot;expandable_cue-open&quot;&gt;
-                Show
-            &lt;/span&gt;
-            &lt;span class=&quot;expandable_cue-close&quot;&gt;
-                Hide
-            &lt;/span&gt;
-        &lt;/a&gt;
-    &lt;/span&gt;
-    &lt;span class=&quot;expandable_header-right&quot;&gt;
-        &lt;em&gt;Now you can put some info on the right.&lt;/em&gt;
-    &lt;/span&gt;
+                <pre class="html"><code data-language="html">&lt;div class=&quot;expandable expandable__expanded&quot;&gt;
+    &lt;div class=&quot;expandable_header&quot;&gt;
+        &lt;span class=&quot;expandable_header-left&quot;&gt;
+            &lt;em&gt;Now you can put some info on the left and right.&lt;/em&gt;
+        &lt;/span&gt;
+        &lt;span class=&quot;expandable_header-right&quot;&gt;
+            &lt;a class=&quot;expandable_target&quot;
+               href=&quot;#expandable-header-content&quot;&gt;
+                &lt;span class=&quot;expandable_cue-open&quot;&gt;
+                    Show
+                &lt;/span&gt;
+                &lt;span class=&quot;expandable_cue-close&quot;&gt;
+                    Hide
+                &lt;/span&gt;
+            &lt;/a&gt;
+        &lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;expandable_content&quot; id=&quot;expandable-header-content&quot;&gt;
+        &lt;p&gt;
+            Lorem ipsum dolor sit amet, consectetur adipisicing
+            elit. Neque ipsa voluptatibus soluta nobis unde quisquam
+            temporibus magnam debitis quidem. Ducimus ratione
+            corporis nesciunt earum vel est quaerat blanditiis
+            dolore ipsa?
+        &lt;/p&gt;
+    &lt;/div&gt;
 &lt;/div&gt;</code></pre>
               </footer>
             </li>
@@ -239,49 +261,55 @@
                 </ul>
               </header>
               <section>
-<div class="expandable_header expandable_header__spaced">
-    <a class="expandable_target"
-       href="#expanded-by-default-content">
-        <span class="expandable_cue-open">
-            Show
-        </span>
-        <span class="expandable_cue-close">
-            Hide
-        </span>
-    </a>
-</div>
-<div class="expandable_content" id="header-spaced-expandable-content"
-     style="background-color:#ccc;">
-    <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing
-        elit. Neque ipsa voluptatibus soluta nobis unde quisquam
-        temporibus magnam debitis quidem. Ducimus ratione
-        corporis nesciunt earum vel est quaerat blanditiis
-        dolore ipsa?
-    </p>
+<div class="expandable expandable__expanded">
+    <div class="expandable_header expandable_header__spaced">
+        <a class="expandable_target"
+           href="#expandable-header-spaced">
+            <span class="expandable_cue-open">
+                Show
+            </span>
+            <span class="expandable_cue-close">
+                Hide
+            </span>
+        </a>
+    </div>
+    <div class="expandable_content"
+         id="expandable-header-spaced-content"
+         style="background-color:#ccc;">
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing
+            elit. Neque ipsa voluptatibus soluta nobis unde quisquam
+            temporibus magnam debitis quidem. Ducimus ratione
+            corporis nesciunt earum vel est quaerat blanditiis
+            dolore ipsa?
+        </p>
+    </div>
 </div>
 </section>
               <footer class="demo-pattern-list_footer">
-                <pre class="html"><code data-language="html">&lt;div class=&quot;expandable_header expandable_header__spaced&quot;&gt;
-    &lt;a class=&quot;expandable_target&quot;
-       href=&quot;#expanded-by-default-content&quot;&gt;
-        &lt;span class=&quot;expandable_cue-open&quot;&gt;
-            Show
-        &lt;/span&gt;
-        &lt;span class=&quot;expandable_cue-close&quot;&gt;
-            Hide
-        &lt;/span&gt;
-    &lt;/a&gt;
-&lt;/div&gt;
-&lt;div class=&quot;expandable_content&quot; id=&quot;header-spaced-expandable-content&quot;
-     style=&quot;background-color:#ccc;&quot;&gt;
-    &lt;p&gt;
-        Lorem ipsum dolor sit amet, consectetur adipisicing
-        elit. Neque ipsa voluptatibus soluta nobis unde quisquam
-        temporibus magnam debitis quidem. Ducimus ratione
-        corporis nesciunt earum vel est quaerat blanditiis
-        dolore ipsa?
-    &lt;/p&gt;
+                <pre class="html"><code data-language="html">&lt;div class=&quot;expandable expandable__expanded&quot;&gt;
+    &lt;div class=&quot;expandable_header expandable_header__spaced&quot;&gt;
+        &lt;a class=&quot;expandable_target&quot;
+           href=&quot;#expandable-header-spaced&quot;&gt;
+            &lt;span class=&quot;expandable_cue-open&quot;&gt;
+                Show
+            &lt;/span&gt;
+            &lt;span class=&quot;expandable_cue-close&quot;&gt;
+                Hide
+            &lt;/span&gt;
+        &lt;/a&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;expandable_content&quot;
+         id=&quot;expandable-header-spaced-content&quot;
+         style=&quot;background-color:#ccc;&quot;&gt;
+        &lt;p&gt;
+            Lorem ipsum dolor sit amet, consectetur adipisicing
+            elit. Neque ipsa voluptatibus soluta nobis unde quisquam
+            temporibus magnam debitis quidem. Ducimus ratione
+            corporis nesciunt earum vel est quaerat blanditiis
+            dolore ipsa?
+        &lt;/p&gt;
+    &lt;/div&gt;
 &lt;/div&gt;</code></pre>
               </footer>
             </li>
@@ -311,12 +339,12 @@
               </header>
               <section>
 <span class="expandable_label">
-    Expandable Header
+    Expandable label
 </span>
 </section>
               <footer class="demo-pattern-list_footer">
                 <pre class="html"><code data-language="html">&lt;span class=&quot;expandable_label&quot;&gt;
-    Expandable Header
+    Expandable label
 &lt;/span&gt;</code></pre>
               </footer>
             </li>
@@ -360,7 +388,13 @@
 .lt-ie9 .expandable_label {
   font-weight: normal !important;
 }
-.expandable_link {
+.expandable_link,
+.expandable_link:link,
+.expandable_link:visited,
+.expandable_link:hover,
+.expandable_link:focus,
+.expandable_link:active {
+  border-bottom: none;
   color: #0072ce;
   font-family: &quot;AvenirNextLTW01-Regular&quot;, Arial, sans-serif;
   font-style: normal;
@@ -369,23 +403,63 @@
   line-height: 1.57142857;
 }
 .expandable_link em,
-.expandable_link i {
+.expandable_link:link em,
+.expandable_link:visited em,
+.expandable_link:hover em,
+.expandable_link:focus em,
+.expandable_link:active em,
+.expandable_link i,
+.expandable_link:link i,
+.expandable_link:visited i,
+.expandable_link:hover i,
+.expandable_link:focus i,
+.expandable_link:active i {
   font-family: &quot;AvenirNextLTW01-Italic&quot;, Arial, sans-serif;
   font-style: italic;
   font-weight: normal;
 }
 .lt-ie9 .expandable_link em,
-.lt-ie9 .expandable_link i {
+.lt-ie9 .expandable_link:link em,
+.lt-ie9 .expandable_link:visited em,
+.lt-ie9 .expandable_link:hover em,
+.lt-ie9 .expandable_link:focus em,
+.lt-ie9 .expandable_link:active em,
+.lt-ie9 .expandable_link i,
+.lt-ie9 .expandable_link:link i,
+.lt-ie9 .expandable_link:visited i,
+.lt-ie9 .expandable_link:hover i,
+.lt-ie9 .expandable_link:focus i,
+.lt-ie9 .expandable_link:active i {
   font-style: normal !important;
 }
 .expandable_link strong,
-.expandable_link b {
+.expandable_link:link strong,
+.expandable_link:visited strong,
+.expandable_link:hover strong,
+.expandable_link:focus strong,
+.expandable_link:active strong,
+.expandable_link b,
+.expandable_link:link b,
+.expandable_link:visited b,
+.expandable_link:hover b,
+.expandable_link:focus b,
+.expandable_link:active b {
   font-family: &quot;AvenirNextLTW01-Demi&quot;, Arial, sans-serif;
   font-style: normal;
   font-weight: bold;
 }
 .lt-ie9 .expandable_link strong,
-.lt-ie9 .expandable_link b {
+.lt-ie9 .expandable_link:link strong,
+.lt-ie9 .expandable_link:visited strong,
+.lt-ie9 .expandable_link:hover strong,
+.lt-ie9 .expandable_link:focus strong,
+.lt-ie9 .expandable_link:active strong,
+.lt-ie9 .expandable_link b,
+.lt-ie9 .expandable_link:link b,
+.lt-ie9 .expandable_link:visited b,
+.lt-ie9 .expandable_link:hover b,
+.lt-ie9 .expandable_link:focus b,
+.lt-ie9 .expandable_link:active b {
   font-weight: normal !important;
 }</code></pre>
           </div>
@@ -489,9 +563,6 @@
 }
 .expandable__padded .expandable_header {
   padding: 0.625em 1em;
-}
-.expandable__padded .expandable_header.expandable_target {
-  border-bottom: none;
 }
 .expandable__padded .expandable_content {
   margin: 0 1em 1.375em;
