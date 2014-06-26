@@ -1,4 +1,7 @@
 {
+  "scripts": {
+    "test": "grunt test"
+  },
   "devDependencies": {
     "cf-component-demo": "git://github.com/cfpb/cf-component-demo.git",
     "cf-grunt-config": "git://github.com/cfpb/cf-grunt-config.git",
