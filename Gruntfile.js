@@ -56,9 +56,22 @@ module.exports = function(grunt) {
       // Here's a banner with some template variables.
       // We'll be inserting it at the top of minified assets.
       banner: grunt.file.read('./node_modules/cf-grunt-config/cfpb-banner.txt'),
-    }
+    },
 
     // Define tasks specific to this project here
+
+    concat: {
+      bodyScripts: {
+        src: [
+          'src/vendor/jquery/jquery.js',
+          'src/vendor/jquery.easing/jquery.easing.js',
+          'src/vendor/cf-*/*.js',
+          'src/*.js',
+          'src/js/*.js'
+        ],
+        dest: 'demo/static/js/component.js',
+      }
+    }
 
   };
 

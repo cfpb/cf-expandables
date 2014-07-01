@@ -22,6 +22,7 @@
     "cf-icons": "git://github.com/cfpb/cf-icons.git",
     "cf-typography": "git://github.com/cfpb/cf-typography.git",
     "jquery": "~1.11.0",
+    "jquery.easing": "~1.3.0",
     "normalize-css": "~3.0.0",
     "normalize-legacy-addon": "git://github.com/cfpb/normalize-legacy-addon.git#0.1.0"
   },
@@ -34,6 +35,9 @@
       "less": "src/**/*.less",
       "fonts": "src/fonts/*.*",
       "js": "src/**/*.js"
+    },
+    "jquery.easing": {
+      "js": "js/jquery.easing.js"
     }
   }
 }

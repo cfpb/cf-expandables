@@ -40,7 +40,10 @@
         }
 
         $this.toggleClass('expandable__expanded');
-        $content.slideToggle();
+        $content.slideToggle({
+            duration: 400,
+            easing: 'easeOutExpo'
+        });
 
       });
 
