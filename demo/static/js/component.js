@@ -10542,26 +10542,37 @@ jQuery.extend( jQuery.easing,
 
       $target.on( 'click', function( ev ){
 
+        var duration = calculateExpandDuration($content.height());
         ev.preventDefault();
         ev.stopPropagation();
 
         if ($target.attr('aria-pressed') === 'true') {
           $content.attr('aria-expanded','false');
           $target.attr('aria-pressed','false');
+          duration = calculateCollapseDuration($content.height());
         } else {
           $content.attr('aria-expanded','true');
           $target.attr('aria-pressed','true');
+          duration = calculateExpandDuration($content.height());
         }
 
         $this.toggleClass('expandable__expanded');
         $content.slideToggle({
-            duration: 400,
+            duration: duration,
             easing: 'easeOutExpo'
         });
 
       });
 
     });
+
+    function calculateExpandDuration(height) {
+        return height * 4;
+    }
+
+    function calculateCollapseDuration(height) {
+        return height * 2;
+    }
 
   });
 }(jQuery));
