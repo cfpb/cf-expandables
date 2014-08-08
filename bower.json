@@ -1,6 +1,6 @@
 {
   "name": "cf-expandables",
-  "version": "1.4.0",
+  "version": "1.3.6",
   "description": "Standard expandable (show/hide) component for Capital Framework.",
   "keywords": ["capital-framework", "capital", "expandables", "jquery", "js", "less"],
   "authors": [
