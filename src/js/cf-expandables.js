@@ -6,7 +6,7 @@
  */
 
 (function($) {
-  $.fn.customInput = function( userSettings ){
+  $.fn.expandable = function( userSettings ){
 
     function calculateExpandDuration(height) {
         return height * 4;
@@ -63,6 +63,6 @@
   };
 
   // Auto init
-  $('.expandable').customInput();
+  $('.expandable').expandable();
 
 }(jQuery));

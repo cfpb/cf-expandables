@@ -10520,7 +10520,7 @@ jQuery.extend( jQuery.easing,
  */
 
 (function($) {
-  $.fn.customInput = function( userSettings ){
+  $.fn.expandable = function( userSettings ){
 
     function calculateExpandDuration(height) {
         return height * 4;
@@ -10577,6 +10577,6 @@ jQuery.extend( jQuery.easing,
   };
 
   // Auto init
-  $('.expandable').customInput();
+  $('.expandable').expandable();
 
 }(jQuery));
