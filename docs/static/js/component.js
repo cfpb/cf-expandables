@@ -10520,9 +10520,17 @@ jQuery.extend( jQuery.easing,
  */
 
 (function($) {
-  $(function() {
+  $.fn.customInput = function( userSettings ){
 
-    $('.expandable').each(function(){
+    function calculateExpandDuration(height) {
+        return height * 4;
+    }
+
+    function calculateCollapseDuration(height) {
+        return height * 2;
+    }
+
+    return $(this).each(function(){
 
       var $this = $( this ),
           $target = $this.find('.expandable_target'),
@@ -10566,13 +10574,9 @@ jQuery.extend( jQuery.easing,
 
     });
 
-    function calculateExpandDuration(height) {
-        return height * 4;
-    }
+  };
 
-    function calculateCollapseDuration(height) {
-        return height * 2;
-    }
+  // Auto init
+  $('.expandable').customInput();
 
-  });
 }(jQuery));
