@@ -202,4 +202,18 @@
     }, 1800);
   });
 
+  test('Verify dynamic duration based on height', function() {
+    expect(2);
+    $('#test-subject-one .expandable_content').height(200);
+    ok(
+        ($.fn.expandable.calculateExpandDuration($('#test-subject-one .expandable_content').height()) === 800),
+        'The duration should be (height * 4) when expanding'
+    );
+    $('#test-subject-two .expandable_content').height(200).trigger('click');
+    ok(
+        ($.fn.expandable.calculateCollapseDuration($('#test-subject-one .expandable_content').height()) === 400),
+        'The duration should be (height * 2) when collapsing'
+    );
+  });
+
 }(jQuery));
