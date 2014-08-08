@@ -6,15 +6,8 @@
  */
 
 (function( $ ) {
+
   $.fn.expandable = function( userSettings ) {
-
-    function calculateExpandDuration( height ) {
-        return height * 4;
-    }
-
-    function calculateCollapseDuration( height ) {
-        return height * 2;
-    }
 
     return $( this ).each(function() {
 
@@ -36,18 +29,18 @@
 
       $target.on( 'click', function( ev ) {
 
-        var duration = calculateExpandDuration( $content.height() );
+        var duration;
         ev.preventDefault();
         ev.stopPropagation();
 
         if ( $target.attr('aria-pressed') === 'true' ) {
           $content.attr( 'aria-expanded', 'false' );
           $target.attr( 'aria-pressed', 'false' );
-          duration = calculateCollapseDuration( $content.height() );
+          duration = $.fn.expandable.calculateCollapseDuration( $content.height() );
         } else {
           $content.attr( 'aria-expanded', 'true' );
           $target.attr( 'aria-pressed', 'true' );
-          duration = calculateExpandDuration( $content.height() );
+          duration = $.fn.expandable.calculateExpandDuration( $content.height() );
         }
 
         $this.toggleClass('expandable__expanded');
@@ -60,6 +53,14 @@
 
     });
 
+  };
+
+  $.fn.expandable.calculateExpandDuration = function( height ) {
+    return height * 4;
+  };
+
+  $.fn.expandable.calculateCollapseDuration = function( height ) {
+    return height * 2;
   };
 
   // Auto init
