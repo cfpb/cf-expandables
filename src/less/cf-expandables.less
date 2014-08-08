@@ -111,9 +111,9 @@
 }
 
 .expandable_content {
-    // padding: 1px is used to prevent margin collapsing which causes
-    // jumpiness when animating the expand and collapse.
-    padding: 1px;
+    // A clearfix prevents twitchy animations from occurring when margins
+    // collapse and extend past the bounds of the expandable.
+    .u-clearfix();
 }
 
 
@@ -199,8 +199,7 @@
 
 .expandable_header {
     display: block;
-    // Used for clearing any child floats.
-    overflow: hidden;
+    .u-clearfix();
 }
 
 .expandable_header__spaced {

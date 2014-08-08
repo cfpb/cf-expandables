@@ -161,8 +161,21 @@
 .expandable__expanded .expandable_cue-close {
   display: inline;
 }
-.expandable_content {
-  padding: 1px;
+.expandable_content:after {
+  content: &quot;&quot;;
+  display: table;
+  clear: both;
+}
+.lt-ie8 .expandable_content {
+  zoom: 1;
+}
+.expandable_content:after {
+  content: &quot;&quot;;
+  display: table;
+  clear: both;
+}
+.lt-ie8 .expandable_content {
+  zoom: 1;
 }</code></pre>
       </div>
     </div>
@@ -313,7 +326,22 @@
       <div class="docs-css">
         <pre class="docs-code"><code data-language="css">.expandable_header {
   display: block;
-  overflow: hidden;
+}
+.expandable_header:after {
+  content: &quot;&quot;;
+  display: table;
+  clear: both;
+}
+.lt-ie8 .expandable_header {
+  zoom: 1;
+}
+.expandable_header:after {
+  content: &quot;&quot;;
+  display: table;
+  clear: both;
+}
+.lt-ie8 .expandable_header {
+  zoom: 1;
 }
 .expandable_header__spaced {
   padding-bottom: 0.9375em;
