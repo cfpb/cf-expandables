@@ -202,16 +202,32 @@
     }, 1800);
   });
 
+  test( 'Verify the constrainValue method', function() {
+    expect( 3 );
+    ok(
+      ( $.fn.expandable.constrainValue( 100, 200, 50 ) === 100 ),
+      'The value 50 is less than the minimum so constrainValue should return the minimum'
+    );
+    ok(
+      ( $.fn.expandable.constrainValue( 100, 200, 250 ) === 200 ),
+      'The value 250 is more than the maximum so constrainValue should return the maximum'
+    );
+    ok(
+      ( $.fn.expandable.constrainValue( 100, 200, 150 ) === 150 ),
+      'The value 150 is between the minimum and maximum so constrainValue should return 150'
+    );
+  });
+
   test( 'Verify dynamic duration based on height', function() {
     expect( 2 );
     $('#test-subject-one .expandable_content').height( 200 );
     ok(
-      ( $.fn.expandable.calculateExpandDuration($('#test-subject-one .expandable_content').height()) === 800 ),
+      ( $.fn.expandable.calculateExpandDuration( $('#test-subject-one .expandable_content').height() ) === 800 ),
       'The duration should be (height * 4) when expanding'
     );
     $('#test-subject-two .expandable_content').height( 200 ).trigger('click');
     ok(
-      ( $.fn.expandable.calculateCollapseDuration($('#test-subject-one .expandable_content').height()) === 400 ),
+      ( $.fn.expandable.calculateCollapseDuration( $('#test-subject-two .expandable_content').height() ) === 400 ),
       'The duration should be (height * 2) when collapsing'
     );
   });

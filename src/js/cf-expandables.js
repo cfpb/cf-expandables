@@ -56,11 +56,21 @@
   };
 
   $.fn.expandable.calculateExpandDuration = function( height ) {
-    return height * 4;
+    return $.fn.expandable.constrainValue( 450, 900, height * 4 );
   };
 
   $.fn.expandable.calculateCollapseDuration = function( height ) {
-    return height * 2;
+    return $.fn.expandable.constrainValue( 350, 900, height * 2 );
+  };
+
+  $.fn.expandable.constrainValue = function( min, max, duration ) {
+    if ( duration > max ) {
+        return max;
+    } else if ( duration < min ) {
+        return min;
+    } else {
+        return duration;
+    }
   };
 
   // Auto init
