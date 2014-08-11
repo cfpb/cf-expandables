@@ -16,149 +16,15 @@
     <script src="static/demo/html5shiv-printshiv.js"></script><![endif]-->
   </head>
   <body style="padding:4px;">
-    <div id="barebones-expandable">
-      <div>
-        <div>
-<div class="expandable">
-    <a class="expandable_target"
-       href="#expandable-barebones-content">
-        <span class="expandable_cue-open">
-            Show
-        </span>
-        <span class="expandable_cue-close">
-            Hide
-        </span>
-    </a>
-    <div class="expandable_content" id="expandable-barebones-content">
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing
-            elit. Neque ipsa voluptatibus soluta nobis unde quisquam
-            temporibus magnam debitis quidem. Ducimus ratione
-            corporis nesciunt earum vel est quaerat blanditiis
-            dolore ipsa?
-        </p>
-    </div>
-</div>
-</div><br>
-      </div>
-      <div>
-        <div>
-<div class="expandable expandable__expanded">
-    <a class="expandable_target"
-       href="#expandable-expanded-by-default-content">
-        <span class="expandable_cue-open">
-            Show
-        </span>
-        <span class="expandable_cue-close">
-            Hide
-        </span>
-    </a>
-    <div class="expandable_content" id="expandable-expanded-by-default-content">
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing
-            elit. Neque ipsa voluptatibus soluta nobis unde quisquam
-            temporibus magnam debitis quidem. Ducimus ratione
-            corporis nesciunt earum vel est quaerat blanditiis
-            dolore ipsa?
-        </p>
-    </div>
-</div>
-</div><br>
-      </div>
-    </div>
-    <div id="expandable-header">
-      <div>
-        <div>
-<div class="expandable expandable__expanded">
-    <div class="expandable_header">
-        <span class="expandable_header-left">
-            <em>Now you can put some info on the left and right.</em>
-        </span>
-        <span class="expandable_header-right">
-            <a class="expandable_target"
-               href="#expandable-header-content">
-                <span class="expandable_cue-open">
-                    Show
-                </span>
-                <span class="expandable_cue-close">
-                    Hide
-                </span>
-            </a>
-        </span>
-    </div>
-    <div class="expandable_content" id="expandable-header-content">
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing
-            elit. Neque ipsa voluptatibus soluta nobis unde quisquam
-            temporibus magnam debitis quidem. Ducimus ratione
-            corporis nesciunt earum vel est quaerat blanditiis
-            dolore ipsa?
-        </p>
-    </div>
-</div>
-</div><br>
-      </div>
-      <div>
-        <div>
-<div class="expandable expandable__expanded">
-    <div class="expandable_header expandable_header__spaced">
-        <a class="expandable_target"
-           href="#expandable-header-spaced-content">
-            <span class="expandable_cue-open">
-                Show
-            </span>
-            <span class="expandable_cue-close">
-                Hide
-            </span>
-        </a>
-    </div>
-    <div class="expandable_content"
-         id="expandable-header-spaced-content"
-         style="background-color:#ccc;">
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing
-            elit. Neque ipsa voluptatibus soluta nobis unde quisquam
-            temporibus magnam debitis quidem. Ducimus ratione
-            corporis nesciunt earum vel est quaerat blanditiis
-            dolore ipsa?
-        </p>
-    </div>
-</div>
-</div><br>
-      </div>
-    </div>
-    <div id="expandable-text-elements">
-      <div>
-        <div>
-<span class="expandable_label">
-    Expandable label
-</span>
-</div><br>
-      </div>
-      <div>
-        <div>
-<a href="#expandable-text-elements" class="expandable_link">
-    Expandable link
-    <span class="expandable_cue-open">
-        <span class="cf-icon cf-icon-plus-round"></span>
-    </span>
-    <span class="expandable_cue-close">
-        <span class="cf-icon cf-icon-minus-round"></span>
-    </span>
-</a>
-</div><br>
-      </div>
-    </div>
-    <div id="padded-expandable">
+    <div id="recommended-expandable-pattern">
       <div>
         <div>
 <div class="expandable expandable__padded">
-    <a class="expandable_target expandable_header"
-       href="#expandable-padded-content">
-        <span class="expandable_label expandable_header-left">
+    <button class="expandable_header expandable_target">
+        <span class="expandable_header-left expandable_label">
             Expandable Header
         </span>
-        <span class="expandable_link expandable_header-right">
+        <span class="expandable_header-right expandable_link">
             <span class="expandable_cue-open">
                 Show
                 <span class="cf-icon cf-icon-plus-round"></span>
@@ -168,8 +34,8 @@
                 <span class="cf-icon cf-icon-minus-round"></span>
             </span>
         </span>
-    </a>
-    <div class="expandable_content" id="expandable-padded-content">
+    </button>
+    <div class="expandable_content">
         <p>
             Lorem ipsum dolor sit amet, consectetur adipisicing
             elit. Neque ipsa voluptatibus soluta nobis unde quisquam
@@ -180,6 +46,66 @@
     </div>
 </div>
 </div><br>
+      </div>
+    </div>
+    <div id="barebones-expandable">
+      <div>
+        <div>
+<div class="expandable">
+    <button class="expandable_target">
+        <span class="expandable_cue-open">
+            Show
+        </span>
+        <span class="expandable_cue-close">
+            Hide
+        </span>
+    </button>
+    <div class="expandable_content">
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing
+            elit. Neque ipsa voluptatibus soluta nobis unde quisquam
+            temporibus magnam debitis quidem. Ducimus ratione
+            corporis nesciunt earum vel est quaerat blanditiis
+            dolore ipsa?
+        </p>
+    </div>
+</div>
+</div><br>
+      </div>
+      <div>
+        <div></div><br>
+      </div>
+    </div>
+    <div id="expandable-text-elements">
+      <div>
+        <div>
+<span class="expandable_label">
+    Lorem ipsum
+</span>
+</div><br>
+      </div>
+      <div>
+        <div>
+<span class="expandable_link">
+    Lorem ipsum
+</span>
+</div><br>
+      </div>
+    </div>
+    <div id="expandable-header-elements">
+      <div>
+        <div></div><br>
+      </div>
+      <div>
+        <div></div><br>
+      </div>
+      <div>
+        <div></div><br>
+      </div>
+    </div>
+    <div id="padded-expandable-modifier">
+      <div>
+        <div></div><br>
       </div>
     </div>
     <div id="custom-demo">
