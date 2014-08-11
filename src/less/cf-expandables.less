@@ -111,26 +111,6 @@
         - "The aria-expanded attribute on .expandable_content gets automatically
            added and updated by JavaScript."
     - name: .expandable__expanded (modifier)
-      markup: |
-        <div class="expandable expandable__expanded">
-            <button class="expandable_target">
-                <span class="expandable_cue-open">
-                    Show
-                </span>
-                <span class="expandable_cue-close">
-                    Hide
-                </span>
-            </button>
-            <div class="expandable_content">
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing
-                    elit. Neque ipsa voluptatibus soluta nobis unde quisquam
-                    temporibus magnam debitis quidem. Ducimus ratione
-                    corporis nesciunt earum vel est quaerat blanditiis
-                    dolore ipsa?
-                </p>
-            </div>
-        </div>
       codenotes:
         - |
           .expandable__expanded
@@ -178,29 +158,6 @@
     family: cf-expandables
     patterns:
     - name: .expandable_label (element)
-      markup: |
-        <div class="expandable">
-            <span class="expandable_label">
-                Lorem ipsum / 
-            </span>
-            <button class="expandable_target">
-                <span class="expandable_cue-open">
-                    Show
-                </span>
-                <span class="expandable_cue-close">
-                    Hide
-                </span>
-            </button>
-            <div class="expandable_content">
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing
-                    elit. Neque ipsa voluptatibus soluta nobis unde quisquam
-                    temporibus magnam debitis quidem. Ducimus ratione
-                    corporis nesciunt earum vel est quaerat blanditiis
-                    dolore ipsa?
-                </p>
-            </div>
-        </div>
       codenotes:
         - |
           .expandable_label
@@ -208,30 +165,6 @@
         - "Allows you to add some styled text."
     - name: .expandable_link (element)
       markup: |
-        <div class="expandable">
-            <span class="expandable_label">
-                Lorem ipsum / 
-            </span>
-            <button class="expandable_target">
-                <span class="expandable_link">
-                    <span class="expandable_cue-open">
-                        Show
-                    </span>
-                    <span class="expandable_cue-close">
-                        Hide
-                    </span>
-                </span>
-            </button>
-            <div class="expandable_content">
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing
-                    elit. Neque ipsa voluptatibus soluta nobis unde quisquam
-                    temporibus magnam debitis quidem. Ducimus ratione
-                    corporis nesciunt earum vel est quaerat blanditiis
-                    dolore ipsa?
-                </p>
-            </div>
-        </div>
       codenotes:
         - |
           .expandable_link
@@ -270,31 +203,6 @@
          user expands it."
     patterns:
     - name: .expandable_header (element)
-      markup: |
-        <div class="expandable">
-            <div class="expandable_header">
-                <span class="expandable_label">
-                    Lorem ipsum / 
-                </span>
-                <button class="expandable_link expandable_target">
-                    <span class="expandable_cue-open">
-                        Show
-                    </span>
-                    <span class="expandable_cue-close">
-                        Hide
-                    </span>
-                </button>
-            </div>
-            <div class="expandable_content" style="background-color: #F1F2F2;">
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing
-                    elit. Neque ipsa voluptatibus soluta nobis unde quisquam
-                    temporibus magnam debitis quidem. Ducimus ratione
-                    corporis nesciunt earum vel est quaerat blanditiis
-                    dolore ipsa?
-                </p>
-            </div>
-        </div>
       codenotes:
         - |
           .expandable_header
@@ -304,31 +212,6 @@
         - "Combine .expandable_header with .expandable_target for a full-width
            trigger."
     - name: .expandable_header__spaced (modifier)
-      markup: |
-        <div class="expandable expandable__expanded">
-            <div class="expandable_header expandable_header__spaced">
-                <span class="expandable_label">
-                    Lorem ipsum / 
-                </span>
-                <button class="expandable_link expandable_target">
-                    <span class="expandable_cue-open">
-                        Show
-                    </span>
-                    <span class="expandable_cue-close">
-                        Hide
-                    </span>
-                </button>
-            </div>
-            <div class="expandable_content" style="background-color: #F1F2F2;">
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing
-                    elit. Neque ipsa voluptatibus soluta nobis unde quisquam
-                    temporibus magnam debitis quidem. Ducimus ratione
-                    corporis nesciunt earum vel est quaerat blanditiis
-                    dolore ipsa?
-                </p>
-            </div>
-        </div>
       codenotes:
         - |
           .expandable_header__spaced
@@ -337,31 +220,6 @@
         - "Inline style usage is for demoing the space between the header and
            content and should not be used."
     - name: .expandable_header-left, .expandable_header-right (elements)
-      markup: |
-        <div class="expandable">
-            <div class="expandable_header">
-                <span class="expandable_header-left expandable_label">
-                    Lorem ipsum
-                </span>
-                <button class="expandable_header-right expandable_link expandable_target">
-                    <span class="expandable_cue-open">
-                        Show
-                    </span>
-                    <span class="expandable_cue-close">
-                        Hide
-                    </span>
-                </button>
-            </div>
-            <div class="expandable_content" style="background-color: #F1F2F2;">
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing
-                    elit. Neque ipsa voluptatibus soluta nobis unde quisquam
-                    temporibus magnam debitis quidem. Ducimus ratione
-                    corporis nesciunt earum vel est quaerat blanditiis
-                    dolore ipsa?
-                </p>
-            </div>
-        </div>
       codenotes:
         - |
           .expandable_header-left
@@ -402,26 +260,6 @@
     family: cf-expandables
     patterns:
     - name: .expandable__padded (modifier)
-      markup: |
-        <div class="expandable expandable__padded">
-            <button class="expandable_header expandable_target">
-                <span class="expandable_cue-open">
-                    Show
-                </span>
-                <span class="expandable_cue-close">
-                    Hide
-                </span>
-            </button>
-            <div class="expandable_content">
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing
-                    elit. Neque ipsa voluptatibus soluta nobis unde quisquam
-                    temporibus magnam debitis quidem. Ducimus ratione
-                    corporis nesciunt earum vel est quaerat blanditiis
-                    dolore ipsa?
-                </p>
-            </div>
-        </div>
       codenotes:
         - |
           .expandable__padded
