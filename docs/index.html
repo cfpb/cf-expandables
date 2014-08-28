@@ -5,28 +5,45 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>cf-expandables docs</title>
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Lora:400,700,400italic">
-    <link rel="stylesheet" type="text/css" href="static/docs/brackets.css">
-    <link rel="stylesheet" type="text/css" href="static/docs/docs.css">
+    <link rel="stylesheet" type="text/css" href="static/demo/demo.css">
     <link rel="stylesheet" type="text/css" href="static/css/main.css">
+    <link rel="stylesheet" type="text/css" href="static/demo/brackets.css">
   </head>
   <body>
-    <div class="docs-masthead">
-      <h1 class="docs-title"><span class="docs-icon">&lt;/&gt;</span> cf-expandables docs
-      </h1><a href="https://github.com/cfpb/cf-expandables" class="docs-repo">view the repository</a>
-    </div>
-    <div id="recommended-expandable-pattern" class="docs-component">
-      <h2 class="docs-component_header"><span>Recommended expandable pattern</span></h2>
-      <div class="docs-component_intro">
-        <ul class="docs-notes">
-          <li>Expandables can be built by combining the basic barebones structure described in the next section along with more specialized expandable elements and modifiers described throughout.</li>
-          <li>The following combination is our recommended go-to expandable pattern.</li>
-        </ul>
-      </div>
-      <div class="docs-patterns">
-        <div class="docs-pattern">
-          <h3 class="docs-pattern_header">Recommended expandable pattern</h3>
-          <section class="docs-pattern_pattern">
+    <div class="demo-wrapper">
+      <header class="demo_header">
+        <h1 class="h5">cf-expandables docs</h1>
+      </header>
+      <ul class="demo-component-list">
+        <li id="recommended-expandable-pattern" class="demo-component-list_item demo-wrapper">
+          <h1 class="demo-component-list_header">Recommended expandable pattern</h1>
+          <ul class="demo_notes">
+            <li>Expandables can be built by combining the basic barebones structure described in the next section along with more specialized expandable elements and modifiers described throughout.</li>
+            <li>The following combination is our recommended go-to expandable pattern.</li>
+          </ul>
+          <ul class="demo-pattern-list">
+            <li class="demo-pattern-list_item">
+              <header class="demo-pattern-list_header">
+                <h3>Recommended expandable pattern</h3>
+                <ul class="demo_codenotes">
+                  <li>
+                    <pre class="code"><code>Pattern structure
+-----------------
+.expandable.expandable__padded
+  .expandable_header.expandable_target
+    .expandable_header-left.expandable_label
+    .expandable_header-right.expandable_link
+      .expandable_cue-open
+        .cf-icon.cf-icon-plus-round
+      .expandable_cue-close
+        .cf-icon.cf-icon-minus-round
+    .expandable_cue-open
+    .expandable_cue-close
+  .expandable_content</code></pre>
+                  </li>
+                </ul>
+              </header>
+              <section>
 <div class="expandable expandable__padded">
     <button class="expandable_header expandable_target">
         <span class="expandable_header-left expandable_label">
@@ -53,10 +70,9 @@
         </p>
     </div>
 </div>
-
-          </section>
-          <footer class="docs-pattern_footer">
-            <pre class="docs-code docs-pattern_markup"><code data-language="html">&lt;div class=&quot;expandable expandable__padded&quot;&gt;
+</section>
+              <footer class="demo-pattern-list_footer">
+                <pre class="html"><code data-language="html">&lt;div class=&quot;expandable expandable__padded&quot;&gt;
     &lt;button class=&quot;expandable_header expandable_target&quot;&gt;
         &lt;span class=&quot;expandable_header-left expandable_label&quot;&gt;
             Expandable Header
@@ -82,39 +98,39 @@
         &lt;/p&gt;
     &lt;/div&gt;
 &lt;/div&gt;</code></pre>
-            <ul class="docs-codenotes">
-              <li>
-                <pre class="docs-code"><code>Pattern structure
+              </footer>
+            </li>
+          </ul>
+        </li>
+        <li id="barebones-expandable" class="demo-component-list_item demo-wrapper">
+          <h1 class="demo-component-list_header">Barebones expandable</h1>
+          <ul class="demo_notes">
+            <li>This is the barebones structure for expandables that can be used (along with other expanable elements and modifiers) to create custom expandable patterns.</li>
+            <li>In this barebones example there are no visual styles.</li>
+          </ul>
+          <ul class="demo-pattern-list">
+            <li class="demo-pattern-list_item">
+              <header class="demo-pattern-list_header">
+                <h3>Barebones expandable</h3>
+                <ul class="demo_codenotes">
+                  <li>
+                    <pre class="code"><code>Pattern structure
 -----------------
-.expandable.expandable__padded
-  .expandable_header.expandable_target
-    .expandable_header-left.expandable_label
-    .expandable_header-right.expandable_link
-      .expandable_cue-open
-        .cf-icon.cf-icon-plus-round
-      .expandable_cue-close
-        .cf-icon.cf-icon-minus-round
+.expandable
+  .expandable_target
     .expandable_cue-open
     .expandable_cue-close
   .expandable_content</code></pre>
-              </li>
-            </ul>
-          </footer>
-        </div>
-      </div>
-    </div>
-    <div id="barebones-expandable" class="docs-component">
-      <h2 class="docs-component_header"><span>Barebones expandable</span></h2>
-      <div class="docs-component_intro">
-        <ul class="docs-notes">
-          <li>This is the barebones structure for expandables that can be used (along with other expanable elements and modifiers) to create custom expandable patterns.</li>
-          <li>In this barebones example there are no visual styles.</li>
-        </ul>
-      </div>
-      <div class="docs-patterns">
-        <div class="docs-pattern">
-          <h3 class="docs-pattern_header">Barebones expandable</h3>
-          <section class="docs-pattern_pattern">
+                  </li>
+                </ul>
+                <ul class="demo_notes">
+                  <li>Use the button tag for the .expandable_target element to allow for keyboard access.</li>
+                  <li>The 'Show' and 'Hide' messages can be customized directly in the HTML by editing the contents of .expandable_cue-open and .expandable_cue-close.</li>
+                  <li>The aria-pressed attribute on .expandable_target gets automatically added and updated by JavaScript.</li>
+                  <li>The aria-expanded attribute on .expandable_content gets automatically added and updated by JavaScript.</li>
+                </ul>
+              </header>
+              <section>
 <div class="expandable">
     <button class="expandable_target">
         <span class="expandable_cue-open">
@@ -134,10 +150,9 @@
         </p>
     </div>
 </div>
-
-          </section>
-          <footer class="docs-pattern_footer">
-            <pre class="docs-code docs-pattern_markup"><code data-language="html">&lt;div class=&quot;expandable&quot;&gt;
+</section>
+              <footer class="demo-pattern-list_footer">
+                <pre class="html"><code data-language="html">&lt;div class=&quot;expandable&quot;&gt;
     &lt;button class=&quot;expandable_target&quot;&gt;
         &lt;span class=&quot;expandable_cue-open&quot;&gt;
             Show
@@ -156,41 +171,24 @@
         &lt;/p&gt;
     &lt;/div&gt;
 &lt;/div&gt;</code></pre>
-            <ul class="docs-codenotes">
-              <li>
-                <pre class="docs-code"><code>Pattern structure
------------------
-.expandable
-  .expandable_target
-    .expandable_cue-open
-    .expandable_cue-close
-  .expandable_content</code></pre>
-              </li>
-            </ul>
-            <ul class="docs-notes">
-              <li>Use the button tag for the .expandable_target element to allow for keyboard access.</li>
-              <li>The 'Show' and 'Hide' messages can be customized directly in the HTML by editing the contents of .expandable_cue-open and .expandable_cue-close.</li>
-              <li>The aria-pressed attribute on .expandable_target gets automatically added and updated by JavaScript.</li>
-              <li>The aria-expanded attribute on .expandable_content gets automatically added and updated by JavaScript.</li>
-            </ul>
-          </footer>
-        </div>
-        <div class="docs-pattern">
-          <h3 class="docs-pattern_header">.expandable__expanded (modifier)</h3>
-          <footer class="docs-pattern_footer">
-            <ul class="docs-codenotes">
-              <li>
-                <pre class="docs-code"><code>.expandable__expanded</code></pre>
-              </li>
-            </ul>
-            <ul class="docs-notes">
-              <li>Sometimes you may want the expandable to be open by default. This is as easy as adding the .expandable__expanded modifier to the .expandable block.</li>
-            </ul>
-          </footer>
-        </div>
-      </div>
-      <div class="docs-css">
-        <pre class="docs-code"><code data-language="css">.expandable {
+              </footer>
+            </li>
+            <li class="demo-pattern-list_item">
+              <header class="demo-pattern-list_header">
+                <h3>.expandable__expanded (modifier)</h3>
+                <ul class="demo_codenotes">
+                  <li>
+                    <pre class="code"><code>.expandable__expanded</code></pre>
+                  </li>
+                </ul>
+                <ul class="demo_notes">
+                  <li>Sometimes you may want the expandable to be open by default. This is as easy as adding the .expandable__expanded modifier to the .expandable block.</li>
+                </ul>
+              </header>
+            </li>
+          </ul>
+          <div class="demo-pattern-css">
+            <pre class="css"><code data-language="css">.expandable {
   margin-bottom: 1.875em;
 }
 .expandable_target {
@@ -224,58 +222,60 @@
 .lt-ie8 .expandable_content {
   zoom: 1;
 }</code></pre>
-      </div>
-    </div>
-    <div id="expandable-text-elements" class="docs-component">
-      <h2 class="docs-component_header"><span>Expandable text elements</span></h2>
-      <div class="docs-patterns">
-        <div class="docs-pattern">
-          <h3 class="docs-pattern_header">.expandable_label (element)</h3>
-          <section class="docs-pattern_pattern">
+          </div>
+        </li>
+        <li id="expandable-text-elements" class="demo-component-list_item demo-wrapper">
+          <h1 class="demo-component-list_header">Expandable text elements</h1>
+          <ul class="demo-pattern-list">
+            <li class="demo-pattern-list_item">
+              <header class="demo-pattern-list_header">
+                <h3>.expandable_label (element)</h3>
+                <ul class="demo_codenotes">
+                  <li>
+                    <pre class="code"><code>.expandable_label</code></pre>
+                  </li>
+                </ul>
+                <ul class="demo_notes">
+                  <li>Allows you to add some styled text.</li>
+                </ul>
+              </header>
+              <section>
 <span class="expandable_label">
     Lorem ipsum
 </span>
-
-          </section>
-          <footer class="docs-pattern_footer">
-            <pre class="docs-code docs-pattern_markup"><code data-language="html">&lt;span class=&quot;expandable_label&quot;&gt;
+</section>
+              <footer class="demo-pattern-list_footer">
+                <pre class="html"><code data-language="html">&lt;span class=&quot;expandable_label&quot;&gt;
     Lorem ipsum
 &lt;/span&gt;</code></pre>
-            <ul class="docs-codenotes">
-              <li>
-                <pre class="docs-code"><code>.expandable_label</code></pre>
-              </li>
-            </ul>
-            <ul class="docs-notes">
-              <li>Allows you to add some styled text.</li>
-            </ul>
-          </footer>
-        </div>
-        <div class="docs-pattern">
-          <h3 class="docs-pattern_header">.expandable_link (element)</h3>
-          <section class="docs-pattern_pattern">
+              </footer>
+            </li>
+            <li class="demo-pattern-list_item">
+              <header class="demo-pattern-list_header">
+                <h3>.expandable_link (element)</h3>
+                <ul class="demo_codenotes">
+                  <li>
+                    <pre class="code"><code>.expandable_link</code></pre>
+                  </li>
+                </ul>
+                <ul class="demo_notes">
+                  <li>Allows you to add some styled text with a link-like look.</li>
+                </ul>
+              </header>
+              <section>
 <span class="expandable_link">
     Lorem ipsum
 </span>
-
-          </section>
-          <footer class="docs-pattern_footer">
-            <pre class="docs-code docs-pattern_markup"><code data-language="html">&lt;span class=&quot;expandable_link&quot;&gt;
+</section>
+              <footer class="demo-pattern-list_footer">
+                <pre class="html"><code data-language="html">&lt;span class=&quot;expandable_link&quot;&gt;
     Lorem ipsum
 &lt;/span&gt;</code></pre>
-            <ul class="docs-codenotes">
-              <li>
-                <pre class="docs-code"><code>.expandable_link</code></pre>
-              </li>
-            </ul>
-            <ul class="docs-notes">
-              <li>Allows you to add some styled text with a link-like look.</li>
-            </ul>
-          </footer>
-        </div>
-      </div>
-      <div class="docs-css">
-        <pre class="docs-code"><code data-language="css">.expandable_label {
+              </footer>
+            </li>
+          </ul>
+          <div class="demo-pattern-css">
+            <pre class="css"><code data-language="css">.expandable_label {
   color: #101820;
   font-family: &quot;AvenirNextLTW01-Medium&quot;, Arial, sans-serif;
   font-style: normal;
@@ -351,70 +351,68 @@
 .lt-ie9 .expandable_link b {
   font-weight: normal !important;
 }</code></pre>
-      </div>
-    </div>
-    <div id="expandable-header-elements" class="docs-component">
-      <h2 class="docs-component_header"><span>Expandable header elements</span></h2>
-      <div class="docs-component_intro">
-        <ul class="docs-codenotes">
-          <li>
-            <pre class="docs-code"><code>Pattern structure
+          </div>
+        </li>
+        <li id="expandable-header-elements" class="demo-component-list_item demo-wrapper">
+          <h1 class="demo-component-list_header">Expandable header elements</h1>
+          <ul class="demo_codenotes">
+            <li>
+              <pre class="code"><code>Pattern structure
 -----------------
 .expandable_header
   .expandable_header-left
   .expandable_header-right</code></pre>
-          </li>
-        </ul>
-        <ul class="docs-notes">
-          <li>These additional elements are useful for more complicated expandables that need to convey more information than just 'Show/Hide' before the user expands it.</li>
-        </ul>
-      </div>
-      <div class="docs-patterns">
-        <div class="docs-pattern">
-          <h3 class="docs-pattern_header">.expandable_header (element)</h3>
-          <footer class="docs-pattern_footer">
-            <ul class="docs-codenotes">
-              <li>
-                <pre class="docs-code"><code>.expandable_header</code></pre>
-              </li>
-            </ul>
-            <ul class="docs-notes">
-              <li>Creates a full-width container to house information that is always visible.</li>
-              <li>Combine .expandable_header with .expandable_target for a full-width trigger.</li>
-            </ul>
-          </footer>
-        </div>
-        <div class="docs-pattern">
-          <h3 class="docs-pattern_header">.expandable_header__spaced (modifier)</h3>
-          <footer class="docs-pattern_footer">
-            <ul class="docs-codenotes">
-              <li>
-                <pre class="docs-code"><code>.expandable_header__spaced</code></pre>
-              </li>
-            </ul>
-            <ul class="docs-notes">
-              <li>Allows you to add space between .expandable_header and .expandable_content.</li>
-              <li>Inline style usage is for demoing the space between the header and content and should not be used.</li>
-            </ul>
-          </footer>
-        </div>
-        <div class="docs-pattern">
-          <h3 class="docs-pattern_header">.expandable_header-left, .expandable_header-right (elements)</h3>
-          <footer class="docs-pattern_footer">
-            <ul class="docs-codenotes">
-              <li>
-                <pre class="docs-code"><code>.expandable_header-left
+            </li>
+          </ul>
+          <ul class="demo_notes">
+            <li>These additional elements are useful for more complicated expandables that need to convey more information than just 'Show/Hide' before the user expands it.</li>
+          </ul>
+          <ul class="demo-pattern-list">
+            <li class="demo-pattern-list_item">
+              <header class="demo-pattern-list_header">
+                <h3>.expandable_header (element)</h3>
+                <ul class="demo_codenotes">
+                  <li>
+                    <pre class="code"><code>.expandable_header</code></pre>
+                  </li>
+                </ul>
+                <ul class="demo_notes">
+                  <li>Creates a full-width container to house information that is always visible.</li>
+                  <li>Combine .expandable_header with .expandable_target for a full-width trigger.</li>
+                </ul>
+              </header>
+            </li>
+            <li class="demo-pattern-list_item">
+              <header class="demo-pattern-list_header">
+                <h3>.expandable_header__spaced (modifier)</h3>
+                <ul class="demo_codenotes">
+                  <li>
+                    <pre class="code"><code>.expandable_header__spaced</code></pre>
+                  </li>
+                </ul>
+                <ul class="demo_notes">
+                  <li>Allows you to add space between .expandable_header and .expandable_content.</li>
+                  <li>Inline style usage is for demoing the space between the header and content and should not be used.</li>
+                </ul>
+              </header>
+            </li>
+            <li class="demo-pattern-list_item">
+              <header class="demo-pattern-list_header">
+                <h3>.expandable_header-left, .expandable_header-right (elements)</h3>
+                <ul class="demo_codenotes">
+                  <li>
+                    <pre class="code"><code>.expandable_header-left
 .expandable_header-right</code></pre>
-              </li>
-            </ul>
-            <ul class="docs-notes">
-              <li>Allows you to float information left and right.</li>
-            </ul>
-          </footer>
-        </div>
-      </div>
-      <div class="docs-css">
-        <pre class="docs-code"><code data-language="css">.expandable_header {
+                  </li>
+                </ul>
+                <ul class="demo_notes">
+                  <li>Allows you to float information left and right.</li>
+                </ul>
+              </header>
+            </li>
+          </ul>
+          <div class="demo-pattern-css">
+            <pre class="css"><code data-language="css">.expandable_header {
   display: block;
 }
 .expandable_header:after {
@@ -446,28 +444,28 @@ button.expandable_header {
 .expandable_header-right {
   float: right;
 }</code></pre>
-      </div>
-    </div>
-    <div id="padded-expandable-modifier" class="docs-component">
-      <h2 class="docs-component_header"><span>Padded expandable modifier</span></h2>
-      <div class="docs-patterns">
-        <div class="docs-pattern">
-          <h3 class="docs-pattern_header">.expandable__padded (modifier)</h3>
-          <footer class="docs-pattern_footer">
-            <ul class="docs-codenotes">
-              <li>
-                <pre class="docs-code"><code>.expandable__padded</code></pre>
-              </li>
-            </ul>
-            <ul class="docs-notes">
-              <li>Adds padding and a background color to .expandable_header and .expandable_content.</li>
-              <li>In addition to using the .expandable__padded modifier you also need to make sure you are using .expandable_header.</li>
-            </ul>
-          </footer>
-        </div>
-      </div>
-      <div class="docs-css">
-        <pre class="docs-code"><code data-language="css">.expandable__padded {
+          </div>
+        </li>
+        <li id="padded-expandable-modifier" class="demo-component-list_item demo-wrapper">
+          <h1 class="demo-component-list_header">Padded expandable modifier</h1>
+          <ul class="demo-pattern-list">
+            <li class="demo-pattern-list_item">
+              <header class="demo-pattern-list_header">
+                <h3>.expandable__padded (modifier)</h3>
+                <ul class="demo_codenotes">
+                  <li>
+                    <pre class="code"><code>.expandable__padded</code></pre>
+                  </li>
+                </ul>
+                <ul class="demo_notes">
+                  <li>Adds padding and a background color to .expandable_header and .expandable_content.</li>
+                  <li>In addition to using the .expandable__padded modifier you also need to make sure you are using .expandable_header.</li>
+                </ul>
+              </header>
+            </li>
+          </ul>
+          <div class="demo-pattern-css">
+            <pre class="css"><code data-language="css">.expandable__padded {
   margin-bottom: 1.875em;
   background: #f1f2f2;
 }
@@ -481,9 +479,270 @@ button.expandable_header {
 .expandable__padded .expandable_content {
   margin: 0 1em 1.375em;
 }</code></pre>
-      </div>
+          </div>
+        </li>
+        <li id="accordion-style-expandable-group" class="demo-component-list_item demo-wrapper">
+          <h1 class="demo-component-list_header">Accordion-style expandable group</h1>
+          <ul class="demo_notes">
+            <li>A group of expandables, only one of which can be open at a time.</li>
+          </ul>
+          <ul class="demo-pattern-list">
+            <li class="demo-pattern-list_item">
+              <header class="demo-pattern-list_header">
+                <h3>Standard accordion</h3>
+                <ul class="demo_codenotes">
+                  <li>
+                    <pre class="code"><code>Pattern structure
+-----------------
+.expandable-group
+  .expandable-group_header
+  .expandable.expandable__padded
+    [...]
+  .expandable.expandable__padded
+    [...]
+  .expandable.expandable__padded
+    [...]</code></pre>
+                  </li>
+                </ul>
+              </header>
+              <section>
+<div class="expandable-group">
+    <div class="expandable-group_header">Expandable group header</div>
+    <div class="expandable expandable__padded">
+        <button class="expandable_header expandable_target">
+            <span class="expandable_header-left expandable_label">
+                Expandable Header 1
+            </span>
+            <span class="expandable_header-right expandable_link">
+                <span class="expandable_cue-open">
+                    Show
+                    <span class="cf-icon cf-icon-plus-round"></span>
+                </span>
+                <span class="expandable_cue-close">
+                    Hide
+                    <span class="cf-icon cf-icon-minus-round"></span>
+                </span>
+            </span>
+        </button>
+        <div class="expandable_content">
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing
+                elit. Neque ipsa voluptatibus soluta nobis unde quisquam
+                temporibus magnam debitis quidem. Ducimus ratione
+                corporis nesciunt earum vel est quaerat blanditiis
+                dolore ipsa?
+            </p>
+        </div>
     </div>
-    <script src="static/docs/main.min.js"></script>
+    <div class="expandable expandable__padded">
+        <button class="expandable_header expandable_target">
+            <span class="expandable_header-left expandable_label">
+                Expandable Header 2
+            </span>
+            <span class="expandable_header-right expandable_link">
+                <span class="expandable_cue-open">
+                    Show
+                    <span class="cf-icon cf-icon-plus-round"></span>
+                </span>
+                <span class="expandable_cue-close">
+                    Hide
+                    <span class="cf-icon cf-icon-minus-round"></span>
+                </span>
+            </span>
+        </button>
+        <div class="expandable_content">
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing
+                elit. Neque ipsa voluptatibus soluta nobis unde quisquam
+                temporibus magnam debitis quidem. Ducimus ratione
+                corporis nesciunt earum vel est quaerat blanditiis
+                dolore ipsa?
+            </p>
+        </div>
+    </div>
+    <div class="expandable expandable__padded">
+        <button class="expandable_header expandable_target">
+            <span class="expandable_header-left expandable_label">
+                Expandable Header 3
+            </span>
+            <span class="expandable_header-right expandable_link">
+                <span class="expandable_cue-open">
+                    Show
+                    <span class="cf-icon cf-icon-plus-round"></span>
+                </span>
+                <span class="expandable_cue-close">
+                    Hide
+                    <span class="cf-icon cf-icon-minus-round"></span>
+                </span>
+            </span>
+        </button>
+        <div class="expandable_content">
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing
+                elit. Neque ipsa voluptatibus soluta nobis unde quisquam
+                temporibus magnam debitis quidem. Ducimus ratione
+                corporis nesciunt earum vel est quaerat blanditiis
+                dolore ipsa?
+            </p>
+        </div>
+    </div>
+</div>
+</section>
+              <footer class="demo-pattern-list_footer">
+                <pre class="html"><code data-language="html">&lt;div class=&quot;expandable-group&quot;&gt;
+    &lt;div class=&quot;expandable-group_header&quot;&gt;Expandable group header&lt;/div&gt;
+    &lt;div class=&quot;expandable expandable__padded&quot;&gt;
+        &lt;button class=&quot;expandable_header expandable_target&quot;&gt;
+            &lt;span class=&quot;expandable_header-left expandable_label&quot;&gt;
+                Expandable Header 1
+            &lt;/span&gt;
+            &lt;span class=&quot;expandable_header-right expandable_link&quot;&gt;
+                &lt;span class=&quot;expandable_cue-open&quot;&gt;
+                    Show
+                    &lt;span class=&quot;cf-icon cf-icon-plus-round&quot;&gt;&lt;/span&gt;
+                &lt;/span&gt;
+                &lt;span class=&quot;expandable_cue-close&quot;&gt;
+                    Hide
+                    &lt;span class=&quot;cf-icon cf-icon-minus-round&quot;&gt;&lt;/span&gt;
+                &lt;/span&gt;
+            &lt;/span&gt;
+        &lt;/button&gt;
+        &lt;div class=&quot;expandable_content&quot;&gt;
+            &lt;p&gt;
+                Lorem ipsum dolor sit amet, consectetur adipisicing
+                elit. Neque ipsa voluptatibus soluta nobis unde quisquam
+                temporibus magnam debitis quidem. Ducimus ratione
+                corporis nesciunt earum vel est quaerat blanditiis
+                dolore ipsa?
+            &lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;expandable expandable__padded&quot;&gt;
+        &lt;button class=&quot;expandable_header expandable_target&quot;&gt;
+            &lt;span class=&quot;expandable_header-left expandable_label&quot;&gt;
+                Expandable Header 2
+            &lt;/span&gt;
+            &lt;span class=&quot;expandable_header-right expandable_link&quot;&gt;
+                &lt;span class=&quot;expandable_cue-open&quot;&gt;
+                    Show
+                    &lt;span class=&quot;cf-icon cf-icon-plus-round&quot;&gt;&lt;/span&gt;
+                &lt;/span&gt;
+                &lt;span class=&quot;expandable_cue-close&quot;&gt;
+                    Hide
+                    &lt;span class=&quot;cf-icon cf-icon-minus-round&quot;&gt;&lt;/span&gt;
+                &lt;/span&gt;
+            &lt;/span&gt;
+        &lt;/button&gt;
+        &lt;div class=&quot;expandable_content&quot;&gt;
+            &lt;p&gt;
+                Lorem ipsum dolor sit amet, consectetur adipisicing
+                elit. Neque ipsa voluptatibus soluta nobis unde quisquam
+                temporibus magnam debitis quidem. Ducimus ratione
+                corporis nesciunt earum vel est quaerat blanditiis
+                dolore ipsa?
+            &lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;expandable expandable__padded&quot;&gt;
+        &lt;button class=&quot;expandable_header expandable_target&quot;&gt;
+            &lt;span class=&quot;expandable_header-left expandable_label&quot;&gt;
+                Expandable Header 3
+            &lt;/span&gt;
+            &lt;span class=&quot;expandable_header-right expandable_link&quot;&gt;
+                &lt;span class=&quot;expandable_cue-open&quot;&gt;
+                    Show
+                    &lt;span class=&quot;cf-icon cf-icon-plus-round&quot;&gt;&lt;/span&gt;
+                &lt;/span&gt;
+                &lt;span class=&quot;expandable_cue-close&quot;&gt;
+                    Hide
+                    &lt;span class=&quot;cf-icon cf-icon-minus-round&quot;&gt;&lt;/span&gt;
+                &lt;/span&gt;
+            &lt;/span&gt;
+        &lt;/button&gt;
+        &lt;div class=&quot;expandable_content&quot;&gt;
+            &lt;p&gt;
+                Lorem ipsum dolor sit amet, consectetur adipisicing
+                elit. Neque ipsa voluptatibus soluta nobis unde quisquam
+                temporibus magnam debitis quidem. Ducimus ratione
+                corporis nesciunt earum vel est quaerat blanditiis
+                dolore ipsa?
+            &lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+              </footer>
+            </li>
+          </ul>
+          <div class="demo-pattern-css">
+            <pre class="css"><code data-language="css">.expandable-group {
+  margin-bottom: 1.875em;
+}
+.expandable-group_header {
+  padding: 0.35714286em 1.14285714em;
+  border-bottom: 1px solid #919395;
+  background: #f1f2f2;
+  color: #75787b;
+  font-family: &quot;AvenirNextLTW01-Demi&quot;, Arial, sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-top: 0;
+  margin-bottom: 0.35714286em;
+  font-size: 0.875em;
+  line-height: 1.57142857;
+  margin-bottom: 0;
+}
+.lt-ie9 .expandable-group_header {
+  font-weight: normal !important;
+}
+.lt-ie9 .expandable-group_header {
+  font-weight: normal !important;
+}
+.lt-ie9 .expandable-group_header {
+  font-weight: normal !important;
+}
+.lt-ie9 .expandable-group_header {
+  font-weight: normal !important;
+}
+.expandable-group .expandable {
+  border-bottom: 1px solid #919395;
+  margin-bottom: 0;
+  background: transparent;
+}
+.expandable-group .expandable_label {
+  margin-top: 0;
+  margin-bottom: 0.27777778em;
+  font-size: 1.125em;
+  font-family: &quot;AvenirNextLTW01-Medium&quot;, Arial, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.22222222;
+  margin-bottom: 0;
+}
+.lt-ie9 .expandable-group .expandable_label {
+  font-weight: normal !important;
+}
+.lt-ie9 .expandable-group .expandable_label {
+  font-weight: normal !important;
+}
+.lt-ie9 .expandable-group .expandable_label {
+  font-weight: normal !important;
+}
+.lt-ie9 .expandable-group .expandable_label {
+  font-weight: normal !important;
+}
+.expandable-group .expandable_content {
+  margin-bottom: 0;
+}</code></pre>
+          </div>
+        </li>
+      </ul>
+      <footer class="wrapper-footer">
+        <h4><a href="https://github.com/cfpb/cf-expandables">View the repository</a></h4>
+      </footer>
+    </div>
+    <script src="static/demo/main.min.js"></script>
     <script src="static/js/component.min.js"></script>
   </body>
 </html>
