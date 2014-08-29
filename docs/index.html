@@ -506,9 +506,9 @@ button.expandable_header {
                 </ul>
               </header>
               <section>
-<div class="expandable-group">
+<div class="expandable-group" data-accordion="true">
     <div class="expandable-group_header">Expandable group header</div>
-    <div class="expandable expandable__padded">
+    <div class="expandable expandable__padded" id="ex-test-1">
         <button class="expandable_header expandable_target">
             <span class="expandable_header-left expandable_label">
                 Expandable Header 1
@@ -534,7 +534,7 @@ button.expandable_header {
             </p>
         </div>
     </div>
-    <div class="expandable expandable__padded">
+    <div class="expandable expandable__padded" id="ex-test-2">
         <button class="expandable_header expandable_target">
             <span class="expandable_header-left expandable_label">
                 Expandable Header 2
@@ -560,7 +560,7 @@ button.expandable_header {
             </p>
         </div>
     </div>
-    <div class="expandable expandable__padded">
+    <div class="expandable expandable__padded" id="ex-test-3">
         <button class="expandable_header expandable_target">
             <span class="expandable_header-left expandable_label">
                 Expandable Header 3
@@ -589,9 +589,9 @@ button.expandable_header {
 </div>
 </section>
               <footer class="demo-pattern-list_footer">
-                <pre class="html"><code data-language="html">&lt;div class=&quot;expandable-group&quot;&gt;
+                <pre class="html"><code data-language="html">&lt;div class=&quot;expandable-group&quot; data-accordion=&quot;true&quot;&gt;
     &lt;div class=&quot;expandable-group_header&quot;&gt;Expandable group header&lt;/div&gt;
-    &lt;div class=&quot;expandable expandable__padded&quot;&gt;
+    &lt;div class=&quot;expandable expandable__padded&quot; id=&quot;ex-test-1&quot;&gt;
         &lt;button class=&quot;expandable_header expandable_target&quot;&gt;
             &lt;span class=&quot;expandable_header-left expandable_label&quot;&gt;
                 Expandable Header 1
@@ -617,7 +617,7 @@ button.expandable_header {
             &lt;/p&gt;
         &lt;/div&gt;
     &lt;/div&gt;
-    &lt;div class=&quot;expandable expandable__padded&quot;&gt;
+    &lt;div class=&quot;expandable expandable__padded&quot; id=&quot;ex-test-2&quot;&gt;
         &lt;button class=&quot;expandable_header expandable_target&quot;&gt;
             &lt;span class=&quot;expandable_header-left expandable_label&quot;&gt;
                 Expandable Header 2
@@ -643,7 +643,7 @@ button.expandable_header {
             &lt;/p&gt;
         &lt;/div&gt;
     &lt;/div&gt;
-    &lt;div class=&quot;expandable expandable__padded&quot;&gt;
+    &lt;div class=&quot;expandable expandable__padded&quot; id=&quot;ex-test-3&quot;&gt;
         &lt;button class=&quot;expandable_header expandable_target&quot;&gt;
             &lt;span class=&quot;expandable_header-left expandable_label&quot;&gt;
                 Expandable Header 3
@@ -708,7 +708,7 @@ button.expandable_header {
 .expandable-group .expandable {
   border-bottom: 1px solid #919395;
   margin-bottom: 0;
-  background: transparent;
+  background: #ffffff;
 }
 .expandable-group .expandable_label {
   margin-top: 0;

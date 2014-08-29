@@ -13,7 +13,13 @@
 
       var $this = $( this ),
           $target = $this.find('.expandable_target'),
-          $content = $this.find('.expandable_content');
+          $content = $this.find('.expandable_content'),
+          $groupParent = $this.parents('.expandable-group'),
+          accordion = $groupParent.length > 0 && $groupParent.data('accordion') === true;
+
+      if (accordion) {
+        var $siblings = $this.siblings('.expandable');
+      }
 
       $target.attr( 'aria-controls', $content.attr('id') );
 
@@ -38,6 +44,15 @@
           $target.attr( 'aria-pressed', 'false' );
           duration = $.fn.expandable.calculateCollapseDuration( $content.height() );
         } else {
+          if (accordion) {
+            $siblings.children('.expandable_content').attr( 'aria-expanded', 'false' );
+            $siblings.children('.expandable_target').attr( 'aria-pressed', 'false' );
+            $siblings.removeClass('expandable__expanded');
+            $siblings.children('.expandable_content').slideUp({
+              duration: 500,
+              easing: 'easeOutExpo'
+            });
+          }
           $content.attr( 'aria-expanded', 'true' );
           $target.attr( 'aria-pressed', 'true' );
           duration = $.fn.expandable.calculateExpandDuration( $content.height() );
