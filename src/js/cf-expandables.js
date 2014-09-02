@@ -15,7 +15,7 @@
           $target = $this.find('.expandable_target'),
           $content = $this.find('.expandable_content'),
           $groupParent = $this.parents('.expandable-group'),
-          accordion = $groupParent.length > 0 && $groupParent.data('accordion') === true;
+          accordion = $groupParent.length > 0 && $groupParent.data('accordion');
 
       if (accordion) {
         var $siblings = $this.siblings('.expandable');
