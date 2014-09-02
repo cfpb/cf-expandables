@@ -25,6 +25,8 @@
     setup: function() {
       this.$testSubjectOne = $('#test-subject-one');
       this.$testSubjectTwo = $('#test-subject-two');
+      this.$testSubjectThreeA = $('#test-subject-three-a');
+      this.$testSubjectThreeB = $('#test-subject-three-b');
     }
   });
 
@@ -197,6 +199,110 @@
       ok(
         ( $expandable.find('.expandable_content').attr('aria-expanded') === 'true' ),
         'The content should have an aria-expanded attribute set to true'
+      );
+      start();
+    }, 1800);
+  });
+
+  asyncTest( 'Verify activating expandable in accordion closes auto-opened expandable sibling', function() {
+    expect( 10 );
+    var $expandableA = this.$testSubjectThreeA,
+        $expandableB = this.$testSubjectThreeB;
+    // Note: $expandableA starts out as open by having the expandable__expanded
+    // class set in the initial markup. This test activates $expandableB,
+    // ensures that B opened correctly, and then ensures that A is now closed.
+    $expandableB.find('.expandable_target').trigger('click');
+    setTimeout(function() {
+      ok(
+        $expandableB.find('.expandable_content').is(':visible'),
+        'Expandable B content should no longer be collapsed'
+      );
+      ok(
+        $expandableB.find('.expandable_cue-close').is(':visible'),
+        'Expandable B close cue should be visible'
+      );
+      ok(
+        !$expandableB.find('.expandable_cue-open').is(':visible'),
+        'Expandable B open cue should be hidden'
+      );
+      ok(
+        ( $expandableB.find('.expandable_target').attr('aria-pressed') === 'true' ),
+        'Expandable B target should have an aria-pressed attribute that is true'
+      );
+      ok(
+        ( $expandableB.find('.expandable_content').attr('aria-expanded') === 'true' ),
+        'Expandable B content should have an aria-expanded attribute set to true'
+      );
+      ok(
+        !$expandableA.find('.expandable_content').is(':visible'),
+        'Expandable A content should now be collapsed'
+      );
+      ok(
+        !$expandableA.find('.expandable_cue-close').is(':visible'),
+        'Expandable A close cue should now be hidden'
+      );
+      ok(
+        $expandableA.find('.expandable_cue-open').is(':visible'),
+        'Expandable A open cue should now be visible'
+      );
+      ok(
+        ( $expandableA.find('.expandable_target').attr('aria-pressed') === 'false' ),
+        'Expandable A target should now have an aria-pressed attribute that is false'
+      );
+      ok(
+        ( $expandableA.find('.expandable_content').attr('aria-expanded') === 'false' ),
+        'Expandable A content should now have an aria-expanded attribute set to false'
+      );
+      start();
+    }, 900);
+  });
+
+  asyncTest( 'Verify activating expandable in accordion closes click-opened expandable sibling', function() {
+    expect( 10 );
+    var $expandableA = this.$testSubjectThreeA,
+        $expandableB = this.$testSubjectThreeB;
+    // Note: $expandableB was opened by click in the previous test.
+    $expandableA.find('.expandable_target').trigger('click');
+    setTimeout(function() {
+      ok(
+        $expandableA.find('.expandable_content').is(':visible'),
+        'Expandable A content should no longer be collapsed'
+      );
+      ok(
+        $expandableA.find('.expandable_cue-close').is(':visible'),
+        'Expandable A close cue should be visible'
+      );
+      ok(
+        !$expandableA.find('.expandable_cue-open').is(':visible'),
+        'Expandable A open cue should be hidden'
+      );
+      ok(
+        ( $expandableA.find('.expandable_target').attr('aria-pressed') === 'true' ),
+        'Expandable A target should have an aria-pressed attribute that is true'
+      );
+      ok(
+        ( $expandableA.find('.expandable_content').attr('aria-expanded') === 'true' ),
+        'Expandable A content should have an aria-expanded attribute set to true'
+      );
+      ok(
+        !$expandableB.find('.expandable_content').is(':visible'),
+        'Expandable B content should now be collapsed'
+      );
+      ok(
+        !$expandableB.find('.expandable_cue-close').is(':visible'),
+        'Expandable B close cue should now be hidden'
+      );
+      ok(
+        $expandableB.find('.expandable_cue-open').is(':visible'),
+        'Expandable B open cue should now be visible'
+      );
+      ok(
+        ( $expandableB.find('.expandable_target').attr('aria-pressed') === 'false' ),
+        'Expandable B target should now have an aria-pressed attribute that is false'
+      );
+      ok(
+        ( $expandableB.find('.expandable_content').attr('aria-expanded') === 'false' ),
+        'Expandable B content should now have an aria-expanded attribute set to false'
       );
       start();
     }, 1800);
