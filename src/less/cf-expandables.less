@@ -303,6 +303,229 @@
 
 
 /* topdoc
+    name: Expandable groups
+    family: cf-expandables
+    patterns:
+    - name: Standard expandable group
+      markup: |
+        <div class="expandable-group">
+            <div class="expandable-group_header">Expandable group header</div>
+            <div class="expandable expandable__padded">
+                <button class="expandable_header expandable_target">
+                    <span class="expandable_header-left expandable_label">
+                        Expandable Header 1
+                    </span>
+                    <span class="expandable_header-right expandable_link">
+                        <span class="expandable_cue-open">
+                            Show
+                            <span class="cf-icon cf-icon-plus-round"></span>
+                        </span>
+                        <span class="expandable_cue-close">
+                            Hide
+                            <span class="cf-icon cf-icon-minus-round"></span>
+                        </span>
+                    </span>
+                </button>
+                <div class="expandable_content">
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing
+                        elit. Neque ipsa voluptatibus soluta nobis unde quisquam
+                        temporibus magnam debitis quidem. Ducimus ratione
+                        corporis nesciunt earum vel est quaerat blanditiis
+                        dolore ipsa?
+                    </p>
+                </div>
+            </div>
+            <div class="expandable expandable__padded">
+                <button class="expandable_header expandable_target">
+                    <span class="expandable_header-left expandable_label">
+                        Expandable Header 2
+                    </span>
+                    <span class="expandable_header-right expandable_link">
+                        <span class="expandable_cue-open">
+                            Show
+                            <span class="cf-icon cf-icon-plus-round"></span>
+                        </span>
+                        <span class="expandable_cue-close">
+                            Hide
+                            <span class="cf-icon cf-icon-minus-round"></span>
+                        </span>
+                    </span>
+                </button>
+                <div class="expandable_content">
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing
+                        elit. Neque ipsa voluptatibus soluta nobis unde quisquam
+                        temporibus magnam debitis quidem. Ducimus ratione
+                        corporis nesciunt earum vel est quaerat blanditiis
+                        dolore ipsa?
+                    </p>
+                </div>
+            </div>
+            <div class="expandable expandable__padded">
+                <button class="expandable_header expandable_target">
+                    <span class="expandable_header-left expandable_label">
+                        Expandable Header 3
+                    </span>
+                    <span class="expandable_header-right expandable_link">
+                        <span class="expandable_cue-open">
+                            Show
+                            <span class="cf-icon cf-icon-plus-round"></span>
+                        </span>
+                        <span class="expandable_cue-close">
+                            Hide
+                            <span class="cf-icon cf-icon-minus-round"></span>
+                        </span>
+                    </span>
+                </button>
+                <div class="expandable_content">
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing
+                        elit. Neque ipsa voluptatibus soluta nobis unde quisquam
+                        temporibus magnam debitis quidem. Ducimus ratione
+                        corporis nesciunt earum vel est quaerat blanditiis
+                        dolore ipsa?
+                    </p>
+                </div>
+            </div>
+        </div>
+      codenotes:
+        - |
+          Pattern structure
+          -----------------
+          .expandable-group
+            .expandable-group_header
+            .expandable.expandable__padded
+              [...]
+            .expandable.expandable__padded
+              [...]
+            .expandable.expandable__padded
+              [...]
+    - name: Accordion-style group
+      markup: |
+        <div class="expandable-group" data-accordion="true">
+            <div class="expandable-group_header">Expandable group header</div>
+            <div class="expandable expandable__padded">
+                <button class="expandable_header expandable_target">
+                    <span class="expandable_header-left expandable_label">
+                        Expandable Header 1
+                    </span>
+                    <span class="expandable_header-right expandable_link">
+                        <span class="expandable_cue-open">
+                            Show
+                            <span class="cf-icon cf-icon-plus-round"></span>
+                        </span>
+                        <span class="expandable_cue-close">
+                            Hide
+                            <span class="cf-icon cf-icon-minus-round"></span>
+                        </span>
+                    </span>
+                </button>
+                <div class="expandable_content">
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing
+                        elit. Neque ipsa voluptatibus soluta nobis unde quisquam
+                        temporibus magnam debitis quidem. Ducimus ratione
+                        corporis nesciunt earum vel est quaerat blanditiis
+                        dolore ipsa?
+                    </p>
+                </div>
+            </div>
+            <div class="expandable expandable__padded">
+                <button class="expandable_header expandable_target">
+                    <span class="expandable_header-left expandable_label">
+                        Expandable Header 2
+                    </span>
+                    <span class="expandable_header-right expandable_link">
+                        <span class="expandable_cue-open">
+                            Show
+                            <span class="cf-icon cf-icon-plus-round"></span>
+                        </span>
+                        <span class="expandable_cue-close">
+                            Hide
+                            <span class="cf-icon cf-icon-minus-round"></span>
+                        </span>
+                    </span>
+                </button>
+                <div class="expandable_content">
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing
+                        elit. Neque ipsa voluptatibus soluta nobis unde quisquam
+                        temporibus magnam debitis quidem. Ducimus ratione
+                        corporis nesciunt earum vel est quaerat blanditiis
+                        dolore ipsa?
+                    </p>
+                </div>
+            </div>
+            <div class="expandable expandable__padded">
+                <button class="expandable_header expandable_target">
+                    <span class="expandable_header-left expandable_label">
+                        Expandable Header 3
+                    </span>
+                    <span class="expandable_header-right expandable_link">
+                        <span class="expandable_cue-open">
+                            Show
+                            <span class="cf-icon cf-icon-plus-round"></span>
+                        </span>
+                        <span class="expandable_cue-close">
+                            Hide
+                            <span class="cf-icon cf-icon-minus-round"></span>
+                        </span>
+                    </span>
+                </button>
+                <div class="expandable_content">
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing
+                        elit. Neque ipsa voluptatibus soluta nobis unde quisquam
+                        temporibus magnam debitis quidem. Ducimus ratione
+                        corporis nesciunt earum vel est quaerat blanditiis
+                        dolore ipsa?
+                    </p>
+                </div>
+            </div>
+        </div>
+      codenotes:
+        - |
+          <div class="expandable-group" data-accordion="true">
+      notes:
+        - "Accordions can only show one open expandable at a time."
+        - "Add the data-accordion=\"true\" attribute to the expandable group to
+           activate the accordion mode."
+    tags:
+    - cf-expandables
+*/
+
+.expandable-group {
+    margin-bottom: unit(30px / @base-font-size-px, em);
+}
+
+.expandable-group_header {
+    padding: unit(5px / @font-size, em)
+             unit(16px / @font-size, em);
+    border-bottom: 1px solid @gray-80;
+    background: @gray-10;
+    color: @gray;
+    .h5();
+    margin-bottom: 0;
+}
+
+.expandable-group .expandable {
+    border-bottom: 1px solid @gray-80;
+    margin-bottom: 0;
+    background: @white;
+}
+
+.expandable-group .expandable_label {
+    .h4();
+    margin-bottom: 0;
+}
+
+.expandable-group .expandable_content {
+    margin-bottom: 0;
+}
+
+
+/* topdoc
   name: EOF
   eof: true
 */
