@@ -12,8 +12,8 @@
     return $( this ).each(function() {
 
       var $this = $( this ),
-          $target = $this.find('.expandable_target'),
-          $content = $this.find('.expandable_content'),
+          $target = $this.find('.expandable_target').not( $this.find('.expandable .expandable_target') ),
+          $content = $this.find('.expandable_content').not( $this.find('.expandable .expandable_content') ),
           $groupParent = $this.parents('.expandable-group'),
           accordion = $groupParent.length > 0 && $groupParent.data('accordion');
 
