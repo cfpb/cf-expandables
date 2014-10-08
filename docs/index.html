@@ -199,6 +199,10 @@
   background-color: transparent;
   cursor: pointer;
 }
+.expandable_target:focus {
+  outline: 1px dotted #101820;
+  outline-offset: 1px;
+}
 .expandable_cue-close {
   display: none;
 }
@@ -480,6 +484,13 @@ button.expandable_header {
 }
 .expandable__padded .expandable_content {
   margin: 0 1em 1.375em;
+}
+.expandable__padded .expandable_content:before {
+  content: '';
+  display: block;
+  height: 1px;
+  margin-bottom: 1em;
+  background: #babbbd;
 }</code></pre>
       </div>
     </div>

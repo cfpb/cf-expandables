@@ -131,6 +131,11 @@
     border: 0;
     background-color: transparent;
     cursor: pointer;
+
+    &:focus {
+        outline: 1px dotted @black;
+        outline-offset: 1px;
+    }
 }
 
 .expandable_cue-close {
@@ -298,6 +303,14 @@
         margin: 0
                 unit(16px / @base-font-size-px, em)
                 unit(22px / @base-font-size-px, em);
+
+        &:before {
+            content: '';
+            display: block;
+            height: 1px;
+            margin-bottom: unit(16px / @base-font-size-px, em);
+            background: @gray-50;
+        }
     }
 }
 
