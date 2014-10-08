@@ -2,6 +2,21 @@ All notable changes to this project will be documented in this file.
 We follow the [Semantic Versioning 2.0.0](http://semver.org/) format.
 
 
+## 0.5.2 - 2014-10-08
+
+### Added
+- Nothing.
+
+### Deprecated
+- Nothing.
+
+### Removed
+- Nothing.
+
+### Fixed
+- Improved focus states on `.expandable_target`.
+
+
 ## 0.5.1 - 2014-10-03
 
 ### Added
