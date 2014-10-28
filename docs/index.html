@@ -166,9 +166,11 @@ Defaults to `$.fn.expandable.calculateExpandDuration` or
 &lt;div class=&quot;expandable&quot; id=&quot;my-expandable&quot;&gt;...&lt;/div&gt;
 
 // JS
-$('#my-expandable').expand(); // Opens the expandable
-$('#my-expandable').collapse(); // Closes the expandable
-$('#my-expandable').toggle(); // Toggles the expandable</code></pre>
+// (use .get(0) to get the HTML element, that's what the functions
+// are bound to)
+$('#my-expandable').get(0).expand(); // Opens the expandable
+$('#my-expandable').get(0).collapse(); // Closes the expandable
+$('#my-expandable').get(0).toggle(); // Toggles the expandable</code></pre>
               </li>
             </ul>
           </footer>

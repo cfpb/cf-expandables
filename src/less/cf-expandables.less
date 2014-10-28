@@ -98,9 +98,11 @@
           <div class="expandable" id="my-expandable">...</div>
 
           // JS
-          $('#my-expandable').expand(); // Opens the expandable
-          $('#my-expandable').collapse(); // Closes the expandable
-          $('#my-expandable').toggle(); // Toggles the expandable
+          // (use .get(0) to get the HTML element, that's what the functions
+          // are bound to)
+          $('#my-expandable').get(0).expand(); // Opens the expandable
+          $('#my-expandable').get(0).collapse(); // Closes the expandable
+          $('#my-expandable').get(0).toggle(); // Toggles the expandable
     tags:
     - cf-expandables
 */

@@ -27,6 +27,11 @@
       this.$testSubjectTwo = $('#test-subject-two');
       this.$testSubjectThreeA = $('#test-subject-three-a');
       this.$testSubjectThreeB = $('#test-subject-three-b');
+      this.$testSubjectFour = $('#test-subject-four');
+      this.$testSubjectFourA = $('#test-subject-four-a');
+      this.$testSubjectFourAContent = $('#test-subject-four-a_content');
+      this.$testSubjectFourB = $('#test-subject-four-b');
+      this.$testSubjectFourBContent = $('#test-subject-four-b_content');
     }
   });
 
@@ -306,6 +311,45 @@
       );
       start();
     }, 1800);
+  });
+
+  test( 'Verify that expanding an expandable with nested expandables does not trigger expansion on the nested expandables', function() {
+    expect( 1 );
+    var expandable = this.$testSubjectFour.get( 0 ),
+        $expandableAContent = this.$testSubjectFourAContent,
+        $expandableBContent = this.$testSubjectFourBContent;
+    expandable.expand( 0 );
+    ok(
+      !$expandableAContent.is(':visible') && !$expandableBContent.is(':visible'),
+      'Nested expandables should remain collapsed after the parent is expanded.'
+    );
+  });
+
+  test( 'Verify that expanding a nested expandable with nested expandables does not trigger expansion on the nested expandables', function() {
+    expect( 1 );
+    var expandableA = this.$testSubjectFourA.get( 0 ),
+        $expandableBContent = this.$testSubjectFourBContent;
+    expandableA.expand( 0 );
+    ok(
+      !$expandableBContent.is(':visible'),
+      'Nested expandables should remain collapsed after the parent is expanded.'
+    );
+  });
+
+  test( 'Verify that collapsing an expandable with nested expandables does not trigger collapsing on the nested expandables', function() {
+    expect( 1 );
+    var expandable = this.$testSubjectFour.get( 0 ),
+        expandableA = this.$testSubjectFourA.get( 0 ),
+        $expandableAContent = this.$testSubjectFourAContent,
+        expandableB = this.$testSubjectFourB.get( 0 ),
+        $expandableBContent = this.$testSubjectFourBContent;
+    expandableA.expand( 0 );
+    expandableB.expand( 0 );
+    expandable.collapse( 0 );
+    ok(
+      $expandableAContent.attr('aria-expanded') === 'true' && $expandableBContent.attr('aria-expanded') === 'true',
+      'Nested expandables should remain expanded after the parent is collapsed.'
+    );
   });
 
   test( 'Verify the constrainValue method', function() {
