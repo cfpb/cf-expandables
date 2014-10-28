@@ -62,6 +62,53 @@
 
 
 /* topdoc
+    name: JS functions
+    family: cf-expandables
+    notes:
+      - "There are a number of available functions that you can call on
+         .expandable elements."
+    patterns:
+    - name: .toggle()
+      codenotes:
+        - "Toggles the expandable."
+    - name: .expand( duration )
+      codenotes:
+        - "Expands the expandable."
+        - |
+          duration
+          Type: number
+          The animation duration.
+          Not required.
+          Defaults to `$.fn.expandable.calculateExpandDuration` or
+          `$.fn.expandable.calculateCollapseDuration` if excluded.
+    - name: .collapse( duration )
+      codenotes:
+        - "Collapses the expandable."
+        - |
+          duration
+          Type: number
+          The animation duration.
+          Not required.
+          Defaults to `$.fn.expandable.calculateExpandDuration` or
+          `$.fn.expandable.calculateCollapseDuration` if excluded.
+    - name: Example usage
+      codenotes:
+        - |
+          // HTML
+          <div class="expandable" id="my-expandable">...</div>
+
+          // JS
+          // (use .get(0) to get the HTML element, that's what the functions
+          // are bound to)
+          $('#my-expandable').get(0).expand(); // Opens the expandable
+          $('#my-expandable').get(0).collapse(); // Closes the expandable
+          $('#my-expandable').get(0).toggle(); // Toggles the expandable
+    tags:
+    - cf-expandables
+*/
+
+
+/* topdoc
     name: Barebones expandable
     family: cf-expandables
     notes:
@@ -135,19 +182,6 @@
     &:focus {
         outline: 1px dotted @black;
         outline-offset: 1px;
-    }
-}
-
-.expandable_cue-close {
-    display: none;
-}
-
-.expandable__expanded {
-    > .expandable_target .expandable_cue-open {
-        display: none;
-    }
-    > .expandable_target .expandable_cue-close {
-        display: inline;
     }
 }
 
