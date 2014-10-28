@@ -2,6 +2,22 @@ All notable changes to this project will be documented in this file.
 We follow the [Semantic Versioning 2.0.0](http://semver.org/) format.
 
 
+## 0.6.0 - 2014-10-28
+
+### Added
+- Infinite nesting.
+- Programmatic access to expand and collapse functions.
+
+### Deprecated
+- Nothing.
+
+### Removed
+- Nothing.
+
+### Fixed
+- Toggle cues now work when outside of `.expandable_header`.
+
+
 ## 0.5.2 - 2014-10-08
 
 ### Added
