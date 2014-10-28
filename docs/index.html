@@ -103,6 +103,78 @@
         </div>
       </div>
     </div>
+    <div id="js-functions" class="docs-component">
+      <h2 class="docs-component_header"><span>JS functions</span></h2>
+      <div class="docs-component_intro">
+        <ul class="docs-notes">
+          <li>There are a number of available functions that you can call on .expandable elements.</li>
+        </ul>
+      </div>
+      <div class="docs-patterns">
+        <div class="docs-pattern">
+          <h3 class="docs-pattern_header">.toggle()</h3>
+          <footer class="docs-pattern_footer">
+            <ul class="docs-codenotes">
+              <li>
+                <pre class="docs-code"><code>Toggles the expandable.</code></pre>
+              </li>
+            </ul>
+          </footer>
+        </div>
+        <div class="docs-pattern">
+          <h3 class="docs-pattern_header">.expand( duration )</h3>
+          <footer class="docs-pattern_footer">
+            <ul class="docs-codenotes">
+              <li>
+                <pre class="docs-code"><code>Expands the expandable.</code></pre>
+              </li>
+              <li>
+                <pre class="docs-code"><code>duration
+Type: number
+The animation duration.
+Not required.
+Defaults to `$.fn.expandable.calculateExpandDuration` or
+`$.fn.expandable.calculateCollapseDuration` if excluded.</code></pre>
+              </li>
+            </ul>
+          </footer>
+        </div>
+        <div class="docs-pattern">
+          <h3 class="docs-pattern_header">.collapse( duration )</h3>
+          <footer class="docs-pattern_footer">
+            <ul class="docs-codenotes">
+              <li>
+                <pre class="docs-code"><code>Collapses the expandable.</code></pre>
+              </li>
+              <li>
+                <pre class="docs-code"><code>duration
+Type: number
+The animation duration.
+Not required.
+Defaults to `$.fn.expandable.calculateExpandDuration` or
+`$.fn.expandable.calculateCollapseDuration` if excluded.</code></pre>
+              </li>
+            </ul>
+          </footer>
+        </div>
+        <div class="docs-pattern">
+          <h3 class="docs-pattern_header">Example usage</h3>
+          <footer class="docs-pattern_footer">
+            <ul class="docs-codenotes">
+              <li>
+                <pre class="docs-code"><code>// HTML
+&lt;div class=&quot;expandable&quot; id=&quot;my-expandable&quot;&gt;...&lt;/div&gt;
+
+// JS
+$('#my-expandable').expand(); // Opens the expandable
+$('#my-expandable').collapse(); // Closes the expandable
+$('#my-expandable').toggle(); // Toggles the expandable</code></pre>
+              </li>
+            </ul>
+          </footer>
+        </div>
+      </div>
+    </div>
     <div id="barebones-expandable" class="docs-component">
       <h2 class="docs-component_header"><span>Barebones expandable</span></h2>
       <div class="docs-component_intro">

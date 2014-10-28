@@ -62,6 +62,51 @@
 
 
 /* topdoc
+    name: JS functions
+    family: cf-expandables
+    notes:
+      - "There are a number of available functions that you can call on
+         .expandable elements."
+    patterns:
+    - name: .toggle()
+      codenotes:
+        - "Toggles the expandable."
+    - name: .expand( duration )
+      codenotes:
+        - "Expands the expandable."
+        - |
+          duration
+          Type: number
+          The animation duration.
+          Not required.
+          Defaults to `$.fn.expandable.calculateExpandDuration` or
+          `$.fn.expandable.calculateCollapseDuration` if excluded.
+    - name: .collapse( duration )
+      codenotes:
+        - "Collapses the expandable."
+        - |
+          duration
+          Type: number
+          The animation duration.
+          Not required.
+          Defaults to `$.fn.expandable.calculateExpandDuration` or
+          `$.fn.expandable.calculateCollapseDuration` if excluded.
+    - name: Example usage
+      codenotes:
+        - |
+          // HTML
+          <div class="expandable" id="my-expandable">...</div>
+
+          // JS
+          $('#my-expandable').expand(); // Opens the expandable
+          $('#my-expandable').collapse(); // Closes the expandable
+          $('#my-expandable').toggle(); // Toggles the expandable
+    tags:
+    - cf-expandables
+*/
+
+
+/* topdoc
     name: Barebones expandable
     family: cf-expandables
     notes:
