@@ -237,17 +237,17 @@
     name: Animated cues
     family: cf-expandables
     patterns:
-    - name: .expandable__animated-cues (modifier)
+    - name: .expandable_cue-open/close__animated (modifier)
       codenotes:
         - |
           .expandable_cue-open__animated
       markup: |
-        <div class="expandable expandable__animated-cues">
+        <div class="expandable">
             <button class="expandable_target">
-                <span class="expandable_cue-open">
+                <span class="expandable_cue-open expandable_cue-open__animated">
                     <span class="cf-icon cf-icon-down"></span>
                 </span>
-                <span class="expandable_cue-close">
+                <span class="expandable_cue-close expandable_cue-close__animated">
                     <span class="cf-icon cf-icon-up"></span>
                 </span>
             </button>
@@ -261,12 +261,12 @@
                 </p>
             </div>
         </div>
-        <div class="expandable expandable__expanded expandable__animated-cues">
+        <div class="expandable expandable__expanded">
             <button class="expandable_target">
-                <span class="expandable_cue-open">
+                <span class="expandable_cue-open expandable_cue-open__animated">
                     <span class="cf-icon cf-icon-down"></span>
                 </span>
-                <span class="expandable_cue-close">
+                <span class="expandable_cue-close expandable_cue-close__animated">
                     <span class="cf-icon cf-icon-up"></span>
                 </span>
             </button>
@@ -284,20 +284,20 @@
     - cf-expandables
 */
 
-.expandable__animated-cues .expandable_cue-open,
-.expandable__animated-cues .expandable_cue-close {
+.expandable_cue-open__animated,
+.expandable_cue-close__animated {
     transition: 0.25s transform;
 }
 
-.expandable__animated-cues .expandable_cue-close {
+.expandable_cue-close__animated {
     transform: rotate(180deg);
 }
 
-.expandable__animated-cues.expandable__expanded .expandable_cue-close {
+.expandable__expanded .expandable_cue-close__animated {
     transform: rotate(0);
 }
 
-.expandable__animated-cues.expandable__expanded .expandable_cue-open {
+.expandable__expanded .expandable_cue-open__animated {
     transform: rotate(-180deg);
 }
 
