@@ -426,14 +426,34 @@ $('#my-expandable').get(0).toggle(); // Toggles the expandable</code></pre>
       <h2 class="docs-component_header"><span>Animated cues</span></h2>
       <div class="docs-patterns">
         <div class="docs-pattern">
-          <h3 class="docs-pattern_header">.expandable_cue-open__animated (modifier)</h3>
+          <h3 class="docs-pattern_header">.expandable__animated-cues (modifier)</h3>
           <section class="docs-pattern_pattern">
-<div class="expandable">
+<div class="expandable expandable__animated-cues">
     <button class="expandable_target">
-        <span class="expandable_cue-open expandable_cue-open__animated">
+        <span class="expandable_cue-open">
             <span class="cf-icon cf-icon-down"></span>
         </span>
-        <span class="expandable_cue-close expandable_cue-close__animated">
+        <span class="expandable_cue-close">
+            <span class="cf-icon cf-icon-up"></span>
+        </span>
+    </button>
+    <div class="expandable_content">
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing
+            elit. Neque ipsa voluptatibus soluta nobis unde quisquam
+            temporibus magnam debitis quidem. Ducimus ratione
+            corporis nesciunt earum vel est quaerat blanditiis
+            dolore ipsa?
+        </p>
+    </div>
+</div>
+<br>
+<div class="expandable expandable__expanded expandable__animated-cues">
+    <button class="expandable_target">
+        <span class="expandable_cue-open">
+            <span class="cf-icon cf-icon-down"></span>
+        </span>
+        <span class="expandable_cue-close">
             <span class="cf-icon cf-icon-up"></span>
         </span>
     </button>
@@ -450,12 +470,32 @@ $('#my-expandable').get(0).toggle(); // Toggles the expandable</code></pre>
 
           </section>
           <footer class="docs-pattern_footer">
-            <pre class="docs-code docs-pattern_markup"><code data-language="html">&lt;div class=&quot;expandable&quot;&gt;
+            <pre class="docs-code docs-pattern_markup"><code data-language="html">&lt;div class=&quot;expandable expandable__animated-cues&quot;&gt;
     &lt;button class=&quot;expandable_target&quot;&gt;
-        &lt;span class=&quot;expandable_cue-open expandable_cue-open__animated&quot;&gt;
+        &lt;span class=&quot;expandable_cue-open&quot;&gt;
             &lt;span class=&quot;cf-icon cf-icon-down&quot;&gt;&lt;/span&gt;
         &lt;/span&gt;
-        &lt;span class=&quot;expandable_cue-close expandable_cue-close__animated&quot;&gt;
+        &lt;span class=&quot;expandable_cue-close&quot;&gt;
+            &lt;span class=&quot;cf-icon cf-icon-up&quot;&gt;&lt;/span&gt;
+        &lt;/span&gt;
+    &lt;/button&gt;
+    &lt;div class=&quot;expandable_content&quot;&gt;
+        &lt;p&gt;
+            Lorem ipsum dolor sit amet, consectetur adipisicing
+            elit. Neque ipsa voluptatibus soluta nobis unde quisquam
+            temporibus magnam debitis quidem. Ducimus ratione
+            corporis nesciunt earum vel est quaerat blanditiis
+            dolore ipsa?
+        &lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;br&gt;
+&lt;div class=&quot;expandable expandable__expanded expandable__animated-cues&quot;&gt;
+    &lt;button class=&quot;expandable_target&quot;&gt;
+        &lt;span class=&quot;expandable_cue-open&quot;&gt;
+            &lt;span class=&quot;cf-icon cf-icon-down&quot;&gt;&lt;/span&gt;
+        &lt;/span&gt;
+        &lt;span class=&quot;expandable_cue-close&quot;&gt;
             &lt;span class=&quot;cf-icon cf-icon-up&quot;&gt;&lt;/span&gt;
         &lt;/span&gt;
     &lt;/button&gt;
@@ -481,25 +521,25 @@ $('#my-expandable').get(0).toggle(); // Toggles the expandable</code></pre>
         </div>
       </div>
       <div class="docs-css">
-        <pre class="docs-code"><code data-language="css">.expandable_cue-open__animated,
-.expandable_cue-close__animated {
+        <pre class="docs-code"><code data-language="css">.expandable__animated-cues .expandable_cue-open,
+.expandable__animated-cues .expandable_cue-close {
   -webkit-transition: 0.25s -webkit-transform;
   transition: 0.25s transform;
 }
-.expandable__expanded .expandable_cue-open__animated {
-  -webkit-transform: rotate(-180deg);
-  -ms-transform: rotate(-180deg);
-  transform: rotate(-180deg);
+.expandable__animated-cues .expandable_cue-close {
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
 }
-.expandable__expanded .expandable_cue-close__animated {
+.expandable__animated-cues.expandable__expanded .expandable_cue-close {
   -webkit-transform: rotate(0);
   -ms-transform: rotate(0);
   transform: rotate(0);
 }
-.expandable_cue-close__animated {
-  -webkit-transform: rotate(180deg);
-  -ms-transform: rotate(180deg);
-  transform: rotate(180deg);
+.expandable__animated-cues.expandable__expanded .expandable_cue-open {
+  -webkit-transform: rotate(-180deg);
+  -ms-transform: rotate(-180deg);
+  transform: rotate(-180deg);
 }</code></pre>
       </div>
     </div>

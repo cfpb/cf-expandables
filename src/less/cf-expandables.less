@@ -237,17 +237,37 @@
     name: Animated cues
     family: cf-expandables
     patterns:
-    - name: .expandable_cue-open__animated (modifier)
+    - name: .expandable__animated-cues (modifier)
       codenotes:
         - |
           .expandable_cue-open__animated
       markup: |
-        <div class="expandable">
+        <div class="expandable expandable__animated-cues">
             <button class="expandable_target">
-                <span class="expandable_cue-open expandable_cue-open__animated">
+                <span class="expandable_cue-open">
                     <span class="cf-icon cf-icon-down"></span>
                 </span>
-                <span class="expandable_cue-close expandable_cue-close__animated">
+                <span class="expandable_cue-close">
+                    <span class="cf-icon cf-icon-up"></span>
+                </span>
+            </button>
+            <div class="expandable_content">
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing
+                    elit. Neque ipsa voluptatibus soluta nobis unde quisquam
+                    temporibus magnam debitis quidem. Ducimus ratione
+                    corporis nesciunt earum vel est quaerat blanditiis
+                    dolore ipsa?
+                </p>
+            </div>
+        </div>
+        <br>
+        <div class="expandable expandable__expanded expandable__animated-cues">
+            <button class="expandable_target">
+                <span class="expandable_cue-open">
+                    <span class="cf-icon cf-icon-down"></span>
+                </span>
+                <span class="expandable_cue-close">
                     <span class="cf-icon cf-icon-up"></span>
                 </span>
             </button>
@@ -267,21 +287,21 @@
     - cf-expandables
 */
 
-.expandable_cue-open__animated,
-.expandable_cue-close__animated {
+.expandable__animated-cues .expandable_cue-open,
+.expandable__animated-cues .expandable_cue-close {
     transition: 0.25s transform;
 }
 
-.expandable__expanded .expandable_cue-open__animated {
-    transform: rotate(-180deg);
+.expandable__animated-cues .expandable_cue-close {
+    transform: rotate(180deg);
 }
 
-.expandable__expanded .expandable_cue-close__animated {
+.expandable__animated-cues.expandable__expanded .expandable_cue-close {
     transform: rotate(0);
 }
 
-.expandable_cue-close__animated {
-    transform: rotate(180deg);
+.expandable__animated-cues.expandable__expanded .expandable_cue-open {
+    transform: rotate(-180deg);
 }
 
 
