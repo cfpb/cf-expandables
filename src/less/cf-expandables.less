@@ -5,6 +5,54 @@
 
 
 /* topdoc
+    name: Theme variables
+    family: cf-expandables
+    notes:
+      - "The following color and sizing variables are exposed, allowing you to
+         easily override them before compiling."
+    patterns:
+    - name: Colors
+      codenotes:
+        - |
+          @expandable-focus
+          @expandable_label-text
+          @expandable_link-text
+          @expandable__padded-bg
+          @expandable__padded-bg-hover
+          @expandable__padded-divider
+          @expandable-group_header-text
+          @expandable-group_header-bg
+          @expandable-group-bg
+          @expandable-group-divider
+    - name: Sizing
+      codenotes:
+        - |
+          @expandable_link-font-size
+    tags:
+    - cf-expandables
+    - less
+*/
+
+// Color variables 
+
+@expandable-focus: darken(#895983, 15%);
+@expandable_label-text: darken(#895983, 15%);
+@expandable_link-text: darken(#895983, 15%);
+@expandable__padded-bg: lighten(#905c8a, 45%);
+@expandable__padded-bg-hover: lighten(@expandable__padded-bg, 3%);
+@expandable__padded-divider: darken(@expandable__padded-bg, 5%);
+@expandable-group_header-text: darken(#895983, 15%);
+@expandable-group_header-bg: lighten(#905c8a, 45%);
+@expandable-group-bg: #fff;
+@expandable-group-divider: darken(#895983, 15%);
+
+
+// Sizing variables
+
+@expandable_link-font-size: 14px;
+
+
+/* topdoc
     name: Recommended expandable pattern
     family: cf-expandables
     notes:
@@ -180,7 +228,7 @@
     cursor: pointer;
 
     &:focus {
-        outline: 1px dotted @black;
+        outline: 1px dotted @expandable-focus;
         outline-offset: 1px;
     }
 }
@@ -221,15 +269,15 @@
 */
 
 .expandable_label {
-    color: @black;
+    color: @expandable_label-text;
     .webfont-medium();
 }
 
 .expandable_link {
-    color: @pacific;
+    color: @expandable_link-text;
     .webfont-regular();
-    font-size: unit(@btn-font-size / @base-font-size-px, em);
-    line-height: unit(@base-line-height-px / @btn-font-size);
+    font-size: unit(@expandable_link-font-size / @base-font-size-px, em);
+    line-height: unit(@base-line-height-px / @expandable_link-font-size);
 }
 
 
@@ -390,11 +438,11 @@
 
 .expandable__padded {
     margin-bottom: unit(30px / @base-font-size-px, em);
-    background: @gray-10;
+    background: @expandable__padded-bg;
 
     &:hover,
     &.expandable__expanded {
-        background: @gray-20;
+        background: @expandable__padded-bg-hover;
     }
 
     .expandable_header {
@@ -408,12 +456,13 @@
                 unit(16px / @base-font-size-px, em)
                 unit(22px / @base-font-size-px, em);
 
+        // The divider between _header and _content.
         &:before {
             content: '';
             display: block;
             height: 1px;
             margin-bottom: unit(16px / @base-font-size-px, em);
-            background: @gray-50;
+            background: @expandable__padded-divider;
         }
     }
 }
@@ -619,17 +668,17 @@
 .expandable-group_header {
     padding: unit(5px / @font-size, em)
              unit(16px / @font-size, em);
-    border-bottom: 1px solid @gray-80;
-    background: @gray-10;
-    color: @gray;
+    border-bottom: 1px solid @expandable-group-divider;
+    background: @expandable-group_header-bg;
+    color: @expandable-group_header-text;
     .h5();
     margin-bottom: 0;
 }
 
 .expandable-group .expandable {
-    border-bottom: 1px solid @gray-80;
+    border-bottom: 1px solid @expandable-group-divider;
     margin-bottom: 0;
-    background: @white;
+    background: @expandable-group-bg;
 }
 
 .expandable-group .expandable_label {

@@ -18,7 +18,6 @@
   "main": "src/js/cf-expandables.js",
   "dependencies": {
     "cf-core": "latest",
-    "cf-buttons": "latest",
     "cf-icons": "latest",
     "jquery": "~1.11.0",
     "jquery.easing": "~1.3.0"

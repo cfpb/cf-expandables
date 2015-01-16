@@ -23,6 +23,45 @@
           <h1 class="docs-title"><span class="docs-icon">&lt;/&gt;</span> cf-expandables docs
           </h1><a href="https://github.com/cfpb/cf-expandables" class="docs-repo">view the repository</a>
         </div>
+        <div id="theme-variables" class="docs-component">
+          <h2 class="docs-component_header"><span>Theme variables</span></h2>
+          <div class="docs-component_intro">
+            <ul class="docs-notes">
+              <li>The following color and sizing variables are exposed, allowing you to easily override them before compiling.</li>
+            </ul>
+          </div>
+          <div class="docs-patterns">
+            <div class="docs-pattern">
+              <h3 class="docs-pattern_header">Colors</h3>
+              <footer class="docs-pattern_footer">
+                <ul class="docs-codenotes">
+                  <li>
+                    <pre class="docs-code"><code>@expandable-focus
+@expandable_label-text
+@expandable_link-text
+@expandable__padded-bg
+@expandable__padded-bg-hover
+@expandable__padded-divider
+@expandable-group_header-text
+@expandable-group_header-bg
+@expandable-group-bg
+@expandable-group-divider</code></pre>
+                  </li>
+                </ul>
+              </footer>
+            </div>
+            <div class="docs-pattern">
+              <h3 class="docs-pattern_header">Sizing</h3>
+              <footer class="docs-pattern_footer">
+                <ul class="docs-codenotes">
+                  <li>
+                    <pre class="docs-code"><code>@expandable_link-font-size</code></pre>
+                  </li>
+                </ul>
+              </footer>
+            </div>
+          </div>
+        </div>
         <div id="recommended-expandable-pattern" class="docs-component">
           <h2 class="docs-component_header"><span>Recommended expandable pattern</span></h2>
           <div class="docs-component_intro">
@@ -290,7 +329,7 @@ $('#my-expandable').get(0).toggle(); // Toggles the expandable</code></pre>
   cursor: pointer;
 }
 .expandable_target:focus {
-  outline: 1px dotted #101820;
+  outline: 1px dotted #5b3b57;
   outline-offset: 1px;
 }
 .expandable_content:after {
@@ -361,7 +400,7 @@ $('#my-expandable').get(0).toggle(); // Toggles the expandable</code></pre>
           </div>
           <div class="docs-css">
             <pre class="docs-code"><code data-language="css">.expandable_label {
-  color: #101820;
+  color: #5b3b57;
   font-family: &quot;AvenirNextLTW01-Medium&quot;, Arial, sans-serif;
   font-style: normal;
   font-weight: 500;
@@ -370,7 +409,7 @@ $('#my-expandable').get(0).toggle(); // Toggles the expandable</code></pre>
   font-weight: normal !important;
 }
 .expandable_link {
-  color: #0072ce;
+  color: #5b3b57;
   font-family: &quot;AvenirNextLTW01-Regular&quot;, Arial, sans-serif;
   font-style: normal;
   font-weight: normal;
@@ -628,11 +667,11 @@ button.expandable_header {
           <div class="docs-css">
             <pre class="docs-code"><code data-language="css">.expandable__padded {
   margin-bottom: 1.875em;
-  background: #f1f2f2;
+  background: #eee4ed;
 }
 .expandable__padded:hover,
 .expandable__padded.expandable__expanded {
-  background: #e3e4e5;
+  background: #f4edf3;
 }
 .expandable__padded .expandable_header {
   padding: 0.625em 1em;
@@ -645,7 +684,7 @@ button.expandable_header {
   display: block;
   height: 1px;
   margin-bottom: 1em;
-  background: #babbbd;
+  background: #e4d4e2;
 }</code></pre>
           </div>
         </div>
@@ -1030,9 +1069,9 @@ button.expandable_header {
 }
 .expandable-group_header {
   padding: 0.35714286em 1.14285714em;
-  border-bottom: 1px solid #919395;
-  background: #f1f2f2;
-  color: #75787b;
+  border-bottom: 1px solid #5b3b57;
+  background: #eee4ed;
+  color: #5b3b57;
   font-family: &quot;AvenirNextLTW01-Demi&quot;, Arial, sans-serif;
   font-style: normal;
   font-weight: bold;
@@ -1048,7 +1087,7 @@ button.expandable_header {
   font-weight: normal !important;
 }
 .expandable-group .expandable {
-  border-bottom: 1px solid #919395;
+  border-bottom: 1px solid #5b3b57;
   margin-bottom: 0;
   background: #ffffff;
 }
