@@ -15,11 +15,6 @@
     <link rel="stylesheet" type="text/css" href="static/docs/brackets.css">
     <link rel="stylesheet" type="text/css" href="static/docs/docs.css">
     <link rel="stylesheet" type="text/css" href="static/css/main.css">
-    <script>
-      // Confirm availability of JS and remove no-js class from html
-      var docElement = document.documentElement;
-      docElement.className = docElement.className.replace(/(^|\s)no-js(\s|$)/, '$1$2');
-    </script>
   </head>
   <body>
     <div class="docs-sidebar-wrapper">
@@ -305,14 +300,6 @@ $('#my-expandable').get(0).toggle(); // Toggles the expandable</code></pre>
 }
 .lt-ie8 .expandable_content {
   zoom: 1;
-}
-.expandable_content:after {
-  content: &quot;&quot;;
-  display: table;
-  clear: both;
-}
-.lt-ie8 .expandable_content {
-  zoom: 1;
 }</code></pre>
           </div>
         </div>
@@ -382,9 +369,6 @@ $('#my-expandable').get(0).toggle(); // Toggles the expandable</code></pre>
 .lt-ie9 .expandable_label {
   font-weight: normal !important;
 }
-.lt-ie9 .expandable_label {
-  font-weight: normal !important;
-}
 .expandable_link {
   color: #0072ce;
   font-family: &quot;AvenirNextLTW01-Regular&quot;, Arial, sans-serif;
@@ -403,47 +387,11 @@ $('#my-expandable').get(0).toggle(); // Toggles the expandable</code></pre>
 .lt-ie9 .expandable_link i {
   font-style: normal !important;
 }
-.lt-ie9 .expandable_link em,
-.lt-ie9 .expandable_link i {
-  font-style: normal !important;
-}
 .expandable_link strong,
 .expandable_link b {
   font-family: &quot;AvenirNextLTW01-Demi&quot;, Arial, sans-serif;
   font-style: normal;
   font-weight: bold;
-}
-.lt-ie9 .expandable_link strong,
-.lt-ie9 .expandable_link b {
-  font-weight: normal !important;
-}
-.lt-ie9 .expandable_link strong,
-.lt-ie9 .expandable_link b {
-  font-weight: normal !important;
-}
-.expandable_link em,
-.expandable_link i {
-  font-family: &quot;AvenirNextLTW01-Italic&quot;, Arial, sans-serif;
-  font-style: italic;
-  font-weight: normal;
-}
-.lt-ie9 .expandable_link em,
-.lt-ie9 .expandable_link i {
-  font-style: normal !important;
-}
-.lt-ie9 .expandable_link em,
-.lt-ie9 .expandable_link i {
-  font-style: normal !important;
-}
-.expandable_link strong,
-.expandable_link b {
-  font-family: &quot;AvenirNextLTW01-Demi&quot;, Arial, sans-serif;
-  font-style: normal;
-  font-weight: bold;
-}
-.lt-ie9 .expandable_link strong,
-.lt-ie9 .expandable_link b {
-  font-weight: normal !important;
 }
 .lt-ie9 .expandable_link strong,
 .lt-ie9 .expandable_link b {
@@ -635,14 +583,6 @@ $('#my-expandable').get(0).toggle(); // Toggles the expandable</code></pre>
           <div class="docs-css">
             <pre class="docs-code"><code data-language="css">.expandable_header {
   display: block;
-}
-.expandable_header:after {
-  content: &quot;&quot;;
-  display: table;
-  clear: both;
-}
-.lt-ie8 .expandable_header {
-  zoom: 1;
 }
 .expandable_header:after {
   content: &quot;&quot;;
@@ -1107,15 +1047,6 @@ button.expandable_header {
 .lt-ie9 .expandable-group_header {
   font-weight: normal !important;
 }
-.lt-ie9 .expandable-group_header {
-  font-weight: normal !important;
-}
-.lt-ie9 .expandable-group_header {
-  font-weight: normal !important;
-}
-.lt-ie9 .expandable-group_header {
-  font-weight: normal !important;
-}
 .expandable-group .expandable {
   border-bottom: 1px solid #919395;
   margin-bottom: 0;
@@ -1130,15 +1061,6 @@ button.expandable_header {
   font-weight: 500;
   line-height: 1.22222222;
   margin-bottom: 0;
-}
-.lt-ie9 .expandable-group .expandable_label {
-  font-weight: normal !important;
-}
-.lt-ie9 .expandable-group .expandable_label {
-  font-weight: normal !important;
-}
-.lt-ie9 .expandable-group .expandable_label {
-  font-weight: normal !important;
 }
 .lt-ie9 .expandable-group .expandable_label {
   font-weight: normal !important;
