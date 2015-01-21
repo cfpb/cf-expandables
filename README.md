@@ -1,4 +1,3 @@
-
 # cf-expandables
 
 [![Build Status](https://travis-ci.org/cfpb/cf-expandables.svg)](https://travis-ci.org/cfpb/cf-expandables)
