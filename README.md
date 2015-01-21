@@ -8,16 +8,18 @@ This component can be used by itself, but it was made for Capital Framework,
 a new front end framework developed at the
 [Consumer Financial Protection Bureau](https://cfpb.github.io/).
 
+- [View the docs](https://cfpb.github.io/cf-expandables/docs/)
+- [See the raw demo](https://cfpb.github.io/cf-expandables/demo/)
+
 The current version number can be found in [bower.json](bower.json#L3)
 and follows [Semantic Versioning 2.0](http://semver.org/).
 Release notes are recorded in the [CHANGELOG](CHANGELOG.md) and on the
 [Releases page](https://github.com/cfpb/cf-buttons/releases/).
 
-- [View the docs](https://cfpb.github.io/cf-expandables/docs/)
-- [See the raw demo](https://cfpb.github.io/cf-expandables/demo/)
-
 If you would like to take advantage of more components or if you're new to
 Capital Framework, we encourage you to [start here](https://cfpb.github.io/capital-framework/).
+
+![](screenshot.png)
 
 
 ## How to use this component
