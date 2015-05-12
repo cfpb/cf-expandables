@@ -1,6 +1,6 @@
 # cf-expandables
 
-[![Build Status](https://travis-ci.org/cfpb/cf-expandables.svg)](https://travis-ci.org/cfpb/cf-expandables)
+[![Build Status](https://img.shields.io/travis/cfpb/cf-expandables.svg)](https://travis-ci.org/cfpb/cf-expandables) 
 [![Dependency Status](https://gemnasium.com/cfpb/cf-expandables.svg)](https://gemnasium.com/cfpb/cf-expandables)
 
 Standard expandable (show/hide) component.
