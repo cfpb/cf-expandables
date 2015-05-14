@@ -1,15 +1,10 @@
 language: node_js
 node_js:
-  - "0.10"
+  - 0.10
+  - 0.12
+  - iojs
 before_script:
-  - npm install -g grunt-cli
   - npm install -g http-server
-  - npm install -g pa11y
-  - npm install -g pa11y-reporter-ci
-  - grunt bower
 script: 
   - nohup http-server -p 8080 >/dev/null 2>&1 &
   - npm test
-branches:
-  only:
-    - gh-pages
