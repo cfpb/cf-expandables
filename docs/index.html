@@ -75,7 +75,7 @@
               <h3 class="docs-pattern_header">Recommended expandable pattern</h3>
               <section class="docs-pattern_pattern">
 <div class="expandable expandable__padded">
-    <button class="expandable_header expandable_target">
+    <button class="expandable_header expandable_target" title="Expand content">
         <span class="expandable_header-left expandable_label">
             Expandable Header
         </span>
@@ -104,7 +104,7 @@
               </section>
               <footer class="docs-pattern_footer">
                 <pre class="docs-code docs-pattern_markup"><code data-language="html">&lt;div class=&quot;expandable expandable__padded&quot;&gt;
-    &lt;button class=&quot;expandable_header expandable_target&quot;&gt;
+    &lt;button class=&quot;expandable_header expandable_target&quot; title=&quot;Expand content&quot;&gt;
         &lt;span class=&quot;expandable_header-left expandable_label&quot;&gt;
             Expandable Header
         &lt;/span&gt;
@@ -130,7 +130,7 @@
     &lt;/div&gt;
 &lt;/div&gt;</code></pre>
                 <form action="http://codepen.io/pen/define" method="POST" target="_blank" class="docs-pattern_footer-edit">
-                  <input type="hidden" name="data" value="{&amp;quot;css&amp;quot;:&amp;quot;body { padding: 1em; }&amp;quot;,&amp;quot;css_external&amp;quot;:&amp;quot;http://cfpb.github.io/cf-expandables/docs/static/css/main.css&amp;quot;,&amp;quot;html&amp;quot;:&amp;quot;\n&lt;div class=\&amp;quot;expandable expandable__padded\&amp;quot;&gt;\n    &lt;button class=\&amp;quot;expandable_header expandable_target\&amp;quot;&gt;\n        &lt;span class=\&amp;quot;expandable_header-left expandable_label\&amp;quot;&gt;\n            Expandable Header\n        &lt;/span&gt;\n        &lt;span class=\&amp;quot;expandable_header-right expandable_link\&amp;quot;&gt;\n            &lt;span class=\&amp;quot;expandable_cue-open\&amp;quot;&gt;\n                Show\n                &lt;span class=\&amp;quot;cf-icon cf-icon-plus-round\&amp;quot;&gt;&lt;/span&gt;\n            &lt;/span&gt;\n            &lt;span class=\&amp;quot;expandable_cue-close\&amp;quot;&gt;\n                Hide\n                &lt;span class=\&amp;quot;cf-icon cf-icon-minus-round\&amp;quot;&gt;&lt;/span&gt;\n            &lt;/span&gt;\n        &lt;/span&gt;\n    &lt;/button&gt;\n    &lt;div class=\&amp;quot;expandable_content\&amp;quot;&gt;\n        &lt;p&gt;\n            Lorem ipsum dolor sit amet, consectetur adipisicing\n            elit. Neque ipsa voluptatibus soluta nobis unde quisquam\n            temporibus magnam debitis quidem. Ducimus ratione\n            corporis nesciunt earum vel est quaerat blanditiis\n            dolore ipsa?\n        &lt;/p&gt;\n    &lt;/div&gt;\n&lt;/div&gt;\n&amp;quot;}">
+                  <input type="hidden" name="data" value="{&amp;quot;css&amp;quot;:&amp;quot;body { padding: 1em; }&amp;quot;,&amp;quot;css_external&amp;quot;:&amp;quot;http://cfpb.github.io/cf-expandables/docs/static/css/main.css&amp;quot;,&amp;quot;html&amp;quot;:&amp;quot;\n&lt;div class=\&amp;quot;expandable expandable__padded\&amp;quot;&gt;\n    &lt;button class=\&amp;quot;expandable_header expandable_target\&amp;quot; title=\&amp;quot;Expand content\&amp;quot;&gt;\n        &lt;span class=\&amp;quot;expandable_header-left expandable_label\&amp;quot;&gt;\n            Expandable Header\n        &lt;/span&gt;\n        &lt;span class=\&amp;quot;expandable_header-right expandable_link\&amp;quot;&gt;\n            &lt;span class=\&amp;quot;expandable_cue-open\&amp;quot;&gt;\n                Show\n                &lt;span class=\&amp;quot;cf-icon cf-icon-plus-round\&amp;quot;&gt;&lt;/span&gt;\n            &lt;/span&gt;\n            &lt;span class=\&amp;quot;expandable_cue-close\&amp;quot;&gt;\n                Hide\n                &lt;span class=\&amp;quot;cf-icon cf-icon-minus-round\&amp;quot;&gt;&lt;/span&gt;\n            &lt;/span&gt;\n        &lt;/span&gt;\n    &lt;/button&gt;\n    &lt;div class=\&amp;quot;expandable_content\&amp;quot;&gt;\n        &lt;p&gt;\n            Lorem ipsum dolor sit amet, consectetur adipisicing\n            elit. Neque ipsa voluptatibus soluta nobis unde quisquam\n            temporibus magnam debitis quidem. Ducimus ratione\n            corporis nesciunt earum vel est quaerat blanditiis\n            dolore ipsa?\n        &lt;/p&gt;\n    &lt;/div&gt;\n&lt;/div&gt;\n&amp;quot;}">
                   <input type="submit" value="edit on codepen.io" class="docs-pattern_footer-edit-btn">
                 </form>
                 <ul class="docs-codenotes">
@@ -241,7 +241,7 @@ $('#my-expandable').get(0).toggle(); // Toggles the expandable</code></pre>
               <h3 class="docs-pattern_header">Barebones expandable</h3>
               <section class="docs-pattern_pattern">
 <div class="expandable">
-    <button class="expandable_target">
+    <button class="expandable_target" title="Expand content">
         <span class="expandable_cue-open">
             Show
         </span>
@@ -263,7 +263,7 @@ $('#my-expandable').get(0).toggle(); // Toggles the expandable</code></pre>
               </section>
               <footer class="docs-pattern_footer">
                 <pre class="docs-code docs-pattern_markup"><code data-language="html">&lt;div class=&quot;expandable&quot;&gt;
-    &lt;button class=&quot;expandable_target&quot;&gt;
+    &lt;button class=&quot;expandable_target&quot; title=&quot;Expand content&quot;&gt;
         &lt;span class=&quot;expandable_cue-open&quot;&gt;
             Show
         &lt;/span&gt;
@@ -282,7 +282,7 @@ $('#my-expandable').get(0).toggle(); // Toggles the expandable</code></pre>
     &lt;/div&gt;
 &lt;/div&gt;</code></pre>
                 <form action="http://codepen.io/pen/define" method="POST" target="_blank" class="docs-pattern_footer-edit">
-                  <input type="hidden" name="data" value="{&amp;quot;css&amp;quot;:&amp;quot;body { padding: 1em; }&amp;quot;,&amp;quot;css_external&amp;quot;:&amp;quot;http://cfpb.github.io/cf-expandables/docs/static/css/main.css&amp;quot;,&amp;quot;html&amp;quot;:&amp;quot;\n&lt;div class=\&amp;quot;expandable\&amp;quot;&gt;\n    &lt;button class=\&amp;quot;expandable_target\&amp;quot;&gt;\n        &lt;span class=\&amp;quot;expandable_cue-open\&amp;quot;&gt;\n            Show\n        &lt;/span&gt;\n        &lt;span class=\&amp;quot;expandable_cue-close\&amp;quot;&gt;\n            Hide\n        &lt;/span&gt;\n    &lt;/button&gt;\n    &lt;div class=\&amp;quot;expandable_content\&amp;quot;&gt;\n        &lt;p&gt;\n            Lorem ipsum dolor sit amet, consectetur adipisicing\n            elit. Neque ipsa voluptatibus soluta nobis unde quisquam\n            temporibus magnam debitis quidem. Ducimus ratione\n            corporis nesciunt earum vel est quaerat blanditiis\n            dolore ipsa?\n        &lt;/p&gt;\n    &lt;/div&gt;\n&lt;/div&gt;\n&amp;quot;}">
+                  <input type="hidden" name="data" value="{&amp;quot;css&amp;quot;:&amp;quot;body { padding: 1em; }&amp;quot;,&amp;quot;css_external&amp;quot;:&amp;quot;http://cfpb.github.io/cf-expandables/docs/static/css/main.css&amp;quot;,&amp;quot;html&amp;quot;:&amp;quot;\n&lt;div class=\&amp;quot;expandable\&amp;quot;&gt;\n    &lt;button class=\&amp;quot;expandable_target\&amp;quot; title=\&amp;quot;Expand content\&amp;quot;&gt;\n        &lt;span class=\&amp;quot;expandable_cue-open\&amp;quot;&gt;\n            Show\n        &lt;/span&gt;\n        &lt;span class=\&amp;quot;expandable_cue-close\&amp;quot;&gt;\n            Hide\n        &lt;/span&gt;\n    &lt;/button&gt;\n    &lt;div class=\&amp;quot;expandable_content\&amp;quot;&gt;\n        &lt;p&gt;\n            Lorem ipsum dolor sit amet, consectetur adipisicing\n            elit. Neque ipsa voluptatibus soluta nobis unde quisquam\n            temporibus magnam debitis quidem. Ducimus ratione\n            corporis nesciunt earum vel est quaerat blanditiis\n            dolore ipsa?\n        &lt;/p&gt;\n    &lt;/div&gt;\n&lt;/div&gt;\n&amp;quot;}">
                   <input type="submit" value="edit on codepen.io" class="docs-pattern_footer-edit-btn">
                 </form>
                 <ul class="docs-codenotes">
@@ -445,7 +445,7 @@ $('#my-expandable').get(0).toggle(); // Toggles the expandable</code></pre>
               <h3 class="docs-pattern_header">.expandable_cue-open/close__animated (modifier)</h3>
               <section class="docs-pattern_pattern">
 <div class="expandable">
-    <button class="expandable_target">
+    <button class="expandable_target" title="Expand content">
         <span class="expandable_cue-open expandable_cue-open__animated">
             <span class="cf-icon cf-icon-down"></span>
         </span>
@@ -464,7 +464,7 @@ $('#my-expandable').get(0).toggle(); // Toggles the expandable</code></pre>
     </div>
 </div>
 <div class="expandable expandable__expanded">
-    <button class="expandable_target">
+    <button class="expandable_target" title="Expand content">
         <span class="expandable_cue-open expandable_cue-open__animated">
             <span class="cf-icon cf-icon-down"></span>
         </span>
@@ -486,7 +486,7 @@ $('#my-expandable').get(0).toggle(); // Toggles the expandable</code></pre>
               </section>
               <footer class="docs-pattern_footer">
                 <pre class="docs-code docs-pattern_markup"><code data-language="html">&lt;div class=&quot;expandable&quot;&gt;
-    &lt;button class=&quot;expandable_target&quot;&gt;
+    &lt;button class=&quot;expandable_target&quot; title=&quot;Expand content&quot;&gt;
         &lt;span class=&quot;expandable_cue-open expandable_cue-open__animated&quot;&gt;
             &lt;span class=&quot;cf-icon cf-icon-down&quot;&gt;&lt;/span&gt;
         &lt;/span&gt;
@@ -505,7 +505,7 @@ $('#my-expandable').get(0).toggle(); // Toggles the expandable</code></pre>
     &lt;/div&gt;
 &lt;/div&gt;
 &lt;div class=&quot;expandable expandable__expanded&quot;&gt;
-    &lt;button class=&quot;expandable_target&quot;&gt;
+    &lt;button class=&quot;expandable_target&quot; title=&quot;Expand content&quot;&gt;
         &lt;span class=&quot;expandable_cue-open expandable_cue-open__animated&quot;&gt;
             &lt;span class=&quot;cf-icon cf-icon-down&quot;&gt;&lt;/span&gt;
         &lt;/span&gt;
@@ -524,7 +524,7 @@ $('#my-expandable').get(0).toggle(); // Toggles the expandable</code></pre>
     &lt;/div&gt;
 &lt;/div&gt;</code></pre>
                 <form action="http://codepen.io/pen/define" method="POST" target="_blank" class="docs-pattern_footer-edit">
-                  <input type="hidden" name="data" value="{&amp;quot;css&amp;quot;:&amp;quot;body { padding: 1em; }&amp;quot;,&amp;quot;css_external&amp;quot;:&amp;quot;http://cfpb.github.io/cf-expandables/docs/static/css/main.css&amp;quot;,&amp;quot;html&amp;quot;:&amp;quot;\n&lt;div class=\&amp;quot;expandable\&amp;quot;&gt;\n    &lt;button class=\&amp;quot;expandable_target\&amp;quot;&gt;\n        &lt;span class=\&amp;quot;expandable_cue-open expandable_cue-open__animated\&amp;quot;&gt;\n            &lt;span class=\&amp;quot;cf-icon cf-icon-down\&amp;quot;&gt;&lt;/span&gt;\n        &lt;/span&gt;\n        &lt;span class=\&amp;quot;expandable_cue-close expandable_cue-close__animated\&amp;quot;&gt;\n            &lt;span class=\&amp;quot;cf-icon cf-icon-up\&amp;quot;&gt;&lt;/span&gt;\n        &lt;/span&gt;\n    &lt;/button&gt;\n    &lt;div class=\&amp;quot;expandable_content\&amp;quot;&gt;\n        &lt;p&gt;\n            Lorem ipsum dolor sit amet, consectetur adipisicing\n            elit. Neque ipsa voluptatibus soluta nobis unde quisquam\n            temporibus magnam debitis quidem. Ducimus ratione\n            corporis nesciunt earum vel est quaerat blanditiis\n            dolore ipsa?\n        &lt;/p&gt;\n    &lt;/div&gt;\n&lt;/div&gt;\n&lt;div class=\&amp;quot;expandable expandable__expanded\&amp;quot;&gt;\n    &lt;button class=\&amp;quot;expandable_target\&amp;quot;&gt;\n        &lt;span class=\&amp;quot;expandable_cue-open expandable_cue-open__animated\&amp;quot;&gt;\n            &lt;span class=\&amp;quot;cf-icon cf-icon-down\&amp;quot;&gt;&lt;/span&gt;\n        &lt;/span&gt;\n        &lt;span class=\&amp;quot;expandable_cue-close expandable_cue-close__animated\&amp;quot;&gt;\n            &lt;span class=\&amp;quot;cf-icon cf-icon-up\&amp;quot;&gt;&lt;/span&gt;\n        &lt;/span&gt;\n    &lt;/button&gt;\n    &lt;div class=\&amp;quot;expandable_content\&amp;quot;&gt;\n        &lt;p&gt;\n            Lorem ipsum dolor sit amet, consectetur adipisicing\n            elit. Neque ipsa voluptatibus soluta nobis unde quisquam\n            temporibus magnam debitis quidem. Ducimus ratione\n            corporis nesciunt earum vel est quaerat blanditiis\n            dolore ipsa?\n        &lt;/p&gt;\n    &lt;/div&gt;\n&lt;/div&gt;\n&amp;quot;}">
+                  <input type="hidden" name="data" value="{&amp;quot;css&amp;quot;:&amp;quot;body { padding: 1em; }&amp;quot;,&amp;quot;css_external&amp;quot;:&amp;quot;http://cfpb.github.io/cf-expandables/docs/static/css/main.css&amp;quot;,&amp;quot;html&amp;quot;:&amp;quot;\n&lt;div class=\&amp;quot;expandable\&amp;quot;&gt;\n    &lt;button class=\&amp;quot;expandable_target\&amp;quot; title=\&amp;quot;Expand content\&amp;quot;&gt;\n        &lt;span class=\&amp;quot;expandable_cue-open expandable_cue-open__animated\&amp;quot;&gt;\n            &lt;span class=\&amp;quot;cf-icon cf-icon-down\&amp;quot;&gt;&lt;/span&gt;\n        &lt;/span&gt;\n        &lt;span class=\&amp;quot;expandable_cue-close expandable_cue-close__animated\&amp;quot;&gt;\n            &lt;span class=\&amp;quot;cf-icon cf-icon-up\&amp;quot;&gt;&lt;/span&gt;\n        &lt;/span&gt;\n    &lt;/button&gt;\n    &lt;div class=\&amp;quot;expandable_content\&amp;quot;&gt;\n        &lt;p&gt;\n            Lorem ipsum dolor sit amet, consectetur adipisicing\n            elit. Neque ipsa voluptatibus soluta nobis unde quisquam\n            temporibus magnam debitis quidem. Ducimus ratione\n            corporis nesciunt earum vel est quaerat blanditiis\n            dolore ipsa?\n        &lt;/p&gt;\n    &lt;/div&gt;\n&lt;/div&gt;\n&lt;div class=\&amp;quot;expandable expandable__expanded\&amp;quot;&gt;\n    &lt;button class=\&amp;quot;expandable_target\&amp;quot; title=\&amp;quot;Expand content\&amp;quot;&gt;\n        &lt;span class=\&amp;quot;expandable_cue-open expandable_cue-open__animated\&amp;quot;&gt;\n            &lt;span class=\&amp;quot;cf-icon cf-icon-down\&amp;quot;&gt;&lt;/span&gt;\n        &lt;/span&gt;\n        &lt;span class=\&amp;quot;expandable_cue-close expandable_cue-close__animated\&amp;quot;&gt;\n            &lt;span class=\&amp;quot;cf-icon cf-icon-up\&amp;quot;&gt;&lt;/span&gt;\n        &lt;/span&gt;\n    &lt;/button&gt;\n    &lt;div class=\&amp;quot;expandable_content\&amp;quot;&gt;\n        &lt;p&gt;\n            Lorem ipsum dolor sit amet, consectetur adipisicing\n            elit. Neque ipsa voluptatibus soluta nobis unde quisquam\n            temporibus magnam debitis quidem. Ducimus ratione\n            corporis nesciunt earum vel est quaerat blanditiis\n            dolore ipsa?\n        &lt;/p&gt;\n    &lt;/div&gt;\n&lt;/div&gt;\n&amp;quot;}">
                   <input type="submit" value="edit on codepen.io" class="docs-pattern_footer-edit-btn">
                 </form>
                 <ul class="docs-codenotes">
@@ -697,7 +697,7 @@ button.expandable_header {
 <div class="expandable-group">
     <div class="expandable-group_header">Expandable group header</div>
     <div class="expandable expandable__padded">
-        <button class="expandable_header expandable_target">
+        <button class="expandable_header expandable_target" title="Expand content">
             <span class="expandable_header-left expandable_label">
                 Expandable Header 1
             </span>
@@ -723,7 +723,7 @@ button.expandable_header {
         </div>
     </div>
     <div class="expandable expandable__padded">
-        <button class="expandable_header expandable_target">
+        <button class="expandable_header expandable_target" title="Expand content">
             <span class="expandable_header-left expandable_label">
                 Expandable Header 2
             </span>
@@ -749,7 +749,7 @@ button.expandable_header {
         </div>
     </div>
     <div class="expandable expandable__padded">
-        <button class="expandable_header expandable_target">
+        <button class="expandable_header expandable_target" title="Expand content">
             <span class="expandable_header-left expandable_label">
                 Expandable Header 3
             </span>
@@ -781,7 +781,7 @@ button.expandable_header {
                 <pre class="docs-code docs-pattern_markup"><code data-language="html">&lt;div class=&quot;expandable-group&quot;&gt;
     &lt;div class=&quot;expandable-group_header&quot;&gt;Expandable group header&lt;/div&gt;
     &lt;div class=&quot;expandable expandable__padded&quot;&gt;
-        &lt;button class=&quot;expandable_header expandable_target&quot;&gt;
+        &lt;button class=&quot;expandable_header expandable_target&quot; title=&quot;Expand content&quot;&gt;
             &lt;span class=&quot;expandable_header-left expandable_label&quot;&gt;
                 Expandable Header 1
             &lt;/span&gt;
@@ -807,7 +807,7 @@ button.expandable_header {
         &lt;/div&gt;
     &lt;/div&gt;
     &lt;div class=&quot;expandable expandable__padded&quot;&gt;
-        &lt;button class=&quot;expandable_header expandable_target&quot;&gt;
+        &lt;button class=&quot;expandable_header expandable_target&quot; title=&quot;Expand content&quot;&gt;
             &lt;span class=&quot;expandable_header-left expandable_label&quot;&gt;
                 Expandable Header 2
             &lt;/span&gt;
@@ -833,7 +833,7 @@ button.expandable_header {
         &lt;/div&gt;
     &lt;/div&gt;
     &lt;div class=&quot;expandable expandable__padded&quot;&gt;
-        &lt;button class=&quot;expandable_header expandable_target&quot;&gt;
+        &lt;button class=&quot;expandable_header expandable_target&quot; title=&quot;Expand content&quot;&gt;
             &lt;span class=&quot;expandable_header-left expandable_label&quot;&gt;
                 Expandable Header 3
             &lt;/span&gt;
@@ -860,7 +860,7 @@ button.expandable_header {
     &lt;/div&gt;
 &lt;/div&gt;</code></pre>
                 <form action="http://codepen.io/pen/define" method="POST" target="_blank" class="docs-pattern_footer-edit">
-                  <input type="hidden" name="data" value="{&amp;quot;css&amp;quot;:&amp;quot;body { padding: 1em; }&amp;quot;,&amp;quot;css_external&amp;quot;:&amp;quot;http://cfpb.github.io/cf-expandables/docs/static/css/main.css&amp;quot;,&amp;quot;html&amp;quot;:&amp;quot;\n&lt;div class=\&amp;quot;expandable-group\&amp;quot;&gt;\n    &lt;div class=\&amp;quot;expandable-group_header\&amp;quot;&gt;Expandable group header&lt;/div&gt;\n    &lt;div class=\&amp;quot;expandable expandable__padded\&amp;quot;&gt;\n        &lt;button class=\&amp;quot;expandable_header expandable_target\&amp;quot;&gt;\n            &lt;span class=\&amp;quot;expandable_header-left expandable_label\&amp;quot;&gt;\n                Expandable Header 1\n            &lt;/span&gt;\n            &lt;span class=\&amp;quot;expandable_header-right expandable_link\&amp;quot;&gt;\n                &lt;span class=\&amp;quot;expandable_cue-open\&amp;quot;&gt;\n                    Show\n                    &lt;span class=\&amp;quot;cf-icon cf-icon-plus-round\&amp;quot;&gt;&lt;/span&gt;\n                &lt;/span&gt;\n                &lt;span class=\&amp;quot;expandable_cue-close\&amp;quot;&gt;\n                    Hide\n                    &lt;span class=\&amp;quot;cf-icon cf-icon-minus-round\&amp;quot;&gt;&lt;/span&gt;\n                &lt;/span&gt;\n            &lt;/span&gt;\n        &lt;/button&gt;\n        &lt;div class=\&amp;quot;expandable_content\&amp;quot;&gt;\n            &lt;p&gt;\n                Lorem ipsum dolor sit amet, consectetur adipisicing\n                elit. Neque ipsa voluptatibus soluta nobis unde quisquam\n                temporibus magnam debitis quidem. Ducimus ratione\n                corporis nesciunt earum vel est quaerat blanditiis\n                dolore ipsa?\n            &lt;/p&gt;\n        &lt;/div&gt;\n    &lt;/div&gt;\n    &lt;div class=\&amp;quot;expandable expandable__padded\&amp;quot;&gt;\n        &lt;button class=\&amp;quot;expandable_header expandable_target\&amp;quot;&gt;\n            &lt;span class=\&amp;quot;expandable_header-left expandable_label\&amp;quot;&gt;\n                Expandable Header 2\n            &lt;/span&gt;\n            &lt;span class=\&amp;quot;expandable_header-right expandable_link\&amp;quot;&gt;\n                &lt;span class=\&amp;quot;expandable_cue-open\&amp;quot;&gt;\n                    Show\n                    &lt;span class=\&amp;quot;cf-icon cf-icon-plus-round\&amp;quot;&gt;&lt;/span&gt;\n                &lt;/span&gt;\n                &lt;span class=\&amp;quot;expandable_cue-close\&amp;quot;&gt;\n                    Hide\n                    &lt;span class=\&amp;quot;cf-icon cf-icon-minus-round\&amp;quot;&gt;&lt;/span&gt;\n                &lt;/span&gt;\n            &lt;/span&gt;\n        &lt;/button&gt;\n        &lt;div class=\&amp;quot;expandable_content\&amp;quot;&gt;\n            &lt;p&gt;\n                Lorem ipsum dolor sit amet, consectetur adipisicing\n                elit. Neque ipsa voluptatibus soluta nobis unde quisquam\n                temporibus magnam debitis quidem. Ducimus ratione\n                corporis nesciunt earum vel est quaerat blanditiis\n                dolore ipsa?\n            &lt;/p&gt;\n        &lt;/div&gt;\n    &lt;/div&gt;\n    &lt;div class=\&amp;quot;expandable expandable__padded\&amp;quot;&gt;\n        &lt;button class=\&amp;quot;expandable_header expandable_target\&amp;quot;&gt;\n            &lt;span class=\&amp;quot;expandable_header-left expandable_label\&amp;quot;&gt;\n                Expandable Header 3\n            &lt;/span&gt;\n            &lt;span class=\&amp;quot;expandable_header-right expandable_link\&amp;quot;&gt;\n                &lt;span class=\&amp;quot;expandable_cue-open\&amp;quot;&gt;\n                    Show\n                    &lt;span class=\&amp;quot;cf-icon cf-icon-plus-round\&amp;quot;&gt;&lt;/span&gt;\n                &lt;/span&gt;\n                &lt;span class=\&amp;quot;expandable_cue-close\&amp;quot;&gt;\n                    Hide\n                    &lt;span class=\&amp;quot;cf-icon cf-icon-minus-round\&amp;quot;&gt;&lt;/span&gt;\n                &lt;/span&gt;\n            &lt;/span&gt;\n        &lt;/button&gt;\n        &lt;div class=\&amp;quot;expandable_content\&amp;quot;&gt;\n            &lt;p&gt;\n                Lorem ipsum dolor sit amet, consectetur adipisicing\n                elit. Neque ipsa voluptatibus soluta nobis unde quisquam\n                temporibus magnam debitis quidem. Ducimus ratione\n                corporis nesciunt earum vel est quaerat blanditiis\n                dolore ipsa?\n            &lt;/p&gt;\n        &lt;/div&gt;\n    &lt;/div&gt;\n&lt;/div&gt;\n&amp;quot;}">
+                  <input type="hidden" name="data" value="{&amp;quot;css&amp;quot;:&amp;quot;body { padding: 1em; }&amp;quot;,&amp;quot;css_external&amp;quot;:&amp;quot;http://cfpb.github.io/cf-expandables/docs/static/css/main.css&amp;quot;,&amp;quot;html&amp;quot;:&amp;quot;\n&lt;div class=\&amp;quot;expandable-group\&amp;quot;&gt;\n    &lt;div class=\&amp;quot;expandable-group_header\&amp;quot;&gt;Expandable group header&lt;/div&gt;\n    &lt;div class=\&amp;quot;expandable expandable__padded\&amp;quot;&gt;\n        &lt;button class=\&amp;quot;expandable_header expandable_target\&amp;quot; title=\&amp;quot;Expand content\&amp;quot;&gt;\n            &lt;span class=\&amp;quot;expandable_header-left expandable_label\&amp;quot;&gt;\n                Expandable Header 1\n            &lt;/span&gt;\n            &lt;span class=\&amp;quot;expandable_header-right expandable_link\&amp;quot;&gt;\n                &lt;span class=\&amp;quot;expandable_cue-open\&amp;quot;&gt;\n                    Show\n                    &lt;span class=\&amp;quot;cf-icon cf-icon-plus-round\&amp;quot;&gt;&lt;/span&gt;\n                &lt;/span&gt;\n                &lt;span class=\&amp;quot;expandable_cue-close\&amp;quot;&gt;\n                    Hide\n                    &lt;span class=\&amp;quot;cf-icon cf-icon-minus-round\&amp;quot;&gt;&lt;/span&gt;\n                &lt;/span&gt;\n            &lt;/span&gt;\n        &lt;/button&gt;\n        &lt;div class=\&amp;quot;expandable_content\&amp;quot;&gt;\n            &lt;p&gt;\n                Lorem ipsum dolor sit amet, consectetur adipisicing\n                elit. Neque ipsa voluptatibus soluta nobis unde quisquam\n                temporibus magnam debitis quidem. Ducimus ratione\n                corporis nesciunt earum vel est quaerat blanditiis\n                dolore ipsa?\n            &lt;/p&gt;\n        &lt;/div&gt;\n    &lt;/div&gt;\n    &lt;div class=\&amp;quot;expandable expandable__padded\&amp;quot;&gt;\n        &lt;button class=\&amp;quot;expandable_header expandable_target\&amp;quot; title=\&amp;quot;Expand content\&amp;quot;&gt;\n            &lt;span class=\&amp;quot;expandable_header-left expandable_label\&amp;quot;&gt;\n                Expandable Header 2\n            &lt;/span&gt;\n            &lt;span class=\&amp;quot;expandable_header-right expandable_link\&amp;quot;&gt;\n                &lt;span class=\&amp;quot;expandable_cue-open\&amp;quot;&gt;\n                    Show\n                    &lt;span class=\&amp;quot;cf-icon cf-icon-plus-round\&amp;quot;&gt;&lt;/span&gt;\n                &lt;/span&gt;\n                &lt;span class=\&amp;quot;expandable_cue-close\&amp;quot;&gt;\n                    Hide\n                    &lt;span class=\&amp;quot;cf-icon cf-icon-minus-round\&amp;quot;&gt;&lt;/span&gt;\n                &lt;/span&gt;\n            &lt;/span&gt;\n        &lt;/button&gt;\n        &lt;div class=\&amp;quot;expandable_content\&amp;quot;&gt;\n            &lt;p&gt;\n                Lorem ipsum dolor sit amet, consectetur adipisicing\n                elit. Neque ipsa voluptatibus soluta nobis unde quisquam\n                temporibus magnam debitis quidem. Ducimus ratione\n                corporis nesciunt earum vel est quaerat blanditiis\n                dolore ipsa?\n            &lt;/p&gt;\n        &lt;/div&gt;\n    &lt;/div&gt;\n    &lt;div class=\&amp;quot;expandable expandable__padded\&amp;quot;&gt;\n        &lt;button class=\&amp;quot;expandable_header expandable_target\&amp;quot; title=\&amp;quot;Expand content\&amp;quot;&gt;\n            &lt;span class=\&amp;quot;expandable_header-left expandable_label\&amp;quot;&gt;\n                Expandable Header 3\n            &lt;/span&gt;\n            &lt;span class=\&amp;quot;expandable_header-right expandable_link\&amp;quot;&gt;\n                &lt;span class=\&amp;quot;expandable_cue-open\&amp;quot;&gt;\n                    Show\n                    &lt;span class=\&amp;quot;cf-icon cf-icon-plus-round\&amp;quot;&gt;&lt;/span&gt;\n                &lt;/span&gt;\n                &lt;span class=\&amp;quot;expandable_cue-close\&amp;quot;&gt;\n                    Hide\n                    &lt;span class=\&amp;quot;cf-icon cf-icon-minus-round\&amp;quot;&gt;&lt;/span&gt;\n                &lt;/span&gt;\n            &lt;/span&gt;\n        &lt;/button&gt;\n        &lt;div class=\&amp;quot;expandable_content\&amp;quot;&gt;\n            &lt;p&gt;\n                Lorem ipsum dolor sit amet, consectetur adipisicing\n                elit. Neque ipsa voluptatibus soluta nobis unde quisquam\n                temporibus magnam debitis quidem. Ducimus ratione\n                corporis nesciunt earum vel est quaerat blanditiis\n                dolore ipsa?\n            &lt;/p&gt;\n        &lt;/div&gt;\n    &lt;/div&gt;\n&lt;/div&gt;\n&amp;quot;}">
                   <input type="submit" value="edit on codepen.io" class="docs-pattern_footer-edit-btn">
                 </form>
                 <ul class="docs-codenotes">
@@ -885,7 +885,7 @@ button.expandable_header {
 <div class="expandable-group" data-accordion="true">
     <div class="expandable-group_header">Expandable group header</div>
     <div class="expandable expandable__padded">
-        <button class="expandable_header expandable_target">
+        <button class="expandable_header expandable_target" title="Expand content">
             <span class="expandable_header-left expandable_label">
                 Expandable Header 1
             </span>
@@ -911,7 +911,7 @@ button.expandable_header {
         </div>
     </div>
     <div class="expandable expandable__padded">
-        <button class="expandable_header expandable_target">
+        <button class="expandable_header expandable_target" title="Expand content">
             <span class="expandable_header-left expandable_label">
                 Expandable Header 2
             </span>
@@ -937,7 +937,7 @@ button.expandable_header {
         </div>
     </div>
     <div class="expandable expandable__padded">
-        <button class="expandable_header expandable_target">
+        <button class="expandable_header expandable_target" title="Expand content">
             <span class="expandable_header-left expandable_label">
                 Expandable Header 3
             </span>
@@ -969,7 +969,7 @@ button.expandable_header {
                 <pre class="docs-code docs-pattern_markup"><code data-language="html">&lt;div class=&quot;expandable-group&quot; data-accordion=&quot;true&quot;&gt;
     &lt;div class=&quot;expandable-group_header&quot;&gt;Expandable group header&lt;/div&gt;
     &lt;div class=&quot;expandable expandable__padded&quot;&gt;
-        &lt;button class=&quot;expandable_header expandable_target&quot;&gt;
+        &lt;button class=&quot;expandable_header expandable_target&quot; title=&quot;Expand content&quot;&gt;
             &lt;span class=&quot;expandable_header-left expandable_label&quot;&gt;
                 Expandable Header 1
             &lt;/span&gt;
@@ -995,7 +995,7 @@ button.expandable_header {
         &lt;/div&gt;
     &lt;/div&gt;
     &lt;div class=&quot;expandable expandable__padded&quot;&gt;
-        &lt;button class=&quot;expandable_header expandable_target&quot;&gt;
+        &lt;button class=&quot;expandable_header expandable_target&quot; title=&quot;Expand content&quot;&gt;
             &lt;span class=&quot;expandable_header-left expandable_label&quot;&gt;
                 Expandable Header 2
             &lt;/span&gt;
@@ -1021,7 +1021,7 @@ button.expandable_header {
         &lt;/div&gt;
     &lt;/div&gt;
     &lt;div class=&quot;expandable expandable__padded&quot;&gt;
-        &lt;button class=&quot;expandable_header expandable_target&quot;&gt;
+        &lt;button class=&quot;expandable_header expandable_target&quot; title=&quot;Expand content&quot;&gt;
             &lt;span class=&quot;expandable_header-left expandable_label&quot;&gt;
                 Expandable Header 3
             &lt;/span&gt;
@@ -1048,7 +1048,7 @@ button.expandable_header {
     &lt;/div&gt;
 &lt;/div&gt;</code></pre>
                 <form action="http://codepen.io/pen/define" method="POST" target="_blank" class="docs-pattern_footer-edit">
-                  <input type="hidden" name="data" value="{&amp;quot;css&amp;quot;:&amp;quot;body { padding: 1em; }&amp;quot;,&amp;quot;css_external&amp;quot;:&amp;quot;http://cfpb.github.io/cf-expandables/docs/static/css/main.css&amp;quot;,&amp;quot;html&amp;quot;:&amp;quot;\n&lt;div class=\&amp;quot;expandable-group\&amp;quot; data-accordion=\&amp;quot;true\&amp;quot;&gt;\n    &lt;div class=\&amp;quot;expandable-group_header\&amp;quot;&gt;Expandable group header&lt;/div&gt;\n    &lt;div class=\&amp;quot;expandable expandable__padded\&amp;quot;&gt;\n        &lt;button class=\&amp;quot;expandable_header expandable_target\&amp;quot;&gt;\n            &lt;span class=\&amp;quot;expandable_header-left expandable_label\&amp;quot;&gt;\n                Expandable Header 1\n            &lt;/span&gt;\n            &lt;span class=\&amp;quot;expandable_header-right expandable_link\&amp;quot;&gt;\n                &lt;span class=\&amp;quot;expandable_cue-open\&amp;quot;&gt;\n                    Show\n                    &lt;span class=\&amp;quot;cf-icon cf-icon-plus-round\&amp;quot;&gt;&lt;/span&gt;\n                &lt;/span&gt;\n                &lt;span class=\&amp;quot;expandable_cue-close\&amp;quot;&gt;\n                    Hide\n                    &lt;span class=\&amp;quot;cf-icon cf-icon-minus-round\&amp;quot;&gt;&lt;/span&gt;\n                &lt;/span&gt;\n            &lt;/span&gt;\n        &lt;/button&gt;\n        &lt;div class=\&amp;quot;expandable_content\&amp;quot;&gt;\n            &lt;p&gt;\n                Lorem ipsum dolor sit amet, consectetur adipisicing\n                elit. Neque ipsa voluptatibus soluta nobis unde quisquam\n                temporibus magnam debitis quidem. Ducimus ratione\n                corporis nesciunt earum vel est quaerat blanditiis\n                dolore ipsa?\n            &lt;/p&gt;\n        &lt;/div&gt;\n    &lt;/div&gt;\n    &lt;div class=\&amp;quot;expandable expandable__padded\&amp;quot;&gt;\n        &lt;button class=\&amp;quot;expandable_header expandable_target\&amp;quot;&gt;\n            &lt;span class=\&amp;quot;expandable_header-left expandable_label\&amp;quot;&gt;\n                Expandable Header 2\n            &lt;/span&gt;\n            &lt;span class=\&amp;quot;expandable_header-right expandable_link\&amp;quot;&gt;\n                &lt;span class=\&amp;quot;expandable_cue-open\&amp;quot;&gt;\n                    Show\n                    &lt;span class=\&amp;quot;cf-icon cf-icon-plus-round\&amp;quot;&gt;&lt;/span&gt;\n                &lt;/span&gt;\n                &lt;span class=\&amp;quot;expandable_cue-close\&amp;quot;&gt;\n                    Hide\n                    &lt;span class=\&amp;quot;cf-icon cf-icon-minus-round\&amp;quot;&gt;&lt;/span&gt;\n                &lt;/span&gt;\n            &lt;/span&gt;\n        &lt;/button&gt;\n        &lt;div class=\&amp;quot;expandable_content\&amp;quot;&gt;\n            &lt;p&gt;\n                Lorem ipsum dolor sit amet, consectetur adipisicing\n                elit. Neque ipsa voluptatibus soluta nobis unde quisquam\n                temporibus magnam debitis quidem. Ducimus ratione\n                corporis nesciunt earum vel est quaerat blanditiis\n                dolore ipsa?\n            &lt;/p&gt;\n        &lt;/div&gt;\n    &lt;/div&gt;\n    &lt;div class=\&amp;quot;expandable expandable__padded\&amp;quot;&gt;\n        &lt;button class=\&amp;quot;expandable_header expandable_target\&amp;quot;&gt;\n            &lt;span class=\&amp;quot;expandable_header-left expandable_label\&amp;quot;&gt;\n                Expandable Header 3\n            &lt;/span&gt;\n            &lt;span class=\&amp;quot;expandable_header-right expandable_link\&amp;quot;&gt;\n                &lt;span class=\&amp;quot;expandable_cue-open\&amp;quot;&gt;\n                    Show\n                    &lt;span class=\&amp;quot;cf-icon cf-icon-plus-round\&amp;quot;&gt;&lt;/span&gt;\n                &lt;/span&gt;\n                &lt;span class=\&amp;quot;expandable_cue-close\&amp;quot;&gt;\n                    Hide\n                    &lt;span class=\&amp;quot;cf-icon cf-icon-minus-round\&amp;quot;&gt;&lt;/span&gt;\n                &lt;/span&gt;\n            &lt;/span&gt;\n        &lt;/button&gt;\n        &lt;div class=\&amp;quot;expandable_content\&amp;quot;&gt;\n            &lt;p&gt;\n                Lorem ipsum dolor sit amet, consectetur adipisicing\n                elit. Neque ipsa voluptatibus soluta nobis unde quisquam\n                temporibus magnam debitis quidem. Ducimus ratione\n                corporis nesciunt earum vel est quaerat blanditiis\n                dolore ipsa?\n            &lt;/p&gt;\n        &lt;/div&gt;\n    &lt;/div&gt;\n&lt;/div&gt;\n&amp;quot;}">
+                  <input type="hidden" name="data" value="{&amp;quot;css&amp;quot;:&amp;quot;body { padding: 1em; }&amp;quot;,&amp;quot;css_external&amp;quot;:&amp;quot;http://cfpb.github.io/cf-expandables/docs/static/css/main.css&amp;quot;,&amp;quot;html&amp;quot;:&amp;quot;\n&lt;div class=\&amp;quot;expandable-group\&amp;quot; data-accordion=\&amp;quot;true\&amp;quot;&gt;\n    &lt;div class=\&amp;quot;expandable-group_header\&amp;quot;&gt;Expandable group header&lt;/div&gt;\n    &lt;div class=\&amp;quot;expandable expandable__padded\&amp;quot;&gt;\n        &lt;button class=\&amp;quot;expandable_header expandable_target\&amp;quot; title=\&amp;quot;Expand content\&amp;quot;&gt;\n            &lt;span class=\&amp;quot;expandable_header-left expandable_label\&amp;quot;&gt;\n                Expandable Header 1\n            &lt;/span&gt;\n            &lt;span class=\&amp;quot;expandable_header-right expandable_link\&amp;quot;&gt;\n                &lt;span class=\&amp;quot;expandable_cue-open\&amp;quot;&gt;\n                    Show\n                    &lt;span class=\&amp;quot;cf-icon cf-icon-plus-round\&amp;quot;&gt;&lt;/span&gt;\n                &lt;/span&gt;\n                &lt;span class=\&amp;quot;expandable_cue-close\&amp;quot;&gt;\n                    Hide\n                    &lt;span class=\&amp;quot;cf-icon cf-icon-minus-round\&amp;quot;&gt;&lt;/span&gt;\n                &lt;/span&gt;\n            &lt;/span&gt;\n        &lt;/button&gt;\n        &lt;div class=\&amp;quot;expandable_content\&amp;quot;&gt;\n            &lt;p&gt;\n                Lorem ipsum dolor sit amet, consectetur adipisicing\n                elit. Neque ipsa voluptatibus soluta nobis unde quisquam\n                temporibus magnam debitis quidem. Ducimus ratione\n                corporis nesciunt earum vel est quaerat blanditiis\n                dolore ipsa?\n            &lt;/p&gt;\n        &lt;/div&gt;\n    &lt;/div&gt;\n    &lt;div class=\&amp;quot;expandable expandable__padded\&amp;quot;&gt;\n        &lt;button class=\&amp;quot;expandable_header expandable_target\&amp;quot; title=\&amp;quot;Expand content\&amp;quot;&gt;\n            &lt;span class=\&amp;quot;expandable_header-left expandable_label\&amp;quot;&gt;\n                Expandable Header 2\n            &lt;/span&gt;\n            &lt;span class=\&amp;quot;expandable_header-right expandable_link\&amp;quot;&gt;\n                &lt;span class=\&amp;quot;expandable_cue-open\&amp;quot;&gt;\n                    Show\n                    &lt;span class=\&amp;quot;cf-icon cf-icon-plus-round\&amp;quot;&gt;&lt;/span&gt;\n                &lt;/span&gt;\n                &lt;span class=\&amp;quot;expandable_cue-close\&amp;quot;&gt;\n                    Hide\n                    &lt;span class=\&amp;quot;cf-icon cf-icon-minus-round\&amp;quot;&gt;&lt;/span&gt;\n                &lt;/span&gt;\n            &lt;/span&gt;\n        &lt;/button&gt;\n        &lt;div class=\&amp;quot;expandable_content\&amp;quot;&gt;\n            &lt;p&gt;\n                Lorem ipsum dolor sit amet, consectetur adipisicing\n                elit. Neque ipsa voluptatibus soluta nobis unde quisquam\n                temporibus magnam debitis quidem. Ducimus ratione\n                corporis nesciunt earum vel est quaerat blanditiis\n                dolore ipsa?\n            &lt;/p&gt;\n        &lt;/div&gt;\n    &lt;/div&gt;\n    &lt;div class=\&amp;quot;expandable expandable__padded\&amp;quot;&gt;\n        &lt;button class=\&amp;quot;expandable_header expandable_target\&amp;quot; title=\&amp;quot;Expand content\&amp;quot;&gt;\n            &lt;span class=\&amp;quot;expandable_header-left expandable_label\&amp;quot;&gt;\n                Expandable Header 3\n            &lt;/span&gt;\n            &lt;span class=\&amp;quot;expandable_header-right expandable_link\&amp;quot;&gt;\n                &lt;span class=\&amp;quot;expandable_cue-open\&amp;quot;&gt;\n                    Show\n                    &lt;span class=\&amp;quot;cf-icon cf-icon-plus-round\&amp;quot;&gt;&lt;/span&gt;\n                &lt;/span&gt;\n                &lt;span class=\&amp;quot;expandable_cue-close\&amp;quot;&gt;\n                    Hide\n                    &lt;span class=\&amp;quot;cf-icon cf-icon-minus-round\&amp;quot;&gt;&lt;/span&gt;\n                &lt;/span&gt;\n            &lt;/span&gt;\n        &lt;/button&gt;\n        &lt;div class=\&amp;quot;expandable_content\&amp;quot;&gt;\n            &lt;p&gt;\n                Lorem ipsum dolor sit amet, consectetur adipisicing\n                elit. Neque ipsa voluptatibus soluta nobis unde quisquam\n                temporibus magnam debitis quidem. Ducimus ratione\n                corporis nesciunt earum vel est quaerat blanditiis\n                dolore ipsa?\n            &lt;/p&gt;\n        &lt;/div&gt;\n    &lt;/div&gt;\n&lt;/div&gt;\n&amp;quot;}">
                   <input type="submit" value="edit on codepen.io" class="docs-pattern_footer-edit-btn">
                 </form>
                 <ul class="docs-codenotes">
