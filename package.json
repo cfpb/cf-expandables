@@ -1,5 +1,6 @@
 {
   "scripts": {
+    "postinstall": "bower install",
     "pretest": "forever stopall -s && forever start -s ./node_modules/.bin/http-server",
     "test": "grunt test && pa11y localhost:8080/demo -r ci -s WCAG2AA",
     "posttest": "forever stopall -s"
