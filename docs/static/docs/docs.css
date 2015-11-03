@@ -1,7 +1,10 @@
-@import url(//fast.fonts.net/t/1.css?apiType=css&projectid=44e8c964-4684-44c6-a6e3-3f3da8787b50);
 /* ==========================================================================
    Capital Framework
    cf-component-demo styling
+   ========================================================================== */
+/* ==========================================================================
+   Capital Framework
+   Color variables
    ========================================================================== */
 /* Variables
    ========================================================================== */
@@ -194,11 +197,6 @@ pre {
 .docs-component + .docs-component {
   margin-top: 1.375em;
 }
-/* CSS
-   ========================================================================== */
-.docs-css {
-  margin-top: 1.375em;
-}
 /* Patterns
    ========================================================================== */
 .docs-pattern + .docs-pattern {
@@ -315,19 +313,4 @@ pre {
 .docs-pattern_markup + .docs-codenotes,
 .docs-pattern_markup + .docs-notes {
   margin-top: 1.57142857em;
-}
-/* Responsive
-   ========================================================================== */
-@media only all and (min-width: 64em) {
-  .docs-patterns,
-  .docs-css {
-    box-sizing: border-box;
-    float: left;
-    width: 55%;
-  }
-  .docs-css {
-    width: 45%;
-    margin: 3.9375em 0 0;
-    padding-left: 1.375em;
-  }
 }
